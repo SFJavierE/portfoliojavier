@@ -1,0 +1,1 @@
+export type Technology = 'React' | 'Ts' | 'Unity' | 'Js' | 'NodeJs' | 'Express' | 'Angular' | 'AngularJS' | 'RoR' | '.NET' | 'C#' | 'Firebase' | 'SQL' | 'GraphQL' | 'Hasura' | 'Postgress' | 'Postman' | 'Confluence' | 'Figma' | 'Jira' | 'Trello'
