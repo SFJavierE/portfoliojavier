@@ -5,61 +5,61 @@ export default function Projects () {
     const projects : Project[] = [
         {
             title: 'porfolio',
-            technologies: [],
+            technologies: ['React', 'Ts', 'TailwindCss'],
             description: '',
             link: ''
         },
         {
             title: 'mangaecommerceapi',
-            technologies: [],
+            technologies: ['NodeJs', 'Express'],
             description: '',
             link: ''
         },
         {
             title: 'SlimeSlash',
-            technologies: [],
+            technologies: ['C#', 'Unity', '.NET'],
             description: '',
             link: ''
         },
         {
             title: 'mangaecommerce',
-            technologies: [],
+            technologies: ['Ts', 'React', 'TailwindCss'],
             description: '',
             link: ''
         },
         {
             title: 'dogs',
-            technologies: [],
+            technologies: ['NodeJs', 'Express', 'React', 'TailwindCss'],
             description: '',
             link: ''
         },
         {
             title: 'BankAppMe',
-            technologies: [],
+            technologies: ['ReactNative', 'NodeJs', 'Express', 'AWS', 'Postman', 'Css'],
             description: '',
             link: ''
         },
         {
             title: 'BackToThe90s-E-commerce',
-            technologies: [],
+            technologies: ['React', 'Postgress', 'Express', 'NodeJs', 'Trello', 'Postman', 'Css'],
             description: '',
             link: ''
         },
         {
             title: 'MiniGame1_Tale_Game',
-            technologies: [],
+            technologies: ['.NET', 'C#', 'Unity'],
             description: '',
             link: ''
         },
         {
             title: 'zombieWave',
-            technologies: [],
+            technologies: ['.NET', 'C#', 'Unity', 'Firebase'],
             description: '',
             link: ''
         },
         {
             title: 'PacmanGame',
-            technologies: [],
+            technologies: ['C#', 'Unity', '.NET'],
             description: '',
             link: ''
         }
