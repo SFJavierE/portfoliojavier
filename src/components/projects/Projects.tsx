@@ -89,7 +89,7 @@ export default function Projects () {
 
         return (
             <div>
-                <div className='my-2'>
+                <div className='my-2 fs-5'>
                     <span>{title} | </span>
                     <a href={link}>{link}</a>
                 </div>
