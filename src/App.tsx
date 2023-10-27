@@ -6,18 +6,22 @@ import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (
-    <div className="bg-dark d-flex flex-row">
-      <div>
-        <Navbar></Navbar>
-      </div>
-      <div className='p-5 text-info'>
-        <Welcome></Welcome>
-        <hr />
-        <Technologies></Technologies>
-        <hr />
-        <Proyects></Proyects>
-        <hr />
-        <Achievements></Achievements>
+    <div className="bg-dark">
+      <div className='row'>
+        <div className='col-2' id='sticky-sidebar'>
+          <div className='sticky-top'>
+            <Navbar></Navbar>
+          </div>
+        </div>
+        <div className='p-5 text-info col'>
+          <Welcome></Welcome>
+          <hr />
+          <Technologies></Technologies>
+          <hr />
+          <Proyects></Proyects>
+          <hr />
+          <Achievements></Achievements>
+        </div>
       </div>
     </div>
   );
