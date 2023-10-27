@@ -5,5 +5,5 @@ export interface AchievementDescription {
 
 export interface Achievement {
     placeExperiencieTitle: string;
-    achievement: AchievementDescription[];
+    listAchievement: AchievementDescription[];
 }

@@ -1,10 +1,10 @@
-import { Achievement } from './Interface';
+import { Achievement, AchievementDescription } from './Interface';
 
 export default function Achievements () {
     const achievements : Achievement[] = [
         {
             placeExperiencieTitle: 'Wisboo',
-            achievement: [
+            listAchievement: [
                 {
                     title: 'Liderar la Célula Money',
                     description: 'Estuve en la posición de Engineer Manager donde me encargaba de la organización del equipo de tecnología, creando tareas junto al equipo de producción donde aportaba mi visión técnica para analizar que podiamos tomar en el sprint que seguia, organizando los sprints y la disponibilidad de cada uno.'
@@ -21,7 +21,7 @@ export default function Achievements () {
         },
         {
             placeExperiencieTitle: 'Ohmunity',
-            achievement: [
+            listAchievement: [
                 {
                     title: 'Rápido aprendizaje',
                     description: 'Destaco esto porque no me tomo mucho tiempo acostumbrarme a las tecnologías con las que trabajé en su momento y que anteriormente en mi carrera no conocia. Dichas técnologías son Typescript, TailwindCss, Hasura y GraphQl.'
@@ -30,7 +30,7 @@ export default function Achievements () {
         },
         {
             placeExperiencieTitle: 'Henry',
-            achievement: [
+            listAchievement: [
                 {
                     title: 'Liderar el front del proyecto BankAppMe',
                     description: 'Tomé la iniciativa de tomar el liderato del sector frontend y la distribución de las tareas para que sea equitativa. Por mi lado también me encargue de seguir explorando React Native ya que nadie en el equipo lo habia utilizando antes, la conección entre las distintas vistas y la implementación de las mismas con la data recibida de la api. Este equipo fue un poco más grande que el anterior proyecto: 4 front y 3 backend'
@@ -43,7 +43,7 @@ export default function Achievements () {
         },
         {
             placeExperiencieTitle: 'TaleGames',
-            achievement: [
+            listAchievement: [
                 {
                     title: 'Implementación de monetización',
                     description: 'Investigue como monetizar con Google Playstore y realice la gran parte de la implementación, pero debido a que empecé el bootcamp de Henry tuve que dejar el desarrollo.'
@@ -60,11 +60,36 @@ export default function Achievements () {
         }
     ];
 
+    const listAchievements = ({placeExperiencieTitle, listAchievement} : Achievement, i: number) => {
+        const achievementDescription = ({title, description} : AchievementDescription, i : number) => (
+            <div className='mt-2'>
+                <span className=''>{title}</span>
+                <br className='my-2'/>
+                <span>{description}</span>
+                {i < (listAchievement.length - 1) && <hr />}
+            </div>
+        )
+
+        return (
+            <div>
+                <div className=''>
+                    <span className='fs-5'>{placeExperiencieTitle}</span>
+                    <div>
+                        {listAchievement.map((ach : AchievementDescription, i : number) => achievementDescription(ach, i))}
+                    </div>
+                </div>
+                {i < achievements.length - 1 && <hr />}
+            </div>
+        )
+    }
+
     return (
         <div>
             <span className="fs-4">
                 Logros
             </span>
+            <hr className='border border-2 border-info'/>
+            {achievements.map((ach: Achievement, i: number) => listAchievements(ach, i))}
         </div>
     )
 }
