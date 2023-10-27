@@ -1,6 +1,8 @@
 import './style.css';
 
 export default function Navbar () {
+    const itemsList : string[] = ['Tecnologías', 'Proyectos', 'Logros', 'Contacto'];
+
     const navbarLink = (text : string) => (
     <div className='px-2'>
         <a className='nav-link text-info' href="#">{text}</a>
@@ -15,10 +17,7 @@ export default function Navbar () {
                     <span className='navar-brand text-info'>Menu</span>
                     <hr className='text-light'/>
                 </div>
-                {navbarLink('Welcome')}
-                {navbarLink('Projects')}
-                {navbarLink('Achievements')}
-                {navbarLink('Contact')}
+                {itemsList.map((item) => navbarLink(item))}
             </div>
         </nav>
     )
