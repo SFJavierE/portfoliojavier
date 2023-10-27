@@ -1,4 +1,5 @@
 import { Project } from './Interface';
+import TechnologyList from '../../features/components/TechnologyList';
 
 export default function Projects () {
 
@@ -80,13 +81,29 @@ export default function Projects () {
             description: 'Este fue el primer proyecto y juego que realice en mi carrera, como dice el título, es una copia del famoso juego Pacman que muchos hemos jugado alguna vez en la vida.',
             link: 'https://github.com/Zoaxx1/PacmanGame'
         }
-    ] 
+    ];
+
+    const listProjects = ({title, status, technologies, description, link} : Project) => (
+        <div>
+            <span>{title}</span>
+            <br />
+            <span>{status}</span>
+            <br />
+            <TechnologyList list={technologies}/>
+            <br />
+            <span>{description}</span>
+            <br />
+            <a href={link}>{link}</a>
+            <hr />
+        </div>
+    )
 
     return (
         <div>
             <span className="fs-4">
                 Projects
             </span>
+            {projects.map((p) => listProjects(p))}
         </div>
     )
 }
