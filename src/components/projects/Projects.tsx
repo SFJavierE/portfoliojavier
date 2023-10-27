@@ -83,27 +83,30 @@ export default function Projects () {
         }
     ];
 
-    const listProjects = ({title, status, technologies, description, link} : Project) => (
-        <div>
-            <span>{title}</span>
-            <br />
-            <span>{status}</span>
-            <br />
-            <TechnologyList list={technologies}/>
-            <br />
-            <span>{description}</span>
-            <br />
-            <a href={link}>{link}</a>
-            <hr />
-        </div>
-    )
+    const listProjects = ({title, status, technologies, description, link} : Project, i : number) => {
+        const statusColor: string = status === 'done' ? 'bg-primary' : 'bg-primary-subtle opacity-75';
+        const statusClass: string = statusColor + ' p-2 my-2';
+
+        return (
+            <div>
+                <div className='my-2'>
+                    <span>{title} | </span>
+                    <a href={link}>{link}</a>
+                </div>
+                <TechnologyList list={technologies}/>
+                <span className={statusClass}>{status}</span>
+                <br className='mt-2 mb-3'/>
+                <span>{description}</span>
+                {i < (projects.length - 1) && <hr />}
+            </div>)
+    }
 
     return (
         <div>
             <span className="fs-4">
                 Projects
             </span>
-            {projects.map((p) => listProjects(p))}
+            {projects.map((p: Project, i: number) => listProjects(p, i))}
         </div>
     )
 }
