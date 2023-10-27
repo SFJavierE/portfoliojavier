@@ -12,6 +12,7 @@ export default function Technologies () {
             <span className="fs-4">
                 Technologies
             </span>
+            <hr className='border border-2 border-info'/>
             <TechnologyList list={tFrontend} />
             <TechnologyList list={tBackend} />
             <TechnologyList list={tDataBase} />

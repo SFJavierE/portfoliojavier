@@ -15,11 +15,11 @@ function App() {
         </div>
         <div className='p-5 text-info col'>
           <Welcome></Welcome>
-          <hr />
+          <hr className='border border-2 border-info'/>
           <Technologies></Technologies>
-          <hr />
+          <hr className='border border-2 border-info'/>
           <Proyects></Proyects>
-          <hr />
+          <hr className='border border-2 border-info'/>
           <Achievements></Achievements>
         </div>
       </div>

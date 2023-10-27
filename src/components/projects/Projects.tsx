@@ -106,6 +106,7 @@ export default function Projects () {
             <span className="fs-4">
                 Projects
             </span>
+            <hr className='border border-2 border-info'/>
             {projects.map((p: Project, i: number) => listProjects(p, i))}
         </div>
     )
