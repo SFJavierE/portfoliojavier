@@ -2,7 +2,7 @@ import Text from './text_es.json';
 
 export default function Welcome () {
     return (
-        <div className="fs-4">
+        <div className="fs-5">
             <span>
                 {Text._1}     
             </span>

@@ -1,7 +1,7 @@
 import './style.css';
 
 export default function Navbar () {
-    const itemsList : string[] = ['Tecnologías', 'Proyectos', 'Logros', 'Contacto'];
+    const itemsList : string[] = ['Tecnologías', 'Proyectos', 'Experiencias', 'Logros', 'Contacto'];
 
     const navbarLink = (text : string) => (
     <div className='px-2'>
