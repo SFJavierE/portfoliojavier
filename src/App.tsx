@@ -4,6 +4,7 @@ import Proyects from './components/projects/Projects';
 import Experiencies from './components/experiencies/Experiencies';
 import Achievements from './components/achievements/Achievements';
 import Navbar from './components/navbar/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
