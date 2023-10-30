@@ -55,14 +55,14 @@ export default function Navbar () {
                 </div>
                 {itemsList.map((item) => <NavbarLink text={item}/>)}
                 <div>
-                    <a
+                    <span
                         onClick={() => setOpenCollapse(!openCollapse)}
                         aria-controls="contact-info"
                         aria-expanded={openCollapse}
                         className='text-info nav-link mb-2'
                     >
                         Contacto
-                    </a>
+                    </span>
                     <Collapse in={openCollapse}>
                         <div id="contact-info">
                             {contactInfo.map((c) => <ContactInfoList {...c} />)}

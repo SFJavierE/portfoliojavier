@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { Company, Job, WorkingTime } from './Interface';
 import InformationBoxComponent from '../../features/components/InformationBoxComponent';
-import TitleComponent from '../../features/components/TitleComponent';
+import TitleCollapseComponent from '../../features/components/TitleCollapseComponent';
 
 export default function Experiencies () {
+    const [openCollapse, setOpenCollapse] = useState<boolean>(false);
+
     const experiencies : Company[] = [
         {
             name: 'Wisboo',
@@ -82,8 +85,14 @@ export default function Experiencies () {
 
     return (
         <div>
-            <TitleComponent title={'Experiencia'} />
-            {experiencies.map((exp : Company, i: number) => listExperiencies(exp, i))}
+            <TitleCollapseComponent
+                title={'Experiencia'}
+                openCollapse={openCollapse}
+                setOpen={setOpenCollapse}
+                idCollapse='experiencie-collapse'
+                >
+                {experiencies.map((exp : Company, i: number) => listExperiencies(exp, i))}
+            </TitleCollapseComponent>
         </div>
     )
 }

@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { Achievement, AchievementDescription } from './Interface';
 import InformationBoxComponent from '../../features/components/InformationBoxComponent';
-import TitleComponent from '../../features/components/TitleComponent';
+import TitleCollapseComponent from '../../features/components/TitleCollapseComponent';
 
 export default function Achievements () {
+    const [openCollapse, setOpenCollapse] = useState<boolean>(false);
+
     const achievements : Achievement[] = [
         {
             placeExperiencieTitle: 'Wisboo',
@@ -88,8 +91,14 @@ export default function Achievements () {
 
     return (
         <div>
-            <TitleComponent title={'Logros'} />           
-            {achievements.map((ach: Achievement, i: number) => listAchievements(ach, i))}
+            <TitleCollapseComponent
+                title={'Logros'}
+                openCollapse={openCollapse}
+                setOpen={setOpenCollapse}
+                idCollapse='achievements-collapse'
+            >
+               {achievements.map((ach: Achievement, i: number) => listAchievements(ach, i))}
+            </TitleCollapseComponent>
         </div>
     )
 }

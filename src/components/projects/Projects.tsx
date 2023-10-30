@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { Project } from './Interface';
 import TechnologyList from '../../features/components/TechnologyList';
 import InformationBoxComponent from '../../features/components/InformationBoxComponent';
-import TitleComponent from '../../features/components/TitleComponent';
+import TitleCollapseComponent from '../../features/components/TitleCollapseComponent';
 
 export default function Projects () {
+    const [openCollapse, setOpenCollapse] = useState<boolean>(false);
 
     const projects : Project[] = [
         {
@@ -110,8 +112,14 @@ export default function Projects () {
 
     return (
         <div>
-            <TitleComponent title={'Proyectos'} />
-            {projects.map((p: Project, i: number) => listProjects(p, i))}
+            <TitleCollapseComponent
+                title={'Proyectos'}
+                openCollapse={openCollapse}
+                setOpen={setOpenCollapse}
+                idCollapse='projects-collapse'
+            >
+                {projects.map((p: Project, i: number) => listProjects(p, i))}
+            </TitleCollapseComponent>
         </div>
     )
 }
