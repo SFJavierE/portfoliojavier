@@ -20,16 +20,18 @@ export default function TitleCollapseComponent ({title, setOpen, openCollapse, i
             aria-expanded={openCollapse}
             className='text-info nav-link mb-2'
         >
-            <div>
-                <Border />
-                <hr style={{marginTop: '-10px'}}/>
-            </div>
-            <span className="fs-4 ps-2">
-                {title}
-            </span>
-            <div>
-                <hr style={{marginBottom: '-10px'}}/>
-                <Border />
+            <div className='bg-primary rounded-1'>
+                <div>
+                    <Border />
+                    <hr style={{marginTop: '-10px'}}/>
+                </div>
+                <span className="fs-4 ps-2">
+                    {title}
+                </span>
+                <div>
+                    <hr style={{marginBottom: '-10px'}}/>
+                    <Border />
+                </div>
             </div>
             <Collapse in={openCollapse}>
                 <div id={idCollapse}>
