@@ -54,8 +54,10 @@ export default function Experiencies () {
     const listExperiencies = ({name, description, titles, wortTime} : Company, i: number) => {
         const listTitles = ({ name, description } : Job, i: number) => {
             return (
-                <div className='px-4 my-4'>
-                    <span>{name}</span>
+                <div className='my-4 '>
+                    <div className='bg-primary p-2 rounded-1'>
+                        <span>{name}</span>
+                    </div>
                     <br />
                     <span>{description}</span>
                     {(i < titles.length - 1) && <hr />}
@@ -64,12 +66,16 @@ export default function Experiencies () {
         }
 
         return (
-            <div>
-                <span className='fs-5'>{name}</span>
-                <br className='my-2'/>
-                <span>{description}</span>
-                {titles.map((t: Job, i: number) => listTitles(t, i))}
-                {(i < experiencies.length - 1) && <hr />}
+            <div className='border border-1 p-1 mb-4 border-info rounded-1'>
+                <div className='border border-1 p-3 border-info rounded-1'>
+                    <div className='bg-primary p-2 rounded-1'>
+                        <span className='fs-5'>{name} | </span>
+                    </div>
+                    <br className=''/>
+                    <span>{description}</span>
+                    <hr />
+                    {titles.map((t: Job, i: number) => listTitles(t, i))}
+                </div>
             </div>
         )
     }
