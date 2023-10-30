@@ -1,6 +1,7 @@
 import { Project } from './Interface';
 import TechnologyList from '../../features/components/TechnologyList';
 import InformationBoxComponent from '../../features/components/InformationBoxComponent';
+import TitleComponent from '../../features/components/TitleComponent';
 
 export default function Projects () {
 
@@ -109,10 +110,7 @@ export default function Projects () {
 
     return (
         <div>
-            <span className="fs-4">
-                Projects
-            </span>
-            <hr className='border border-2 border-info'/>
+            <TitleComponent title={'Proyectos'} />
             {projects.map((p: Project, i: number) => listProjects(p, i))}
         </div>
     )

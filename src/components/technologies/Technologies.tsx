@@ -1,5 +1,6 @@
 import { Technology } from '../../features/types/TypeTechnology';
 import TechnologyList from '../../features/components/TechnologyList';
+import TitleComponent from '../../features/components/TitleComponent';
 
 export default function Technologies () {
     const tFrontend : Technology[] = ['Javascript', 'React', 'Typescript', 'Angular', 'AngularJS', 'HTML', 'Css', 'Sass', 'TailwindCss', 'Bootstrap', 'ReactNative'];
@@ -9,10 +10,7 @@ export default function Technologies () {
 
     return(
         <div className="mb-4">
-            <span className="fs-4">
-                Technologies
-            </span>
-            <hr className='border border-2 border-info'/>
+            <TitleComponent title={'Tecnologías'}/>
             <TechnologyList list={tFrontend} />
             <TechnologyList list={tBackend} />
             <TechnologyList list={tDataBase} />

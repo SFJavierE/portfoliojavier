@@ -1,5 +1,6 @@
 import { Company, Job, WorkingTime } from './Interface';
 import InformationBoxComponent from '../../features/components/InformationBoxComponent';
+import TitleComponent from '../../features/components/TitleComponent';
 
 export default function Experiencies () {
     const experiencies : Company[] = [
@@ -81,10 +82,7 @@ export default function Experiencies () {
 
     return (
         <div>
-            <span className="fs-4">
-                Experiencias
-            </span>
-            <hr className='border border-2 border-info'/>
+            <TitleComponent title={'Experiencia'} />
             {experiencies.map((exp : Company, i: number) => listExperiencies(exp, i))}
         </div>
     )

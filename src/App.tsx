@@ -16,13 +16,9 @@ function App() {
         </div>
         <div className='p-5 text-info col'>
           <Welcome></Welcome>
-          <hr className='border border-2 border-info'/>
           <Technologies></Technologies>
-          <hr className='border border-2 border-info'/>
           <Proyects></Proyects>
-          <hr className='border border-2 border-info'/>
           <Experiencies></Experiencies>
-          <hr className='border border-2 border-info'/>
           <Achievements></Achievements>
         </div>
       </div>

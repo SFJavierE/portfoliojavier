@@ -1,5 +1,6 @@
 import { Achievement, AchievementDescription } from './Interface';
 import InformationBoxComponent from '../../features/components/InformationBoxComponent';
+import TitleComponent from '../../features/components/TitleComponent';
 
 export default function Achievements () {
     const achievements : Achievement[] = [
@@ -87,10 +88,7 @@ export default function Achievements () {
 
     return (
         <div>
-            <span className="fs-4">
-                Logros
-            </span>
-            <hr className='border border-2 border-info'/>
+            <TitleComponent title={'Logros'} />           
             {achievements.map((ach: Achievement, i: number) => listAchievements(ach, i))}
         </div>
     )
