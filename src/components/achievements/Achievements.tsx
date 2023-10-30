@@ -1,4 +1,5 @@
 import { Achievement, AchievementDescription } from './Interface';
+import InformationBoxComponent from '../../features/components/InformationBoxComponent';
 
 export default function Achievements () {
     const achievements : Achievement[] = [
@@ -63,23 +64,24 @@ export default function Achievements () {
     const listAchievements = ({placeExperiencieTitle, listAchievement} : Achievement, i: number) => {
         const achievementDescription = ({title, description} : AchievementDescription, i : number) => (
             <div className='mt-2'>
-                <span className=''>{title}</span>
-                <br className='my-2'/>
+                <div className='bg-primary p-2 rounded-1 mb-3'>
+                    <span>{title}</span>
+                </div>
                 <span>{description}</span>
                 {i < (listAchievement.length - 1) && <hr />}
             </div>
         )
 
         return (
-            <div>
-                <div className=''>
+            <InformationBoxComponent>
+                <div className='bg-primary p-2 rounded-1'>
                     <span className='fs-5'>{placeExperiencieTitle}</span>
-                    <div>
-                        {listAchievement.map((ach : AchievementDescription, i : number) => achievementDescription(ach, i))}
-                    </div>
                 </div>
-                {i < achievements.length - 1 && <hr />}
-            </div>
+                <hr className='border border-2 border-info'/>
+                <div>
+                    {listAchievement.map((ach : AchievementDescription, i : number) => achievementDescription(ach, i))}
+                </div>
+            </InformationBoxComponent>
         )
     }
 

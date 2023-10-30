@@ -8,9 +8,11 @@ export default function TechnologyList ({list} : ListTechnology) {
     return (
         <div className="d-flex my-2">
             {
-                list.map((t : Technology) => (<div className="bg-primary p-2 me-2">
+                list.map((t : Technology) => (
+                    <div className="bg-primary px-2 py-1 me-2 rounded-1">
                         {t}
-                    </div>))
+                    </div>
+                ))
             }
         </div>
     )

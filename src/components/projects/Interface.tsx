@@ -1,6 +1,6 @@
 import { Technology } from '../../features/types/TypeTechnology';
 
-type Status = 'done' | 'progress'
+type Status = 'done' | 'in progress' | 'finalizado' | 'en progreso'
 
 export interface Project {
     title: string;
