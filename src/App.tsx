@@ -15,7 +15,7 @@ function App() {
             <Navbar></Navbar>
           </div>
         </div>
-        <div className='p-5 text-info col'>
+        <div className='ps-2 pe-4 py-3 text-info col'>
           <Welcome></Welcome>
           <Technologies></Technologies>
           <Proyects></Proyects>
