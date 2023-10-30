@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Company, Job, WorkingTime } from './Interface';
+import { Company, Job } from './Interface';
 import InformationBoxComponent from '../../features/components/InformationBoxComponent';
 import TitleCollapseComponent from '../../features/components/TitleCollapseComponent';
 

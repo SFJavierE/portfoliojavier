@@ -1,6 +1,6 @@
 import './style.css';
 import React, { useState } from 'react';
-import { Button, Collapse } from 'react-bootstrap';
+import { Collapse } from 'react-bootstrap';
 import { NavbarLink, Contact } from './Interface';
 
 export default function Navbar () {
@@ -31,7 +31,7 @@ export default function Navbar () {
 
     const NavbarLink: React.FC<NavbarLink>= ({text}) => (
         <div>
-            <a className='nav-link text-info' href="#">{text}</a>
+            <span className='nav-link text-info'>{text}</span>
             <hr className='text-light'/>
         </div>
     )
