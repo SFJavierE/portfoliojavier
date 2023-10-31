@@ -12,7 +12,7 @@ export default function Technologies () {
     const tOthers: Technology[] = ['Confluence', 'Figma', 'Jira', 'Trello', 'Unity'];
 
     return(
-        <div className="mb-4">
+        <div>
             <TitleCollapseComponent
                 title={'Tecnologías'}
                 openCollapse={openCollapse}
