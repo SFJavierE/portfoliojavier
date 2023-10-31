@@ -90,7 +90,7 @@ export default function Experiencies () {
                 openCollapse={openCollapse}
                 setOpen={setOpenCollapse}
                 idCollapse='experiencie-collapse'
-                >
+            >
                 {experiencies.map((exp : Company, i: number) => listExperiencies(exp, i))}
             </TitleCollapseComponent>
         </div>

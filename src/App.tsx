@@ -1,27 +1,26 @@
+import { useState } from 'react';
+import { Collapse, Button } from 'react-bootstrap';
+// Components
 import Welcome from './components/welcome/Welcome';
 import Technologies from './components/technologies/Technologies';
 import Proyects from './components/projects/Projects';
 import Experiencies from './components/experiencies/Experiencies';
 import Achievements from './components/achievements/Achievements';
-import Navbar from './components/navbar/Navbar';
+import ContactComponent from './components/contacts/ContactComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const [openCollapseNavbar, setOpenCollapseNavbar] = useState<boolean>(false);
+
   return (
-    <div className="bg-dark">
-      <div className='row'>
-        <div className='col-2' id='sticky-sidebar'>
-          <div className='sticky-top'>
-            <Navbar></Navbar>
-          </div>
-        </div>
-        <div className='ps-2 pe-4 py-3 text-info col'>
-          <Welcome></Welcome>
-          <Technologies></Technologies>
-          <Proyects></Proyects>
-          <Experiencies></Experiencies>
-          <Achievements></Achievements>
-        </div>
+    <div className="bg-dark" style={{width: '100%', height: '100%'}}>
+      <div className='px-5 py-3 text-info'>
+        <Welcome></Welcome>
+        <ContactComponent></ContactComponent>
+        <Technologies></Technologies>
+        <Proyects></Proyects>
+        <Experiencies></Experiencies>
+        <Achievements></Achievements>
       </div>
     </div>
   );

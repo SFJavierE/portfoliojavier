@@ -3,7 +3,3 @@ export interface Contact {
     data: string;
     isLink?: boolean;
 }
-
-export interface NavbarLink {
-    text: string;
-}
