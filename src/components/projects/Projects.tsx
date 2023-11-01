@@ -87,7 +87,7 @@ export default function Projects () {
         }
     ];
 
-    const listProjects = ({title, status, technologies, description, link} : Project, i : number) => {
+    const ListProjects = ({title, status, technologies, description, link} : Project) => {
         const statusColor: string = status === 'finalizado' ? 'bg-primary border border-info' : 'bg-primary-subtle opacity-75';
         const statusClass: string = statusColor + ' p-1 rounded-1';
 
@@ -118,7 +118,14 @@ export default function Projects () {
                 setOpen={setOpenCollapse}
                 idCollapse='projects-collapse'
             >
-                {projects.map((p: Project, i: number) => listProjects(p, i))}
+                {
+                    projects.map((p: Project) => (
+                        <div key={p.title}>
+                            <ListProjects {...p}/>
+                        </div>
+                        )
+                    )
+                }
             </TitleCollapseComponent>
         </div>
     )

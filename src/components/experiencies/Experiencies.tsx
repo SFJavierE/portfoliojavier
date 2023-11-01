@@ -56,8 +56,8 @@ export default function Experiencies () {
     ]
 
 
-    const listExperiencies = ({name, description, titles, wortTime} : Company, i: number) => {
-        const listTitles = ({ name, description } : Job, i: number) => {
+    const ListExperiencies = ({name, description, titles, wortTime} : Company) => {
+        const ListTitles = ({ name, description } : Job) => {
             return (
                 <div className='my-4 '>
                     <div className='bg-primary p-2 rounded-1'>
@@ -65,7 +65,6 @@ export default function Experiencies () {
                     </div>
                     <br />
                     <span>{description}</span>
-                    {(i < titles.length - 1) && <hr />}
                 </div>
             )
         }
@@ -78,7 +77,14 @@ export default function Experiencies () {
                 <br className=''/>
                 <span>{description}</span>
                 <hr />
-                {titles.map((t: Job, i: number) => listTitles(t, i))}
+                {
+                    titles.map((t: Job) => (
+                        <div key={t.name}>
+                            <ListTitles {...t}/>
+                        </div>
+                        )
+                    )
+                }
             </InformationBoxComponent>
         )
     }
@@ -91,7 +97,14 @@ export default function Experiencies () {
                 setOpen={setOpenCollapse}
                 idCollapse='experiencie-collapse'
             >
-                {experiencies.map((exp : Company, i: number) => listExperiencies(exp, i))}
+                {
+                    experiencies.map((exp : Company) =>(
+                        <div key={exp.name}>
+                            <ListExperiencies {...exp}/>
+                        </div>
+                        )
+                    )
+                }
             </TitleCollapseComponent>
         </div>
     )

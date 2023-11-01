@@ -65,14 +65,13 @@ export default function Achievements () {
         }
     ];
 
-    const listAchievements = ({placeExperiencieTitle, listAchievement} : Achievement, i: number) => {
-        const achievementDescription = ({title, description} : AchievementDescription, i : number) => (
-            <div className='mt-2'>
+    const ListAchievements = ({placeExperiencieTitle, listAchievement} : Achievement) => {
+        const AchievementDescription = ({title, description} : AchievementDescription) => (
+            <div className='mt-3'>
                 <div className='bg-primary p-2 rounded-1 mb-3'>
                     <span>{title}</span>
                 </div>
                 <span>{description}</span>
-                {i < (listAchievement.length - 1) && <hr />}
             </div>
         )
 
@@ -82,8 +81,15 @@ export default function Achievements () {
                     <span className='fs-5'>{placeExperiencieTitle}</span>
                 </div>
                 <hr className='border border-2 border-info'/>
-                <div>
-                    {listAchievement.map((ach : AchievementDescription, i : number) => achievementDescription(ach, i))}
+                <div className='mb-2'>
+                    {
+                        listAchievement.map((ach : AchievementDescription, i : number) => (
+                                <div key={ach.title}>
+                                    <AchievementDescription {...ach}/>
+                                </div>
+                            )
+                        )
+                    }
                 </div>
             </InformationBoxComponent>
         )
@@ -97,7 +103,14 @@ export default function Achievements () {
                 setOpen={setOpenCollapse}
                 idCollapse='achievements-collapse'
             >
-               {achievements.map((ach: Achievement, i: number) => listAchievements(ach, i))}
+                {
+                    achievements.map((ach: Achievement) => (
+                            <div key={ach.placeExperiencieTitle}>
+                                <ListAchievements {...ach}/>
+                            </div>
+                        )
+                    )
+                }
             </TitleCollapseComponent>
         </div>
     )

@@ -58,7 +58,14 @@ export default function ContactComponent () {
                 idCollapse='contact-collapse'
             >
                 <div className='row'>
-                    {contactInfo.map((c) => <ContactInfo {...c}/>)}
+                    {
+                        contactInfo.map((c) => (
+                            <div key={c.contactMedium}>
+                                <ContactInfo {...c}/>)
+                            </div>
+                            )
+                        )
+                    }
                 </div>
             </TitleCollapseComponent>
         </div>
