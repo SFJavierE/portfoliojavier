@@ -59,7 +59,7 @@ export default function Experiencies () {
     const ListExperiencies = ({name, description, titles, wortTime} : Company) => {
         const ListTitles = ({ name, description } : Job) => {
             return (
-                <div className='my-4 '>
+                <div className='mt-3'>
                     <div className='bg-primary p-2 rounded-1'>
                         <span>{name}</span>
                     </div>

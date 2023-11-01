@@ -81,7 +81,7 @@ export default function Achievements () {
                     <span className='fs-5'>{placeExperiencieTitle}</span>
                 </div>
                 <hr className='border border-2 border-info'/>
-                <div className='mb-2'>
+                <div>
                     {
                         listAchievement.map((ach : AchievementDescription, i : number) => (
                                 <div key={ach.title}>

@@ -26,7 +26,7 @@ export default function ContactComponent () {
     ]
 
     const ContactInfo: React.FC<Contact> = ({contactMedium, data, isLink}) => (
-        <div className='col text-center'>
+        <div className='text-center'>
             <hr />
             {
                 isLink &&
@@ -60,9 +60,9 @@ export default function ContactComponent () {
                 <div className='row'>
                     {
                         contactInfo.map((c) => (
-                            <div key={c.contactMedium}>
-                                <ContactInfo {...c}/>)
-                            </div>
+                                <div key={c.contactMedium} className='col'>
+                                    <ContactInfo {...c}/>
+                                </div>
                             )
                         )
                     }
