@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Achievement, AchievementDescription } from './Interface';
 import InformationBoxComponent from '../../features/components/InformationBoxComponent';
 import TitleCollapseComponent from '../../features/components/TitleCollapseComponent';
