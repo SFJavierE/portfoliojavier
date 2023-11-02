@@ -88,24 +88,24 @@ export default function Projects () {
     ];
 
     const ListProjects = ({title, status, technologies, description, link} : Project) => {
-        const statusColor: string = status === 'finalizado' ? 'bg-primary border border-info' : 'bg-primary-subtle opacity-75';
+        const statusColor: string = status === 'finalizado' ? 'bg-cold-blue border border-cold-light-blue text-cold-light-blue' : 'bg-cold-light-blue text-cold-bluegray';
         const statusClass: string = statusColor + ' p-1 rounded-1';
 
         return (
             <InformationBoxComponent>
-                <div className='bg-primary py-1 px-2 rounded-1'>
-                    <span className='fs-5 me-3'>{title}</span>
-                    <a className='text-info' href={link}>{link}</a>
+                <div className='bg-cold-light-blue py-1 px-2 rounded-1'>
+                    <span className='fs-5 me-3 text-cold-blue'>{title}</span>
+                    <a className='text-cold-bluegray' href={link}>{link}</a>
                 </div>
-                <hr />
+                <hr className='border-cold-gray'/>
                 <TechnologyList list={technologies}/>
-                <hr />
-                <div className='my-3'>
+                <hr className='border-cold-gray'/>
+                <div className='my-3 text-cold-bluegray'>
                     <span className='me-2'>Estado: </span>
                     <span className={statusClass}>{status}</span>
                 </div>
-                <hr />
-                <span >{description}</span>
+                <hr className='border-cold-gray'/>
+                <span className='text-cold-bluegray' >{description}</span>
             </InformationBoxComponent>
         )
     }

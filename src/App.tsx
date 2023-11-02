@@ -59,8 +59,8 @@ function App() {
   }, [userInTop]);
 
   return (
-    <div className="bg-dark">
-      <div className='px-5 py-4 text-info'>
+    <div>
+      <div className='px-5 py-4'>
         <div className="d-flex container-fluid justify-content-center align-items-center mb-5" style={{height: '100vh'}}>
           <Welcome></Welcome>
           {
@@ -78,7 +78,7 @@ function App() {
           {
             !userInTop &&
             <button
-              className='fixed-top bg-light border-secondary opacity-50 text-secondary'
+              className='fixed-top bg-light-gray border-secondary opacity-50 text-secondary'
               style={{width: '100%', height: '25px'}}
               onClick={() => {
                 setUserInTop(true);

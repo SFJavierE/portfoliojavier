@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Achievement, AchievementDescription } from './Interface';
 import InformationBoxComponent from '../../features/components/InformationBoxComponent';
 import TitleCollapseComponent from '../../features/components/TitleCollapseComponent';
@@ -68,19 +68,19 @@ export default function Achievements () {
     const ListAchievements = ({placeExperiencieTitle, listAchievement} : Achievement) => {
         const AchievementDescription = ({title, description} : AchievementDescription) => (
             <div className='mt-3'>
-                <div className='bg-primary p-2 rounded-1 mb-3'>
-                    <span>{title}</span>
+                <div className='bg-cold-light-blue p-2 rounded-1 mb-3'>
+                    <span className='text-cold-blue'>{title}</span>
                 </div>
-                <span>{description}</span>
+                <span className='text-cold-bluegray'>{description}</span>
             </div>
         )
 
         return (
             <InformationBoxComponent>
-                <div className='bg-primary p-2 rounded-1'>
-                    <span className='fs-5'>{placeExperiencieTitle}</span>
+                <div className='bg-cold-light-blue p-2 rounded-1'>
+                    <span className='fs-5 text-cold-blue'>{placeExperiencieTitle}</span>
                 </div>
-                <hr className='border border-2 border-info'/>
+                <hr className='border-cold-gray'/>
                 <div>
                     {
                         listAchievement.map((ach : AchievementDescription, i : number) => (

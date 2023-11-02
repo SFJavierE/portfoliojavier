@@ -60,23 +60,23 @@ export default function Experiencies () {
         const ListTitles = ({ name, description } : Job) => {
             return (
                 <div className='mt-3'>
-                    <div className='bg-primary p-2 rounded-1'>
+                    <div className='bg-cold-light-blue text-cold-blue p-2 rounded-1'>
                         <span>{name}</span>
                     </div>
                     <br />
-                    <span>{description}</span>
+                    <span className='text-cold-bluegray'>{description}</span>
                 </div>
             )
         }
 
         return (
             <InformationBoxComponent>
-                <div className='bg-primary p-2 rounded-1'>
+                <div className='bg-cold-light-blue text-cold-blue p-2 rounded-1'>
                     <span className='fs-5'>{name} | </span>
                 </div>
                 <br className=''/>
-                <span>{description}</span>
-                <hr />
+                <span className='text-cold-bluegray'>{description}</span>
+                <hr className='border-cold-gray'/>
                 {
                     titles.map((t: Job) => (
                         <div key={t.name}>
