@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/portfoliojavier/static/css/main.f00e181b.css",
-    "main.js": "/portfoliojavier/static/js/main.bcdfc941.js",
+    "main.js": "/portfoliojavier/static/js/main.daa82e59.js",
     "static/js/787.333d445c.chunk.js": "/portfoliojavier/static/js/787.333d445c.chunk.js",
     "static/media/gunter_png.png": "/portfoliojavier/static/media/gunter_png.1368d0466192aca0fd98.png",
     "index.html": "/portfoliojavier/index.html",
     "main.f00e181b.css.map": "/portfoliojavier/static/css/main.f00e181b.css.map",
-    "main.bcdfc941.js.map": "/portfoliojavier/static/js/main.bcdfc941.js.map",
+    "main.daa82e59.js.map": "/portfoliojavier/static/js/main.daa82e59.js.map",
     "787.333d445c.chunk.js.map": "/portfoliojavier/static/js/787.333d445c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f00e181b.css",
-    "static/js/main.bcdfc941.js"
+    "static/js/main.daa82e59.js"
   ]
 }
