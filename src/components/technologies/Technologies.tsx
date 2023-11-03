@@ -9,12 +9,11 @@ interface TechnologyName{
 export default function Technologies () {
     const [technolgies, setTechnologies] = useState<Technology[]>([]);
 
-    const tFrontend : Technology[] = ['Javascript', 'React', 'Typescript', 'Angular', 'HTML', 'Css', 'Sass', 'TailwindCss', 'Bootstrap', 'ReactNative'];
-    const tBackend: Technology[] = ['NodeJs', 'ExpressJs', 'Ruby on Rails', 'C#', 'Postman'];
-    const tDataBase: Technology[] = ['SQL', 'GraphQL', 'PostgresQl', 'Firebase'];
-    const tOthers: Technology[] = ['Confluence', 'Figma', 'Jira', 'Trello', 'Unity'];
-
     useEffect(() => {
+        const tFrontend : Technology[] = ['Javascript', 'React', 'Typescript', 'Angular', 'HTML', 'Css', 'Sass', 'TailwindCss', 'Bootstrap', 'ReactNative'];
+        const tBackend: Technology[] = ['NodeJs', 'ExpressJs', 'Ruby on Rails', 'C#', 'Postman'];
+        const tDataBase: Technology[] = ['SQL', 'GraphQL', 'PostgresQl', 'Firebase'];
+        const tOthers: Technology[] = ['Confluence', 'Figma', 'Jira', 'Trello', 'Unity'];
         const tAll : Technology[] = tFrontend.concat(tBackend).concat(tDataBase).concat(tOthers);
         setTechnologies(tAll);
     }, []);

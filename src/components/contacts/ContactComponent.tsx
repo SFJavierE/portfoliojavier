@@ -44,7 +44,7 @@ export default function ContactComponent () {
             <div className='row'>
                 {
                     contactInfo.map((c) => (
-                            <div key={c.contactMedium} className='col'>
+                            <div key={c.data} className='col'>
                                 <ContactInfo {...c}/>
                             </div>
                         )

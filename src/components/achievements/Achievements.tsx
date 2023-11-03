@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import { Achievement, AchievementDescription, AchievementDescriptionList } from './Interface';
 
 export default function Achievements () {
-    const [openCollapse, setOpenCollapse] = useState<boolean>(false);
-
     const achievements : Achievement[] = [
         {
             placeExperiencieTitle: 'Wisboo',

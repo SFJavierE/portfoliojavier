@@ -1,11 +1,6 @@
-import { useState } from 'react';
 import { Project } from './Interface';
-import InformationBoxComponent from '../../features/components/InformationBoxComponent';
-import TitleCollapseComponent from '../../features/components/TitleCollapseComponent';
 
 export default function Projects () {
-    const [openCollapse, setOpenCollapse] = useState<boolean>(false);
-
     const projects : Project[] = [
         {
             title: 'LeagueOfLegendsARAM',
@@ -87,7 +82,6 @@ export default function Projects () {
     ];
 
     const ListProjects = ({title, status, technologies, description, link} : Project) => {
-
         return (
             <div className='row mb-5'>
                 <div className='col-3'>
@@ -95,7 +89,9 @@ export default function Projects () {
                 </div>
                 <div className='col border-start ps-3'>
                     <span className='fs-5 me-3 text-info'>{title}</span>
-                    <a className='text-cold-bluegray icon-link' href={link} target='_blank'></a>
+                    <a className='text-cold-bluegray' href={link} target='_blank' rel="noreferrer">
+                        <div className='icon-link'/>
+                    </a>
                     <div className='my-3 text-cold-bluegray'>
                         <span className='border-start border-end px-2'>{status}</span>
                     </div>
