@@ -1,10 +1,6 @@
-import { useState } from 'react';
-import { Company, Job } from './Interface';
-import InformationBoxComponent from '../../features/components/InformationBoxComponent';
-import TitleCollapseComponent from '../../features/components/TitleCollapseComponent';
+import { Company, Job, ListTitles, WorkingTimeDate } from './Interface';
 
 export default function Experiencies () {
-    const [openCollapse, setOpenCollapse] = useState<boolean>(false);
 
     const experiencies : Company[] = [
         {
@@ -20,9 +16,9 @@ export default function Experiencies () {
                     description: 'Desarrollo de funcionalidades en backend utilizando Ruby on Rails y en front utilizamos AngularJS, para dar mantenimiento o realizar mejoras dentro del proyecto de Wisboo.',
                 }
             ],
-            wortTime: {
-                startDate: new Date(),
-                endDate: new Date(),
+            workingTime: {
+                startDate: new Date('06/15/2021'),
+                endDate: new Date('06/30/2023'),
             },
             link: ''
         },
@@ -33,9 +29,9 @@ export default function Experiencies () {
                 name: 'Fullstack Developer',
                 description: 'Desarrollo fullstack utilizando Typescript y TailwindsCss para el desarrollo front, Express para el backend y para el manejo de datos utilizé Hasura que te proporciona una consola con la cual puedes hacer manejo de datos con GraphQL.',
             }],
-            wortTime: {
-                startDate: new Date(),
-                endDate: new Date(),
+            workingTime: {
+                startDate: new Date('10/15/2020'),
+                endDate: new Date('03/30/2021'),
             },
             link: ''
         },
@@ -48,64 +44,74 @@ export default function Experiencies () {
                     description: 'Desarrollo de juegos utilizando Unity con C# para el manejo de objetos.',
                 }
             ],
-            wortTime: {
-                startDate: new Date(),
-                endDate: new Date(),
+            workingTime: {
+                startDate: new Date('12/15/2019'),
+                endDate: new Date('06/01/2020'),
             }
         }
     ]
 
 
-    const ListExperiencies = ({name, description, titles, wortTime} : Company) => {
-        const ListTitles = ({ name, description } : Job) => {
+    const ListExperiencies = ({name, description, titles, workingTime: {startDate, endDate}} : Company) => {
+        const ListTitles: React.FC<ListTitles> = ({ title: { name, description }, index }) => {
             return (
-                <div className='mt-3'>
-                    <div className='bg-cold-light-blue text-cold-blue p-2 rounded-1'>
+                <div className={`${index !== 0 && 'mt-3'}`}>
+                    <div className='text-info'>
                         <span>{name}</span>
                     </div>
-                    <br />
-                    <span className='text-cold-bluegray'>{description}</span>
+                    <span className='text-cold-bluegray' style={{fontSize: '15px'}}>{description}</span>
                 </div>
             )
         }
 
+        const Date: React.FC<WorkingTimeDate> = ({date}) => (
+            <span className='text-info'>
+                {`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}
+            </span>
+        )
+
         return (
-            <InformationBoxComponent>
-                <div className='bg-cold-light-blue text-cold-blue p-2 rounded-1'>
-                    <span className='fs-5'>{name} | </span>
-                </div>
-                <br className=''/>
-                <span className='text-cold-bluegray'>{description}</span>
-                <hr className='border-cold-gray'/>
-                {
-                    titles.map((t: Job) => (
-                        <div key={t.name}>
-                            <ListTitles {...t}/>
+            <div className='row mb-4'>
+                <div className='col-3'>
+                    <div className='text-info d-flex align-items-center'>
+                        <span className='fs-5'>{name}</span>
+                        <div className='ms-3' style={{fontSize: '15px'}}>
+                            <Date date={startDate}/>
+                            <span className='mx-2'>-</span>
+                            <Date date={endDate}/>
                         </div>
+                    </div>
+                    <hr className='border border-info' style={{marginTop: '-2px'}}/>
+                    <span className='text-cold-bluegray' style={{fontSize: '15px'}}>{description}</span>
+                </div>
+                <div className='col border-start ps-3'>
+                    {
+                        titles.map((t: Job, i: number) => (
+                            <div key={t.name}>
+                                <ListTitles title={t} index={i}/>
+                            </div>
+                            )
                         )
-                    )
-                }
-            </InformationBoxComponent>
+                    }
+                </div>
+            </div>
         )
     }
 
     return (
-        <div>
-            <TitleCollapseComponent
-                title={'Experiencia'}
-                openCollapse={openCollapse}
-                setOpen={setOpenCollapse}
-                idCollapse='experiencie-collapse'
-            >
-                {
-                    experiencies.map((exp : Company) =>(
-                        <div key={exp.name}>
-                            <ListExperiencies {...exp}/>
-                        </div>
-                        )
+        <div className='mt-5'>
+            <div>
+                <span className='text-info fs-2'>Experiencia Profesional</span>
+                <hr className='border border-info' style={{marginTop: '-6px'}}/>
+            </div>
+            {
+                experiencies.map((exp : Company) =>(
+                    <div key={exp.name}>
+                        <ListExperiencies {...exp}/>
+                    </div>
                     )
-                }
-            </TitleCollapseComponent>
+                )
+            }
         </div>
     )
 }

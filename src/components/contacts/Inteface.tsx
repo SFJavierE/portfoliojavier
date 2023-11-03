@@ -1,5 +1,5 @@
 export interface Contact {
-    contactMedium: 'Github' | 'N° Celular' | 'Email' | 'Linkedin'
+    contactMedium?: 'Github' | 'Linkedin'
     data: string;
     isLink?: boolean;
 }

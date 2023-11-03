@@ -1,16 +1,11 @@
-import React, { useState } from 'react';
-import TitleCollapseComponent from '../../features/components/TitleCollapseComponent';
 import { Contact } from './Inteface';
 
 export default function ContactComponent () {
-    const [openCollapse, setOpenCollapse] = useState<boolean>(false);
     const contactInfo: Contact[] = [
         {
-            contactMedium: 'N° Celular',
             data: '(+54) 223-6696559'
         },
         {
-            contactMedium: 'Email',
             data: 'sosafuch@gmail.com'
         },
         {
@@ -26,8 +21,7 @@ export default function ContactComponent () {
     ]
 
     const ContactInfo: React.FC<Contact> = ({contactMedium, data, isLink}) => (
-        <div className='text-center'>
-            <hr />
+        <div className='text-center container-fluid p-2 text-info'>
             {
                 isLink &&
                 <a
@@ -39,35 +33,24 @@ export default function ContactComponent () {
             }
             {
                 !isLink &&
-                <div>
-                    <span>{contactMedium}: </span>
-                    <span>{data}</span>
-                </div>
+                <span className=''>{data}</span>
             }
-            <hr />
         </div>
     )
 
 
     return(
-        <div>
-            <TitleCollapseComponent
-                title={'Contacto'}
-                openCollapse={openCollapse}
-                setOpen={setOpenCollapse}
-                idCollapse='contact-collapse'
-            >
-                <div className='row'>
-                    {
-                        contactInfo.map((c) => (
-                                <div key={c.contactMedium} className='col'>
-                                    <ContactInfo {...c}/>
-                                </div>
-                            )
+        <div className='border-end border-start border-3 border-bottom rounded-bottom-4'>
+            <div className='row'>
+                {
+                    contactInfo.map((c) => (
+                            <div key={c.contactMedium} className='col'>
+                                <ContactInfo {...c}/>
+                            </div>
                         )
-                    }
-                </div>
-            </TitleCollapseComponent>
+                    )
+                }
+            </div>
         </div>
     )
 }

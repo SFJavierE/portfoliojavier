@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import { Achievement, AchievementDescription } from './Interface';
-import InformationBoxComponent from '../../features/components/InformationBoxComponent';
-import TitleCollapseComponent from '../../features/components/TitleCollapseComponent';
+import { Achievement, AchievementDescription, AchievementDescriptionList } from './Interface';
 
 export default function Achievements () {
     const [openCollapse, setOpenCollapse] = useState<boolean>(false);
@@ -66,52 +64,49 @@ export default function Achievements () {
     ];
 
     const ListAchievements = ({placeExperiencieTitle, listAchievement} : Achievement) => {
-        const AchievementDescription = ({title, description} : AchievementDescription) => (
-            <div className='mt-3'>
-                <div className='bg-cold-light-blue p-2 rounded-1 mb-3'>
-                    <span className='text-cold-blue'>{title}</span>
+        const AchievementDescription: React.FC<AchievementDescriptionList> = ({achievement: {title, description}, index} ) => (
+            <div className={`${index !== 0 && 'mt-3'}`}>
+                <div>
+                    <span className='text-info'>{title}</span>
                 </div>
-                <span className='text-cold-bluegray'>{description}</span>
+                <span className='text-cold-bluegray' style={{fontSize: '15px'}}>{description}</span>
             </div>
         )
 
         return (
-            <InformationBoxComponent>
-                <div className='bg-cold-light-blue p-2 rounded-1'>
-                    <span className='fs-5 text-cold-blue'>{placeExperiencieTitle}</span>
+            <div className='row mb-4'>
+                <div className='col-3'>
+                    <span className='fs-5 text-info'>{placeExperiencieTitle}</span>
+                    <hr className='border border-info' style={{marginTop: '-2px'}}/>
                 </div>
-                <hr className='border-cold-gray'/>
-                <div>
+                <div className='col border-start ps-3'>
                     {
                         listAchievement.map((ach : AchievementDescription, i : number) => (
                                 <div key={ach.title}>
-                                    <AchievementDescription {...ach}/>
+                                    <AchievementDescription achievement={ach} index={i}/>
                                 </div>
                             )
                         )
                     }
                 </div>
-            </InformationBoxComponent>
+            </div>
         )
     }
 
     return (
         <div>
-            <TitleCollapseComponent
-                title={'Logros'}
-                openCollapse={openCollapse}
-                setOpen={setOpenCollapse}
-                idCollapse='achievements-collapse'
-            >
-                {
-                    achievements.map((ach: Achievement) => (
-                            <div key={ach.placeExperiencieTitle}>
-                                <ListAchievements {...ach}/>
-                            </div>
-                        )
+            <div className='mb-4'>
+                <span className='text-info fs-2'>Logros</span>
+                <hr className='border border-info' style={{marginTop: '-6px'}}/>
+            </div>
+            {
+                achievements.map((ach: Achievement) => (
+                        <div key={ach.placeExperiencieTitle}>
+                            <ListAchievements {...ach}/>
+                        </div>
                     )
-                }
-            </TitleCollapseComponent>
+                )
+            }
         </div>
     )
 }

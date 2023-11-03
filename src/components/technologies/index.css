@@ -1,0 +1,119 @@
+.icon{
+    width: 50px;
+    height: 50px;
+}
+
+.icon--angular {
+    background-image: url('../../features/imgs/technologies/angular.png');
+    background-size: cover;
+}
+
+.icon--bootstrap {
+    background-image: url('../../features/imgs/technologies/bootstrap.png');
+    background-size: cover;
+}
+
+.icon--_c{
+    background-image: url('../../features/imgs/technologies/_c.png');
+    background-size: cover;
+}
+
+.icon--confluence {
+    background-image: url('../../features/imgs/technologies/confluence.png');
+    background-size: cover;
+}
+
+.icon--css {
+    background-image: url('../../features/imgs/technologies/css.png');
+    background-size: cover;
+}
+
+.icon--expressjs {
+    background-image: url('../../features/imgs/technologies/expressjs.png');
+    background-size: cover;
+}
+
+.icon--figma {
+    background-image: url('../../features/imgs/technologies/figma.png');
+    background-size: cover;
+}
+
+.icon--firebase {
+    background-image: url('../../features/imgs/technologies/firebase.png');
+    background-size: cover;
+}
+
+.icon--graphql {
+    background-image: url('../../features/imgs/technologies/graphql.png');
+    background-size: cover;
+}
+
+.icon--html {
+    background-image: url('../../features/imgs/technologies/html.png');
+    background-size: cover;
+}
+
+.icon--jira {
+    background-image: url('../../features/imgs/technologies/jira.png');
+    background-size: cover;
+}
+
+.icon--javascript {
+    background-image: url('../../features/imgs/technologies/javascript.png');
+    background-size: cover;
+}
+
+.icon--nodejs {
+    background-image: url('../../features/imgs/technologies/nodejs.png');
+    background-size: cover;
+}
+
+.icon--postgresql {
+    background-image: url('../../features/imgs/technologies/postgresql.png');
+    background-size: cover;
+}
+
+.icon--postman {
+    background-image: url('../../features/imgs/technologies/postman.png');
+    background-size: cover;
+}
+
+.icon--react {
+    background-image: url('../../features/imgs/technologies/react.png');
+    background-size: cover;
+}
+
+.icon--rubyonrails {
+    background-image: url('../../features/imgs/technologies/rubyonrails.png');
+    background-size: cover;
+}
+
+.icon--sass {
+    background-image: url('../../features/imgs/technologies/sass.png');
+    background-size: cover;
+}
+
+.icon--sql {
+    background-image: url('../../features/imgs/technologies/sql.png');
+    background-size: cover;
+}
+
+.icon--tailwindcss {
+    background-image: url('../../features/imgs/technologies/tailwindcss.png');
+    background-size: cover;
+}
+
+.icon--trello {
+    background-image: url('../../features/imgs/technologies/trello.png');
+    background-size: cover;
+}
+
+.icon--typescript {
+    background-image: url('../../features/imgs/technologies/typescript.png');
+    background-size: cover;
+}
+
+.icon--unity {
+    background-image: url('../../features/imgs/technologies/unity.png');
+    background-size: cover;
+}

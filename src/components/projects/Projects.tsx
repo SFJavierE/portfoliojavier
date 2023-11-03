@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Project } from './Interface';
-import TechnologyList from '../../features/components/TechnologyList';
 import InformationBoxComponent from '../../features/components/InformationBoxComponent';
 import TitleCollapseComponent from '../../features/components/TitleCollapseComponent';
 
@@ -25,7 +24,7 @@ export default function Projects () {
         {
             title: 'mangaecommerceapi',
             status: 'en progreso',
-            technologies: ['NodeJs', 'Express'],
+            technologies: ['NodeJs', 'ExpressJs'],
             description: 'Una api para manejar la base de datos del e-commerce de mangas.',
             link: 'https://github.com/Zoaxx1/mangaecommerceapi'
         },
@@ -46,21 +45,21 @@ export default function Projects () {
         {
             title: 'dogs',
             status: 'finalizado',
-            technologies: ['NodeJs', 'Express', 'React', 'TailwindCss'],
+            technologies: ['NodeJs', 'ExpressJs', 'React', 'TailwindCss'],
             description: 'Dogs fue hecho para una prueba técnica donde a través de una Api obtenía una lista de perros, además que podía agregarlos, borrarlos, etc. Decidí incluirlo porque me gustó mucho como quedo y merece la pena mostrarlo.',
             link: 'https://github.com/Zoaxx1/dogs'
         },
         {
             title: 'BankAppMe',
             status: 'finalizado',
-            technologies: ['ReactNative', 'NodeJs', 'Express', 'AWS', 'Postman', 'Css'],
+            technologies: ['ReactNative', 'NodeJs', 'ExpressJs', 'AWS', 'Postman', 'Css'],
             description: 'Billetera Virtual que nos plantearon como proyecto final el bootcamp Henry, utilizamos por primera vez React Native por lo que estaba 100% enfocada al ambiente mobile, y utilizamos AWS para manejar la base de datos en tiempo real. En este proyecto cumplí un Rol parecido al e-commerce, lideré el Front y me enfoqué esta vez en la investigación del lenguaje (como dije antes, era la primera vez que lo usabamos) y la creación de las distintas vistas.',
             link: 'https://github.com/Zoaxx1/BankAppMe'
         },
         {
             title: 'BackToThe90s-E-commerce',
             status: 'finalizado',
-            technologies: ['React', 'Postgress', 'Express', 'NodeJs', 'Trello', 'Postman', 'Css'],
+            technologies: ['React', 'PostgresQl', 'ExpressJs', 'NodeJs', 'Trello', 'Postman', 'Css'],
             description: 'Proyecto creado y evaluado en Henry con otros 3 compañeros, donde hicimos un e-commerce con la idea de vender cosas de los 90 con precios de los 90. Estuve liderando el frontend y ayudando en el backend, principalmente estuve en la conexión entre el Front y la Api.',
             link: 'https://github.com/Zoaxx1/BackToThe90s-E-commerce'
         },
@@ -88,45 +87,38 @@ export default function Projects () {
     ];
 
     const ListProjects = ({title, status, technologies, description, link} : Project) => {
-        const statusColor: string = status === 'finalizado' ? 'bg-cold-blue border border-cold-light-blue text-cold-light-blue' : 'bg-cold-light-blue text-cold-bluegray';
-        const statusClass: string = statusColor + ' p-1 rounded-1';
 
         return (
-            <InformationBoxComponent>
-                <div className='bg-cold-light-blue py-1 px-2 rounded-1'>
-                    <span className='fs-5 me-3 text-cold-blue'>{title}</span>
-                    <a className='text-cold-bluegray' href={link}>{link}</a>
+            <div className='row mb-5'>
+                <div className='col-3'>
+                    <img src="" alt="" width={300} height={150}/>
                 </div>
-                <hr className='border-cold-gray'/>
-                <TechnologyList list={technologies}/>
-                <hr className='border-cold-gray'/>
-                <div className='my-3 text-cold-bluegray'>
-                    <span className='me-2'>Estado: </span>
-                    <span className={statusClass}>{status}</span>
+                <div className='col border-start ps-3'>
+                    <span className='fs-5 me-3 text-info'>{title}</span>
+                    <a className='text-cold-bluegray icon-link' href={link} target='_blank'></a>
+                    <div className='my-3 text-cold-bluegray'>
+                        <span className='border-start border-end px-2'>{status}</span>
+                    </div>
+                    <span className='text-cold-bluegray' >{description}</span>
                 </div>
-                <hr className='border-cold-gray'/>
-                <span className='text-cold-bluegray' >{description}</span>
-            </InformationBoxComponent>
+            </div>
         )
     }
 
     return (
         <div>
-            <TitleCollapseComponent
-                title={'Proyectos'}
-                openCollapse={openCollapse}
-                setOpen={setOpenCollapse}
-                idCollapse='projects-collapse'
-            >
-                {
-                    projects.map((p: Project) => (
-                        <div key={p.title}>
-                            <ListProjects {...p}/>
-                        </div>
-                        )
+            <div className='mb-4'>
+                <span className='text-info fs-2'>Proyectos</span>
+                <hr className='border border-info' style={{marginTop: '-6px'}}/>
+            </div>
+            {
+                projects.map((p: Project) => (
+                    <div key={p.title}>
+                        <ListProjects {...p}/>
+                    </div>
                     )
-                }
-            </TitleCollapseComponent>
+                )
+            }
         </div>
     )
 }

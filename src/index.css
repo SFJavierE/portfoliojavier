@@ -4,31 +4,31 @@ body{
 }
 
 .bg-cold-blue {
-  background-color: #4A55A2;
+  background-color: #222831;
 }
 
 .bg-cold-bluegray {
-  background-color: #7895CB;
+  background-color: #393E46;
 }
 
 .bg-cold-light-blue{
-  background-color: #A0BFE0;
+  background-color: #00ADB5;
 }
 
 .bg-cold-gray{
-  background-color: #C5DFF8;
+  background-color: #EEEEEE;
 }
 
 .text-cold-blue {
-  color: #4A55A2;
+  color: #222831;
 }
 
 .text-cold-bluegray {
-  color: #7895CB;
+  color: #393E46;
 }
 
 .text-cold-light-blue{
-  color: #A0BFE0;
+  color: #00ADB5;
 }
 
 .text-cold-gray{
@@ -36,14 +36,21 @@ body{
 }
 
 .border-cold-light-blue{
-  border-color: #A0BFE0;
+  border-color: #00ADB5;
 }
 
 .border-cold-gray{
-  border-color: #C5DFF8;
+  border-color: #EEEEEE;
 }
 
 .bg-penguin{
   background-image: url('./features/imgs/gunter_png.png');
+  background-size: cover;
+}
+
+.icon-link {
+  width: 18px;
+  height: 18px;
+  background-image: url('./features/imgs/icons/link_2.png');
   background-size: cover;
 }
