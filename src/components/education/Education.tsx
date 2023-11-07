@@ -79,7 +79,11 @@ export default function EducationComponent () {
                 <span className='text-info fs-2'>Educación</span>
                 <hr className='border border-info' style={{marginTop: '-6px'}}/>
             </div>
-            { educations.map((ed) => <EducationList {...ed}/>) }
+            { educations.map((ed) =>
+                <div key={ed.title}>
+                    <EducationList {...ed}/>
+                </div>)
+            }
         </div>
     )
 }
