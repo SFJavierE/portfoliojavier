@@ -35,7 +35,7 @@ export default function Technologies () {
     }
 
     return(
-        <div className='mb-3 border-start border-end border-3 px-2 mt-5'>
+        <div className='mb-3 border-start border-end border-3 px-2 mt-5 border-primary'>
             <div className="my-2 d-flex justify-content-around align-items-center">
             {
                 technolgies.map((name : Technology) => (

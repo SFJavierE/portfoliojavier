@@ -21,11 +21,11 @@ export default function ContactComponent () {
     ]
 
     const ContactInfo: React.FC<Contact> = ({contactMedium, data, isLink}) => (
-        <div className='text-center container-fluid p-2 text-info'>
+        <div className='text-center container-fluid p-2 fs-7  text-cold-3'>
             {
                 isLink &&
                 <a
-                    className='text-decoration-none text-info'
+                    className='text-decoration-none  text-cold-3'
                     href={data}
                 >
                     {contactMedium}
@@ -40,7 +40,7 @@ export default function ContactComponent () {
 
 
     return(
-        <div className='border-end border-start border-3 border-bottom rounded-bottom-4'>
+        <div className='rounded-bottom-4 bg-cold-2'>
             <div className='row'>
                 {
                     contactInfo.map((c) => (

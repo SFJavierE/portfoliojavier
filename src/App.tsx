@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   return (
-    <div className='container-fluid py-4 px-5'>
+    <div className='container-fluid py-4 px-5 text-cold-4'>
       <div className=''>
         <div className='mb-5'>
           <Welcome></Welcome>

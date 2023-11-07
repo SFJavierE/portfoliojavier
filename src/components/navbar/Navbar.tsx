@@ -12,8 +12,8 @@ export default function Navbar () {
     )
 
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary rounded-top-3" style={{height: 'auto'}}>
-            <div className='bg-penguin position-absolute border border-1 rounded-5' style={{width: '50px', height: '50px'}}>
+        <nav className="navbar navbar-expand-lg bg-cold-3 rounded-top-3 text-cold-2 fw-bold" style={{height: 'auto'}}>
+            <div className='bg-penguin position-absolute rounded-5 bg-cold-4' style={{width: '60px', height: '60px', top: '25%'}}>
             </div>
             <div className="container-fluid d-flex justify-content-around">
                 { itemsList.map((item: string) => 

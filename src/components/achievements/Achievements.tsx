@@ -1,4 +1,5 @@
 import { Achievement, AchievementDescription, AchievementDescriptionList } from './Interface';
+import TitleComponent from '../../features/components/TitleComponent';
 
 export default function Achievements () {
     const achievements : Achievement[] = [
@@ -64,16 +65,16 @@ export default function Achievements () {
         const AchievementDescription: React.FC<AchievementDescriptionList> = ({achievement: {title, description}, index} ) => (
             <div className={`${index !== 0 && 'mt-3'}`}>
                 <div>
-                    <span className='text-info'>{title}</span>
+                    <span className='text-cold-3'>{title}</span>
                 </div>
-                <span className='text-cold-bluegray' style={{fontSize: '15px'}}>{description}</span>
+                <span style={{fontSize: '15px'}}>{description}</span>
             </div>
         )
 
         return (
             <div className='row mb-4'>
                 <div className='col-3'>
-                    <span className='fs-5 text-info'>{placeExperiencieTitle}</span>
+                    <span className='fs-5 text-cold-3'>{placeExperiencieTitle}</span>
                     <hr className='border border-info' style={{marginTop: '-2px'}}/>
                 </div>
                 <div className='col border-start ps-3'>
@@ -92,10 +93,7 @@ export default function Achievements () {
 
     return (
         <div>
-            <div className='mb-4'>
-                <span className='text-info fs-2'>Logros</span>
-                <hr className='border border-info' style={{marginTop: '-6px'}}/>
-            </div>
+            <TitleComponent title={'Logros'}/>
             {
                 achievements.map((ach: Achievement) => (
                         <div key={ach.placeExperiencieTitle}>

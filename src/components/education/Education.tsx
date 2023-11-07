@@ -1,4 +1,5 @@
 import { Education, TimeDate } from './Interface';
+import TitleComponent from '../../features/components/TitleComponent';
 
 export default function EducationComponent () {
     const educations : Education[] = [
@@ -44,7 +45,7 @@ export default function EducationComponent () {
     const EducationList : React.FC<Education> = ({title, time: {start, end}, place, link, description}) => {
         const Date : React.FC<TimeDate> = ({date}) => {
             return (
-                <span className='text-info'>
+                <span>
                     {`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}
                 </span>
             )
@@ -52,9 +53,9 @@ export default function EducationComponent () {
 
         return (
             <div className='row mb-4'>
-                <div className='text-info col-3'>
+                <div className='col-3'>
                     <div>
-                        <div className='text-info'>
+                        <div className='text-cold-3'>
                             <span>{title}</span>
                         </div>
                         <hr style={{marginBottom: '5px', marginTop: '5px'}}/>
@@ -67,7 +68,7 @@ export default function EducationComponent () {
                         <span >{place}</span>
                     </div>
                 </div>
-                <div className='col text-info border-start ps-3'>
+                <div className='col border-start ps-3 border-primary text-cold-4'>
                     {description && <span>{description}</span>}
                     {(description && link) && <br />}
                     {link && <span>{link}</span>}
@@ -79,10 +80,7 @@ export default function EducationComponent () {
 
     return (
         <div className='mt-4'>
-            <div className='mb-2'>
-                <span className='text-info fs-2'>Educación</span>
-                <hr className='border border-info' style={{marginTop: '-6px'}}/>
-            </div>
+            <TitleComponent title={'Educación'}/>
             { educations.map((ed) =>
                 <div key={ed.title}>
                     <EducationList {...ed}/>

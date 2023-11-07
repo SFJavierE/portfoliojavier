@@ -1,4 +1,5 @@
 import { Company, Job, ListTitles, WorkingTimeDate } from './Interface';
+import TitleComponent from '../../features/components/TitleComponent';
 
 export default function Experiencies () {
 
@@ -56,16 +57,16 @@ export default function Experiencies () {
         const ListTitles: React.FC<ListTitles> = ({ title: { name, description }, index }) => {
             return (
                 <div className={`${index !== 0 && 'mt-3'}`}>
-                    <div className='text-info'>
-                        <span>{name}</span>
+                    <div>
+                        <span className='text-cold-3'>{name}</span>
                     </div>
-                    <span className='text-cold-bluegray' style={{fontSize: '15px'}}>{description}</span>
+                    <span style={{fontSize: '15px'}}>{description}</span>
                 </div>
             )
         }
 
         const Date: React.FC<WorkingTimeDate> = ({date}) => (
-            <span className='text-info'>
+            <span>
                 {`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}
             </span>
         )
@@ -73,8 +74,8 @@ export default function Experiencies () {
         return (
             <div className='row mb-4'>
                 <div className='col-3'>
-                    <div className='text-info d-flex align-items-center'>
-                        <span className='fs-5'>{name}</span>
+                    <div className='d-flex align-items-center'>
+                        <span className='fs-5 text-cold-3'>{name}</span>
                         <div className='ms-3' style={{fontSize: '15px'}}>
                             <Date date={startDate}/>
                             <span className='mx-2'>-</span>
@@ -82,7 +83,7 @@ export default function Experiencies () {
                         </div>
                     </div>
                     <hr className='border border-info' style={{marginTop: '-2px'}}/>
-                    <span className='text-cold-bluegray' style={{fontSize: '15px'}}>{description}</span>
+                    <span style={{fontSize: '15px'}}>{description}</span>
                 </div>
                 <div className='col border-start ps-3'>
                     {
@@ -100,10 +101,7 @@ export default function Experiencies () {
 
     return (
         <div className='mt-5'>
-            <div>
-                <span className='text-info fs-2'>Experiencia Profesional</span>
-                <hr className='border border-info' style={{marginTop: '-6px'}}/>
-            </div>
+            <TitleComponent title={'Experiencia Profesional'} />
             {
                 experiencies.map((exp : Company) =>(
                     <div key={exp.name}>

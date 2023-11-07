@@ -1,4 +1,5 @@
 import { Project } from './Interface';
+import TitleComponent from '../../features/components/TitleComponent';
 
 export default function Projects () {
     const projects : Project[] = [
@@ -88,14 +89,14 @@ export default function Projects () {
                     <img src="" alt="" width={300} height={150}/>
                 </div>
                 <div className='col border-start ps-3'>
-                    <span className='fs-5 me-3 text-info'>{title}</span>
-                    <a className='text-cold-bluegray' href={link} target='_blank' rel="noreferrer">
+                    <span className='fs-5 me-3 text-cold-3'>{title}</span>
+                    <a href={link} target='_blank' rel="noreferrer">
                         <div className='icon-link'/>
                     </a>
-                    <div className='my-3 text-cold-bluegray'>
-                        <span className='border-start border-end px-2'>{status}</span>
+                    <div className='my-3'>
+                        <span className='border-start border-end px-2 text-cold-3'>{status}</span>
                     </div>
-                    <span className='text-cold-bluegray' >{description}</span>
+                    <span>{description}</span>
                 </div>
             </div>
         )
@@ -103,10 +104,7 @@ export default function Projects () {
 
     return (
         <div>
-            <div className='mb-4'>
-                <span className='text-info fs-2'>Proyectos</span>
-                <hr className='border border-info' style={{marginTop: '-6px'}}/>
-            </div>
+            <TitleComponent title={'Proyectos'}/>
             {
                 projects.map((p: Project) => (
                     <div key={p.title}>
