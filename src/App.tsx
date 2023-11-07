@@ -6,6 +6,7 @@ import Experiencies from './components/experiencies/Experiencies';
 import Achievements from './components/achievements/Achievements';
 import Navbar from './components/navbar/Navbar';
 import ContactComponent from './components/contacts/ContactComponent';
+import EducationComponent from './components/education/Education';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         </div>
         <div className=''>
           <Technologies></Technologies>
+          <EducationComponent/>
           <Projects></Projects>
           <Experiencies></Experiencies>
           <Achievements></Achievements>
