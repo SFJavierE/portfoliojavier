@@ -42,7 +42,7 @@ export default function EducationComponent () {
     ]
 
     const EducationList : React.FC<Education> = ({title, time: {start, end}, place, link, description}) => {
-        const TimeList : React.FC<TimeDate> = ({date}) => {
+        const Date : React.FC<TimeDate> = ({date}) => {
             return (
                 <span className='text-info'>
                     {`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}
@@ -54,13 +54,17 @@ export default function EducationComponent () {
             <div className='row mb-4'>
                 <div className='text-info col-3'>
                     <div>
-                        <span>{title}</span>
-                        <br />
-                        <span>{place}</span>
-                        <div>
-                            <TimeList date={start}/>
-                            <TimeList date={end}/>
+                        <div className='text-info'>
+                            <span>{title}</span>
                         </div>
+                        <hr style={{marginBottom: '5px', marginTop: '5px'}}/>
+                        <div style={{fontSize: '15px'}}>
+                            <Date date={start}/>
+                            <span className='mx-2'>-</span>
+                            <Date date={end}/>
+                        </div>
+                        <hr style={{marginBottom: '5px', marginTop: '5px'}}/>
+                        <span >{place}</span>
                     </div>
                 </div>
                 <div className='col text-info border-start ps-3'>
@@ -74,7 +78,7 @@ export default function EducationComponent () {
     }
 
     return (
-        <div>
+        <div className='mt-4'>
             <div className='mb-2'>
                 <span className='text-info fs-2'>Educación</span>
                 <hr className='border border-info' style={{marginTop: '-6px'}}/>
