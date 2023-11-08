@@ -9,3 +9,7 @@ export interface Project {
     description: string;
     link: string
 }
+
+export interface StatusComp {
+    status: Status;
+}

@@ -7,7 +7,7 @@ export default function Welcome () {
                 <span style={{fontSize: '70px'}}>
                     Bienvenidos
                 </span>
-                <hr className='border border-2 border-primary' style={{marginTop: '-10px'}}/>
+                <hr className='border-cold-3' style={{marginTop: '-10px'}}/>
             </div>
             <span className='pe-5' style={{fontSize: '16px'}}>
                 {Text._1}     

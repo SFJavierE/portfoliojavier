@@ -1,5 +1,41 @@
-import { Project } from './Interface';
+import { Project, StatusComp } from './Interface';
 import TitleComponent from '../../features/components/TitleComponent';
+
+const StatusComponent : React.FC<StatusComp> = ({status}) => {
+    let classN = 'px-2 border-cold-3-start border-cold-3-end'
+    if(status === 'done' || status === 'finalizado'){
+        classN = classN + ' text-cold-3'
+    }
+    else {
+        classN = classN + ' text-cold-2'
+    }
+
+    return (
+        <span className={classN}>
+            {status}
+        </span>
+    )
+}
+
+const ListProjects: React.FC<Project> = ({title, status, technologies, description, link}) => {
+    return (
+        <div className='row mb-5'>
+            <div className='col-3'>
+                <img src="" alt="" width={300} height={150}/>
+            </div>
+            <div className='col border-cold-3-start ps-3'>
+                <span className='fs-5 me-3 text-cold-3'>{title}</span>
+                <a href={link} target='_blank' rel="noreferrer">
+                    <div className='icon-link'/>
+                </a>
+                <div className='my-3'>
+                    <StatusComponent status={status}/>
+                </div>
+                <span>{description}</span>
+            </div>
+        </div>
+    )
+}
 
 export default function Projects () {
     const projects : Project[] = [
@@ -81,26 +117,6 @@ export default function Projects () {
             link: 'https://github.com/Zoaxx1/PacmanGame'
         }
     ];
-
-    const ListProjects = ({title, status, technologies, description, link} : Project) => {
-        return (
-            <div className='row mb-5'>
-                <div className='col-3'>
-                    <img src="" alt="" width={300} height={150}/>
-                </div>
-                <div className='col border-start ps-3'>
-                    <span className='fs-5 me-3 text-cold-3'>{title}</span>
-                    <a href={link} target='_blank' rel="noreferrer">
-                        <div className='icon-link'/>
-                    </a>
-                    <div className='my-3'>
-                        <span className='border-start border-end px-2 text-cold-3'>{status}</span>
-                    </div>
-                    <span>{description}</span>
-                </div>
-            </div>
-        )
-    }
 
     return (
         <div>

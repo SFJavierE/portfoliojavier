@@ -40,11 +40,33 @@ body{
 }
 
 .border-cold-2 {
-  border-color: #393E46;
+  border-color: #393E46 !important;
 }
 
 .border-cold-3 {
-  border-color: #00ADB5;
+  height: 2px;
+  border: 2px solid #00ADB5;
+}
+
+.border-cold-3-1 {
+  height: 2px;
+  border: 1px solid #00ADB5;
+}
+
+.border-cold-3-start {
+  border-left: 1px solid #00ADB5;
+}
+
+.border-cold-3-end {
+  border-right: 1px solid #00ADB5;
+}
+
+.border-cold-3-start-3 {
+  border-left: 3px solid #00ADB5;
+}
+
+.border-cold-3-end-3 {
+  border-right: 3px solid #00ADB5;
 }
 
 .border-cold-4 {

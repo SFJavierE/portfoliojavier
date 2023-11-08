@@ -74,18 +74,18 @@ export default function Experiencies () {
         return (
             <div className='row mb-4'>
                 <div className='col-3'>
-                    <div className='d-flex align-items-center'>
-                        <span className='fs-5 text-cold-3'>{name}</span>
+                    <div className='d-flex align-items-center text-cold-3'>
+                        <span className='fs-5'>{name}</span>
                         <div className='ms-3' style={{fontSize: '15px'}}>
                             <Date date={startDate}/>
                             <span className='mx-2'>-</span>
                             <Date date={endDate}/>
                         </div>
                     </div>
-                    <hr className='border border-info' style={{marginTop: '-2px'}}/>
-                    <span style={{fontSize: '15px'}}>{description}</span>
+                    <hr className='border-cold-3-1' style={{marginTop: '-2px', marginBottom: '5px'}}/>
+                    <span className='text-cold-2' style={{fontSize: '15px'}}>{description}</span>
                 </div>
-                <div className='col border-start ps-3'>
+                <div className='col border-cold-3-start ps-3'>
                     {
                         titles.map((t: Job, i: number) => (
                             <div key={t.name}>

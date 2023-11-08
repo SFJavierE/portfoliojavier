@@ -75,9 +75,9 @@ export default function Achievements () {
             <div className='row mb-4'>
                 <div className='col-3'>
                     <span className='fs-5 text-cold-3'>{placeExperiencieTitle}</span>
-                    <hr className='border border-info' style={{marginTop: '-2px'}}/>
+                    <hr className='border-cold-3-1' style={{marginTop: '-2px'}}/>
                 </div>
-                <div className='col border-start ps-3'>
+                <div className='col border-cold-3-start ps-3'>
                     {
                         listAchievement.map((ach : AchievementDescription, i : number) => (
                                 <div key={ach.title}>

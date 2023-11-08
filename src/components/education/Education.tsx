@@ -59,7 +59,7 @@ export default function EducationComponent () {
                             <span>{title}</span>
                         </div>
                         <hr style={{marginBottom: '5px', marginTop: '5px'}}/>
-                        <div style={{fontSize: '15px'}}>
+                        <div className='text-cold-4' style={{fontSize: '15px'}}>
                             <Date date={start}/>
                             <span className='mx-2'>-</span>
                             <Date date={end}/>
@@ -68,11 +68,11 @@ export default function EducationComponent () {
                         <span >{place}</span>
                     </div>
                 </div>
-                <div className='col border-start ps-3 border-primary text-cold-4'>
+                <div className='col border-cold-3-start ps-3 text-cold-4'>
                     {description && <span>{description}</span>}
                     {(description && link) && <br />}
                     {link && <span>{link}</span>}
-                    {(!description && !link) && <span>..................................................</span>}
+                    {(!description && !link) && <span>Sin descripción</span>}
                 </div>
             </div>
         )
