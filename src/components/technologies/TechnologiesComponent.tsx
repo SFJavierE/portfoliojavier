@@ -8,16 +8,18 @@ const TechnologyComponent : React.FC<TechName> = ({name}) : React.ReactElement =
     const [techImg, setTechImg] = useState<string>('');
 
     useEffect(() => {
-        // Is to remove whitespace
-        let img : string =  `icon icon--${name.replace(/\s+/g, '').toLowerCase()}`;
-        if(name === 'C#'){
-            img = 'icon icon--_c';
+        if(name){
+            // Is to remove whitespace
+            let img : string =  `icon icon--${name.replace(/\s+/g, '').toLowerCase()}`;
+            if(name === 'C#'){
+                img = 'icon icon--_c';
+            }
+            if(name === 'ReactNative'){
+                img = 'icon icon--react'
+            }
+            setTechImg(img);
         }
-        if(name === 'ReactNative'){
-            img = 'icon icon--react'
-        }
-        setTechImg(img);
-    }, []);
+    }, [name]);
 
     return (
         <div
@@ -26,7 +28,7 @@ const TechnologyComponent : React.FC<TechName> = ({name}) : React.ReactElement =
         >
             <div className={`${techImg}`}/>
             { isHoover &&
-                <div className='text-cold position-absolute py-1 text-center bg-cold-3 px-1 rounded-2' style={{height: 'auto', bottom: '202px'}}>
+                <div className='text-cold position-absolute py-1 text-center bg-cold-3 px-1 rounded-2' style={{height: 'auto', bottom: '200px'}}>
                     {name}
                 </div>
             }
