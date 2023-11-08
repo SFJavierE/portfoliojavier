@@ -1,4 +1,4 @@
-import { Technology } from '../../features/types/TypeTechnology';
+import { Technology } from '../../features/types/TechnologyType';
 
 type Status = 'done' | 'in progress' | 'finalizado' | 'en progreso'
 

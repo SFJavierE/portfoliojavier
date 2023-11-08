@@ -1,32 +1,34 @@
-// Components
-import Welcome from './components/welcome/Welcome';
-import Technologies from './components/technologies/Technologies';
-import Projects from './components/projects/Projects';
-import Experiencies from './components/experiencies/Experiencies';
-import Achievements from './components/achievements/Achievements';
-import Navbar from './components/navbar/Navbar';
+// Components ||||||||||||
+//Welcome ---------------
+import WelcomeComponet from './components/welcome/WelcomeComponent';
+// Navbar ---------------
+import NavbarComponent from './components/navbar/NavbarComponent';
 import ContactComponent from './components/contacts/ContactComponent';
-import EducationComponent from './components/education/Education';
+// Datas ----------------
+import Technologies from './components/technologies/TechnologiesComponent';
+import EducationComponent from './components/education/EducationComponent';
+import ProjectsComponent from './components/projects/ProjectsComponent';
+import ExperienciesComponent from './components/experiences/ExperiencesComponent';
+import AchievementsComponent from './components/achievements/AchievementsComponent'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-
   return (
     <div className='container-fluid py-4 px-5 text-cold-4'>
-      <div className=''>
+      <div>
         <div className='mb-5'>
-          <Welcome></Welcome>
+          <WelcomeComponet/>
         </div>
-        <div className='sticky-top'>
-          <Navbar></Navbar>
+        <div className='sticky-top pt-2'>
+          <NavbarComponent/>
           <ContactComponent/>
         </div>
         <div>
           <Technologies></Technologies>
           <EducationComponent/>
-          <Projects></Projects>
-          <Experiencies></Experiencies>
-          <Achievements></Achievements>
+          <ProjectsComponent/>
+          <ExperienciesComponent/>
+          <AchievementsComponent/>
         </div>
       </div>
     </div>

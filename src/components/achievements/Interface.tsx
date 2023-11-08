@@ -4,11 +4,11 @@ export interface AchievementDescription {
 }
 
 export interface Achievement {
-    placeExperiencieTitle: string;
-    listAchievement: AchievementDescription[];
+    place: string;
+    achievements: AchievementDescription[];
 }
 
-export interface AchievementDescriptionList {
+export interface AchievementDescriptionComp {
     achievement: AchievementDescription;
     index: number;
 }

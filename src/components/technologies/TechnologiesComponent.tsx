@@ -1,18 +1,30 @@
-import { Technology } from '../../features/types/TypeTechnology';
+import { Technology } from '../../features/types/TechnologyType';
 import { useEffect, useState } from 'react';
-import { TechnologyName, TooltipTech } from './Interface';
+import { TechName } from './Interface';
 import './index.css';
 
-
-const TooltipTechnology : React.FC<TooltipTech> = ({name, img}) => {
+const TechnologyComponent : React.FC<TechName> = ({name}) : React.ReactElement => {
     const [isHoover, setIsHoover] = useState<boolean>(false);
+    const [techImg, setTechImg] = useState<string>('');
+
+    useEffect(() => {
+        // Is to remove whitespace
+        let img : string =  `icon icon--${name.replace(/\s+/g, '').toLowerCase()}`;
+        if(name === 'C#'){
+            img = 'icon icon--_c';
+        }
+        if(name === 'ReactNative'){
+            img = 'icon icon--react'
+        }
+        setTechImg(img);
+    }, []);
 
     return (
         <div
         onMouseEnter={() => setIsHoover(true)}
         onMouseLeave={() => setIsHoover(false)}
         >
-            <div className={`${img}`}></div>
+            <div className={`${techImg}`}/>
             { isHoover &&
                 <div className='text-cold position-absolute py-1 text-center bg-cold-3 px-1 rounded-2' style={{height: 'auto', bottom: '202px'}}>
                     {name}
@@ -22,27 +34,12 @@ const TooltipTechnology : React.FC<TooltipTech> = ({name, img}) => {
     )
 }
 
-const TechnologiesList: React.FC<TechnologyName> = ({name}) => {
-    let img : string =  `icon icon--${name.replace(/\s+/g, '').toLowerCase()}`;
-    if(name === 'C#'){
-        img = 'icon icon--_c';
-    }
-    if(name === 'ReactNative'){
-        img = 'icon icon--react'
-    }
-
-    return (
-        <div>
-            <TooltipTechnology name={name} img={img}/>
-        </div>
-    )
-}
-
-export default function Technologies () {
+const TechnologiesComponent = () : React.ReactElement => {
     const [technolgies, setTechnologies] = useState<Technology[]>([]);
 
     useEffect(() => {
-        const tFrontend : Technology[] = ['Javascript', 'React', 'Typescript', 'Angular', 'HTML', 'Css', 'Sass', 'TailwindCss', 'Bootstrap', 'ReactNative'];
+        // This is to maintain order and not a very long list of technologies.
+        const tFrontend : Technology[] = ['Javascript', 'React', 'Typescript', 'Angular', 'ReactNative', 'HTML', 'Css', 'Sass', 'TailwindCss', 'Bootstrap'];
         const tBackend: Technology[] = ['NodeJs', 'ExpressJs', 'Ruby on Rails', 'C#', 'Postman'];
         const tDataBase: Technology[] = ['SQL', 'GraphQL', 'PostgresQl', 'Firebase'];
         const tOthers: Technology[] = ['Confluence', 'Figma', 'Jira', 'Trello', 'Unity'];
@@ -56,7 +53,7 @@ export default function Technologies () {
             {
                 technolgies.map((name : Technology) => (
                     <div key={name}>
-                        <TechnologiesList name={name}/>
+                        <TechnologyComponent name={name}/>
                     </div>
                 ))
             }
@@ -64,3 +61,5 @@ export default function Technologies () {
         </div>
     )
 }
+
+export default TechnologiesComponent;

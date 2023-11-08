@@ -1,10 +1,5 @@
-import { Technology } from '../../features/types/TypeTechnology';
+import { Technology } from '../../features/types/TechnologyType';
 
-export interface TechnologyName{
+export interface TechName{
     name: Technology;
-}
-
-export interface TooltipTech {
-    name: Technology;
-    img: string;
 }
