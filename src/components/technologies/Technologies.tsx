@@ -1,10 +1,10 @@
 import { Technology } from '../../features/types/TypeTechnology';
 import { useEffect, useState } from 'react';
-import { TechnologyName, TooltipTechnology } from './Interface';
+import { TechnologyName, TooltipTech } from './Interface';
 import './index.css';
 
 
-const TooltipTechnology : React.FC<TooltipTechnology> = ({name, img}) => {
+const TooltipTechnology : React.FC<TooltipTech> = ({name, img}) => {
     const [isHoover, setIsHoover] = useState<boolean>(false);
 
     return (
@@ -60,7 +60,7 @@ export default function Technologies () {
                     </div>
                 ))
             }
-        </div>
+            </div>
         </div>
     )
 }

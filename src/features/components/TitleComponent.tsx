@@ -1,4 +1,4 @@
-interface TitleComponent {
+interface Title {
     title: string;
 }
 
@@ -8,7 +8,7 @@ export const HrComponent = () => {
     )
 }
 
-const TitleComponent : React.FC<TitleComponent> =  ({title}) => {
+const TitleComponent : React.FC<Title> =  ({title}) => {
     return (
         <div className='mb-2'>
             <span className='fs-2 text-cold-3'>{title}</span>

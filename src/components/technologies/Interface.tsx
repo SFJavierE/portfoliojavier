@@ -4,7 +4,7 @@ export interface TechnologyName{
     name: Technology;
 }
 
-export interface TooltipTechnology {
+export interface TooltipTech {
     name: Technology;
     img: string;
 }
