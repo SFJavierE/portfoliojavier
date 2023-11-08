@@ -21,7 +21,7 @@ function App() {
           <Navbar></Navbar>
           <ContactComponent/>
         </div>
-        <div className=''>
+        <div>
           <Technologies></Technologies>
           <EducationComponent/>
           <Projects></Projects>
