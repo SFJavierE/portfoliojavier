@@ -28,7 +28,7 @@ const TechnologyComponent : React.FC<TechName> = ({name}) : React.ReactElement =
         >
             <div className={`${techImg}`}/>
             { isHoover &&
-                <div className='text-cold position-absolute py-1 text-center bg-cold-3 px-1 rounded-2' style={{height: 'auto', bottom: '200px'}}>
+                <div className='text-cold position-absolute py-1 text-center bg-cold-3 px-1 rounded-2' style={{height: 'auto', marginTop: '10px'}}>
                     {name}
                 </div>
             }
