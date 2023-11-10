@@ -1,4 +1,5 @@
 import { useEffect, useState, Dispatch, SetStateAction } from "react";
+import './styles.css';
 
 const WelcomeComponent = () : React.ReactElement => {
     const [age, setAge] = useState<number>(0);

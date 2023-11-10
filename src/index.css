@@ -79,28 +79,6 @@ body{
   perspective: 1000px;
 }
 
-.bg-me{
-  background-image: url('./features/imgs/me.jpg');
-  background-size: cover;
-}
-
-.coin {
-  animation: rotateCoin 0.5s ease-in-out infinite; /* Animación de giro */
-  transform-origin: center center;
-}
-
-@keyframes rotateCoin {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(180deg);
-  }
-  100% {
-    transform: rotateY(0deg);
-  }
-}
-
 .icon-link {
   width: 18px;
   height: 18px;

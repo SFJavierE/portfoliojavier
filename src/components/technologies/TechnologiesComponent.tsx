@@ -1,7 +1,7 @@
 import { Technology } from '../../features/types/TechnologyType';
 import { useEffect, useState } from 'react';
 import { TechName } from './Interface';
-import './index.css';
+import './styles.css';
 
 const TechnologyComponent : React.FC<TechName> = ({name}) : React.ReactElement => {
     const [isHoover, setIsHoover] = useState<boolean>(false);
