@@ -20,7 +20,7 @@ const StatusComponent : React.FC<StatusComp> = ({status}) : React.ReactElement =
 const ProjectComponent: React.FC<Project> = ({title, status, technologies, description, link}) : React.ReactElement => (
     <div className='row mb-5'>
         <div className='col-3'>
-            <img src="" alt="" width={300} height={150}/>
+            <img src="" alt="" width={'auto'} height={'150'}/>
         </div>
         <div className='col border-cold-3-start ps-3'>
             <span className='fs-5 me-3 text-cold-3'>{title}</span>
