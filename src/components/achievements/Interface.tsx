@@ -11,4 +11,5 @@ export interface Achievement {
 export interface AchievementDescriptionComp {
     achievement: AchievementDescription;
     index: number;
+    isMobile?: boolean;
 }

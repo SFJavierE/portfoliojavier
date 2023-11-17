@@ -1,6 +1,7 @@
 import { Project, StatusComp } from './Interface';
 import TitleComponent from '../../features/components/TitleComponent';
 import projects from './Information';
+import { useMediaQuery } from 'react-responsive';
 
 const StatusComponent : React.FC<StatusComp> = ({status}) : React.ReactElement => {
     let classN = 'px-2 border-cold-3-start border-cold-3-end'
@@ -17,24 +18,43 @@ const StatusComponent : React.FC<StatusComp> = ({status}) : React.ReactElement =
     )
 }
 
-const ProjectComponent: React.FC<Project> = ({title, status, technologies, description, link}) : React.ReactElement => (
-    <div className='row mb-5'>
-        <div className='col-3'>
-            <img src="" alt="" width={'auto'} height={'150'}/>
-        </div>
-        <div className='col border-cold-3-start ps-3'>
-            <span className='fs-5 me-3 text-cold-3'>{title}</span>
-            <a href={link} target='_blank' rel="noreferrer">
-                <div className='icon-link'/>
-            </a>
-            <div className='my-3'>
-                <StatusComponent status={status}/>
-            </div>
-            <span>{description}</span>
-        </div>
-    </div>
-)
+const ProjectComponent: React.FC<Project> = ({title, status, technologies, description, link}) : React.ReactElement => {
+    const isMobile : boolean = useMediaQuery({maxWidth: 1000});
 
+    const ViewMobile = () : React.ReactElement => (
+        <div className='mb-4'>
+            <div>
+                <span className='fs-5 me-3 text-cold-3'>{title}</span>
+                <a href={link} target='_blank' rel="noreferrer">
+                    <div className='icon-link'/>
+                </a>
+                <div className='my-3'>
+                    <StatusComponent status={status}/>
+                </div>
+                <span>{description}</span>
+            </div>
+        </div>
+    )
+
+    return !isMobile ? 
+    (
+        <div className='row mb-5'>
+            <div className='col-3'>
+                <img src="" alt="" width={'auto'} height={'150'}/>
+            </div>
+            <div className='col border-cold-3-start ps-3'>
+                <span className='fs-5 me-3 text-cold-3'>{title}</span>
+                <a href={link} target='_blank' rel="noreferrer">
+                    <div className='icon-link'/>
+                </a>
+                <div className='my-3'>
+                    <StatusComponent status={status}/>
+                </div>
+                <span>{description}</span>
+            </div>
+        </div>
+    ) : <ViewMobile/>
+}
 const ProjectsComponent = () : React.ReactElement => (
     <div>
         <TitleComponent title={'Proyectos'}/>

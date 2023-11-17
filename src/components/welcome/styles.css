@@ -8,6 +8,12 @@ animation: rotateCoin 0.5s ease-in-out infinite; /* Animación de giro */
 transform-origin: center center;
 }
 
+.coinStyle {
+    width: 100%;
+    height: 60vh;
+    border-radius: 100%;
+}
+
 @keyframes rotateCoin {
 0% {
     transform: rotateY(0deg);

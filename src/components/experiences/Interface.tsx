@@ -14,6 +14,7 @@ export interface Job {
 }
 
 export interface Description {
-    title: Job,
-    index: number
+    title: Job;
+    index: number;
+    isMobile?: boolean;
 }

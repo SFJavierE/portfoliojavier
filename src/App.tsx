@@ -1,3 +1,4 @@
+import { useMediaQuery } from 'react-responsive';
 // Components ||||||||||||
 //Welcome ---------------
 import WelcomeComponet from './components/welcome/WelcomeComponent';
@@ -13,8 +14,10 @@ import AchievementsComponent from './components/achievements/AchievementsCompone
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const isMobile : boolean = useMediaQuery({maxWidth: 1000});
+
   return (
-    <div className='container-fluid py-4 px-5 text-cold-4'>
+    <div className={isMobile ? 'container-fluid py-4 px-3 text-cold-4' :'container-fluid py-4 px-5 text-cold-4'}>
       <div>
         <div className='mb-5'>
           <WelcomeComponet/>

@@ -1,5 +1,6 @@
 import './styles.css';
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { NavbarLink } from './Interface';
 
 const NavbarLinkComponent: React.FC<NavbarLink>= ({text}) : React.ReactElement => (
@@ -9,9 +10,23 @@ const NavbarLinkComponent: React.FC<NavbarLink>= ({text}) : React.ReactElement =
 )
 
 const NavbarComponent = () : React.ReactElement => {
-    const itemsList : string[] = ['Proyectos', 'Educación', 'Experiencia Profesional', 'Logros'];    
+    const itemsList : string[] = ['Proyectos', 'Educación', 'Experiencia', 'Logros'];
+    const isMobile : boolean = useMediaQuery({maxWidth: 1000});
 
-    return (
+    const ViewMobile = () => (
+        <nav className="navbar navbar-expand-lg bg-cold-3 rounded-top-3 text-cold-2 fw-bold" style={{height: 'auto'}}>
+            <div className="row">
+                { itemsList.map((item: string) => 
+                        <div key={item} className='col-5 text-center mb-1' style={{width: '50%'}}>
+                            <NavbarLinkComponent text={item}/>
+                        </div>
+                    )
+                }
+            </div>
+        </nav>
+    )
+
+    return !isMobile ? (
         <nav className="navbar navbar-expand-lg bg-cold-3 rounded-top-3 text-cold-2 fw-bold" style={{height: 'auto'}}>
             <div className='bg-penguin position-absolute rounded-5 bg-cold-4' style={{width: '60px', height: '60px', top: '25%', left: '48%'}}>
             </div>
@@ -24,7 +39,7 @@ const NavbarComponent = () : React.ReactElement => {
                 }
             </div>
         </nav>
-    )
+    ) : <ViewMobile/>;
 }
 
 export default NavbarComponent;

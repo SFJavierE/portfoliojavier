@@ -69,6 +69,10 @@ body{
   border-right: 3px solid #00ADB5;
 }
 
+.border-cold-3-bottom {
+  border-bottom: 3px solid #00ADB5;
+}
+
 .border-cold-4 {
   border-color: #EEEEEE;
 }
@@ -88,4 +92,8 @@ body{
 
 .fs-7 {
   font-size: 15px;
+}
+
+.fs-8 {
+  font-size: 12px;
 }
