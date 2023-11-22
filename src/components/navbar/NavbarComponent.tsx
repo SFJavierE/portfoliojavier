@@ -13,7 +13,7 @@ const NavbarLinkComponent: React.FC<NavbarLink>= ({text, sectionId}) : React.Rea
 
     return (
         <div className="nav-item">
-            <a onClick={() => navLinkScroll()} className="nav-link active">{text}</a>
+            <span onClick={() => navLinkScroll()} className="nav-link active">{text}</span>
         </div>
     )
 }
