@@ -19,18 +19,22 @@ function App() {
   return (
     <div className={isMobile ? 'container-fluid py-4 px-3 text-cold-4' :'container-fluid py-4 px-5 text-cold-4'}>
       <div>
-        <div className='mb-5'>
-          <WelcomeComponet/>
-        </div>
-        <div className='sticky-top pt-2'>
+        <div className={!isMobile ? 'sticky-top pt-2' : 'pt-2'}>
           <NavbarComponent/>
           <ContactComponent/>
         </div>
+        <div className='my-5'>
+          <WelcomeComponet/>
+        </div>
         <div>
+          <div id="education"/>
           <Technologies></Technologies>
           <EducationComponent/>
+          <div id="projects"/>
           <ProjectsComponent/>
+          <div id="experiencie"/>
           <ExperienciesComponent/>
+          <div id="achievements"/>
           <AchievementsComponent/>
         </div>
       </div>
