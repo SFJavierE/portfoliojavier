@@ -1,99 +1,33 @@
-body{
+/* src/input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #1a0b2e 20%,   /* Violeta oscuro */
+    #3d1b7a 50%,   /* Violeta neón */
+    #5a2da8 80%,   /* Azul-violeta brillante */
+    #6b46c1 100%   /* Tono pastel saturado */
+);
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+}
+
+html::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-}
-
-.bg-cold {
-  background-color: #222831;
-}
-
-.bg-cold-2 {
-  background-color: #393E46;
-}
-
-.bg-cold-3 {
-  background-color: #00ADB5;
-}
-
-.bg-cold-4 {
-  background-color: #EEEEEE;
-}
-
-.text-cold {
-  color: #222831;
-}
-
-.text-cold-2 {
-  color: #393E46;
-}
-
-.text-cold-3 {
-  color: #00ADB5;
-}
-
-.text-cold-4 {
-  color: #EEEEEE;
-}
-
-.border-cold {
-  border-color: #222831;
-}
-
-.border-cold-2 {
-  border-color: #393E46 !important;
-}
-
-.border-cold-3 {
-  height: 2px;
-  border: 2px solid #00ADB5;
-}
-
-.border-cold-3-1 {
-  height: 2px;
-  border: 1px solid #00ADB5;
-}
-
-.border-cold-3-start {
-  border-left: 1px solid #00ADB5;
-}
-
-.border-cold-3-end {
-  border-right: 1px solid #00ADB5;
-}
-
-.border-cold-3-start-3 {
-  border-left: 3px solid #00ADB5;
-}
-
-.border-cold-3-end-3 {
-  border-right: 3px solid #00ADB5;
-}
-
-.border-cold-3-bottom {
-  border-bottom: 3px solid #00ADB5;
-}
-
-.border-cold-4 {
-  border-color: #EEEEEE;
-}
-
-.bg-penguin{
-  background-image: url('./features/imgs/gunter_png.png');
-  background-size: cover;
-  perspective: 1000px;
-}
-
-.icon-link {
-  width: 18px;
-  height: 18px;
-  background-image: url('./features/imgs/icons/link_2.png');
-  background-size: cover;
-}
-
-.fs-7 {
-  font-size: 15px;
-}
-
-.fs-8 {
-  font-size: 12px;
+  background: radial-gradient(
+      ellipse at 50% 30%,
+      rgba(85, 60, 180, 0.2) 0%,  /* Violeta translúcido */
+      rgba(0, 0, 0, 0.6) 100%
+  );
+  pointer-events: none;
 }
