@@ -5,7 +5,6 @@ import { MediaButtonProps } from '../interfaces/Interfaces';
 
 
 export const SocialMedias = () =>{
-    const [showCVIcon, setShowCVIcon] = useState<boolean>(true);
     const [showBubleDialog, setShowBubleDialog] = useState<boolean>(false);
     const socialMedias : MediaButtonProps[] = [
         {socialMedia: 'LinkedIn'},
@@ -20,12 +19,6 @@ export const SocialMedias = () =>{
     const email : string = "sosafuch@gmail.com";
     const whatsapp : string = "https://w.app/sosafuchjaviere";
 
-    const DelayCVIcons = (isShowing : boolean) =>{
-        setTimeout(() =>{
-            setShowCVIcon(isShowing);
-        }, 150)
-    }
-
     const DelayShowBubleDialog = ( isShowing : boolean) =>{
         setTimeout(() =>{
             setShowBubleDialog(isShowing);
@@ -33,9 +26,7 @@ export const SocialMedias = () =>{
     }
     
     const SocialMediaButton = ({socialMedia} : MediaButtonProps) : ReactElement =>{
-        const classNameSVG : string = "w-9 h-9 hover:border-zinc-100 hover:bg-zinc-100 hover:text-indigo-500 transition ease in out delay-150 bg-indigo-950 rounded-md border-4 border-indigo-950";
-        const classNameCVSVG : string = "w-9 h-9 bg-indigo-950 rounded-md border-4 border-indigo-950";
-        const classNameArrowSVG : string = "w-9 h-9 text-indigo-950 bg-zinc-100 rounded-md border-4 border-zinc-100";
+        const classNameSVG : string = "w-10 h-10 hover:border-zinc-100 hover:bg-zinc-100 hover:text-indigo-500 transition ease in out delay-150 bg-indigo-950 rounded-md border-4 border-indigo-950";
         
         return(
             <button className="mr-4" onClick={()=>DoSomething(socialMedia)}>
@@ -54,10 +45,7 @@ export const SocialMedias = () =>{
                     </div> :
                     socialMedia == 'Whatsapp' ?
                     <WhatsappIcon className={classNameSVG}/>:
-                    <div onMouseEnter={()=> DelayCVIcons(false)} onMouseLeave={()=> DelayCVIcons(true)}>
-                        {showCVIcon ? <CVIcon className={classNameCVSVG}/> :
-                        <DownloadArrowIcon className={classNameArrowSVG}/>}
-                    </div>
+                    <CVIcon className={classNameSVG}/>
                 }
             </button>
         )

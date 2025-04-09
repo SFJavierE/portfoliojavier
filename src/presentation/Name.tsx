@@ -6,7 +6,7 @@ export const Name = () =>{
     const firstSureName = "Sosa ";
     const secondSureName = "Fuch";
 
-    const classNameBold = "text-4xl font-bold w-auto";
+    const classNameBold = "text-6xl font-bold w-auto";
 
     return(
         <div className="w-max">

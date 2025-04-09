@@ -1,6 +1,5 @@
 import './App.css'
 import Presentation from './presentation/Presentation'
-import Navbar from './navbar/Navbar'
 import CardList from './cardList/CardList'
 import Technologies from './technologies/Technologies'
 import { listJobs } from './experiencie/ListJobs'
@@ -9,16 +8,15 @@ import { listProjects } from './projects/ListProjects'
 
 function App() {
   return (
-    <div className="font-mono text-zinc-100 bg-black px-80 py-40">
-      <Navbar/>
+    <div className="font-mono text-zinc-100 bg-black px-64 py-20">
       <div className="">
         <Presentation/>
         <br/>
-        <div className='mt-12'>
+        <div className=''>
           <Technologies/>
         </div>
         <br />
-        <div className='mt-16'>
+        <div className='mt-8'>
           <CardList info={listJobs}/>
         </div>
         <br />

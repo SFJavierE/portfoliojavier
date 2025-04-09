@@ -6,7 +6,7 @@ export default function CardList ({info} : {info : CardInfo}) {
     return (
         <div className="">
             <span className=
-            "text-2xl font-bold h-auto border-indigo-100 border-b-4 rounded-sm border-s-8 border-e border-t p-2 shadow-lg shadow-indigo-950 bg-indigo-950/25"
+            "text-3xl font-bold h-auto border-indigo-100 border-b-4 rounded-sm border-s-8 border-e border-t p-2 shadow-lg shadow-indigo-950 bg-indigo-950/25"
             >{info.title}</span>
             <div className="mt-8">
                 {

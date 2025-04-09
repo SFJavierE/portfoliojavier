@@ -53,6 +53,24 @@ export const listProjects : CardInfo = {
                     ]
                     }
                 ]
+        },
+        {
+            place: 'BankAppMe',
+            description: [
+                {
+                    skills: ['ReactNative', 'CSS', 'NodeJS', 'ExpressJs'],
+                    text: "Desarrollé una aplicación móvil de billetera virtual utilizando React Native en equipo. Aunque ningún integrante tenía experiencia previa con la tecnología, asumí el liderazgo del frontend, coordinando al grupo mediante videollamadas para resolver desafíos técnicos y guiar la implementación. El resultado fue una app funcional que permitía cargar saldo virtual y realizar transferencias entre usuarios, demostrando nuestra capacidad para aprender rápidamente y colaborar de manera efectiva."
+                    }
+                ]
+        },
+        {
+            place: 'BackTo90sEcommerce',
+            description: [
+                {
+                    skills: ['React', 'CSS', 'NodeJS', 'ExpressJs'],
+                    text: "Ecommerce desarrollado como proyecto en Henry junto a tres compañeros. Su objetivo era exhibir productos icónicos de los años 90, mostrando sus precios originales de la época y evocando nostalgia. Realizamos una campaña de marketing creativa, lo que generó una buena recepción entre los alumnos durante la presentación en vivo ante el instructor."
+                    }
+                ]
         }
         ]
 }

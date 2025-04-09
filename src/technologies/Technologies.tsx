@@ -1,26 +1,46 @@
-import { AngularIcon, BootstrapIcon, JiraIcon, NETIcon, ReactIcon, RubyOnRailsIcon, TailwindIcon, TypescriptIcon, UnityIcon, UnrealEngineIcon } from "../icons/Icons";
+import SVG, { AngularIcon, BootstrapIcon, JiraIcon, NETIcon, ReactIcon, RubyOnRailsIcon, TailwindIcon, TypescriptIcon, UnityIcon, UnrealEngineIcon } from "../icons/Icons";
 import { ReactElement, useEffect, useRef } from "react";
 import ReactDOM from 'react-dom/client';
 
 export default function Technologies() {
     const classNameIcons = "h-16 w-16 text-indigo-300/75 hover:text-indigo-900/75 transition-all duration-300";
     const containerRef = useRef<HTMLDivElement>(null);
-    const animationRef = useRef<number>();
+    const animationRef = useRef<number>(0);
     const rootRefs = useRef<ReactDOM.Root[]>([]);
     const positionRef = useRef(0);
     const isPausedRef = useRef(false);
 
     const technologies: ReactElement[] = [
-        <UnityIcon key="unity" className={classNameIcons} />,
-        <UnrealEngineIcon key="unreal" className={classNameIcons} />,
-        <TailwindIcon key="tailwind" className={classNameIcons} />,
-        <BootstrapIcon key="bootstrap" className={classNameIcons} />,
-        <ReactIcon key="react" className={classNameIcons} />,
-        <TypescriptIcon key="typescript" className={classNameIcons} />,
-        <AngularIcon key="angular" className={classNameIcons} />,
-        <RubyOnRailsIcon key="ruby" className={classNameIcons} />,
-        <NETIcon key="net" className={classNameIcons} />,
-        <JiraIcon key="jira" className={classNameIcons} />
+        <SVG name="Unity">
+            <UnityIcon key="unity" className={classNameIcons} />
+        </SVG>,
+        <SVG name="UnrealEngine">
+            <UnrealEngineIcon key="unreal" className={classNameIcons} />
+        </SVG>,
+        <SVG name="Tailwind">
+            <TailwindIcon key="tailwind" className={classNameIcons} />
+        </SVG>,
+        <SVG name="Bootstrap">
+            <BootstrapIcon key="bootstrap" className={classNameIcons} />
+        </SVG>,
+        <SVG name="React">
+            <ReactIcon key="react" className={classNameIcons} />
+        </SVG>,
+        <SVG name="Typescript">
+            <TypescriptIcon key="typescript" className={classNameIcons} />
+        </SVG>,
+        <SVG name="Angular">
+            <AngularIcon key="angular" className={classNameIcons} />
+        </SVG>,
+        <SVG name="RubyOnRails">
+            <RubyOnRailsIcon key="ruby" className={classNameIcons} />
+        </SVG>,
+        <SVG name=".NET">
+            <NETIcon key="net" className={classNameIcons} />
+        </SVG>,
+        <SVG name="Jira">
+            <JiraIcon key="jira" className={classNameIcons} />
+        </SVG>
     ];
 
     useEffect(() => {
@@ -119,7 +139,7 @@ export default function Technologies() {
     return (
         <div 
             ref={containerRef}
-            className="w-full overflow-hidden py-4 relative h-20 border-l-2 border-r-2 border-indigo-100/50"
+            className="w-full overflow-hidden h-40"
         />
     );
 }

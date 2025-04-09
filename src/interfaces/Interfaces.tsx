@@ -31,7 +31,7 @@ export interface Dates{
     year: number
 }
 
-export type Skills = 'Redis' | 'ExpressJs' | 'NodeJS' | 'Tailwind' | 'Scrum' | 'API' | 'Express' | 'GitHub' | 'Unity' | 'UnrealEngine' | 'C++' | 'React' | 'Typescript' | 'AngularJS' | 'RubyOnRails' | 'Hasura' | 'GraphQL' | 'ReactNative' | 'Verse' | 'UEFN' | 'UnrealEngineForFortnite' | 'Git' | 'Jira' | 'NetCode' | 'C#' | 'Jest' | 'Js' | 'Figma'
+export type Skills = 'ReactNative' | 'CSS' | 'Redis' | 'ExpressJs' | 'NodeJS' | 'Tailwind' | 'Scrum' | 'API' | 'Express' | 'GitHub' | 'Unity' | 'UnrealEngine' | 'C++' | 'React' | 'Typescript' | 'AngularJS' | 'RubyOnRails' | 'Hasura' | 'GraphQL' | 'ReactNative' | 'Verse' | 'UEFN' | 'UnrealEngineForFortnite' | 'Git' | 'Jira' | 'NetCode' | 'C#' | 'Jest' | 'Js' | 'Figma'
 
 export interface MediaButtonProps{
     socialMedia: 'GitHub' | 'LinkedIn' | 'Email' | 'CV' | 'Whatsapp' | 'CopyEmail';

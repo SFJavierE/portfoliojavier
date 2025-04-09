@@ -8,9 +8,9 @@ export const Description = ({description} : {description : CardDescription}) =>{
             {
             description.position && 
             <div className="flex justify-between">
-                <span className="font-semibold text-md">{description.position.name}</span>
+                <span className="font-semibold text-base">{description.position.name}</span>
                 <div>
-                    <span className="mr-2 text-sm">{`${TranslateES.MONTH[description.position.time.firstDate.month]} ${description.position.time.firstDate.year.toString()} ->`}</span>
+                    <span className="mr-2 text-base">{`${TranslateES.MONTH[description.position.time.firstDate.month]} ${description.position.time.firstDate.year.toString()} -`}</span>
                     {
                         description.position.time.secondDate != 'Current' ?
                         <span>{`${TranslateES.MONTH[description.position.time.secondDate.month]} ${description.position.time.secondDate.year.toString()}`}</span>
@@ -19,8 +19,8 @@ export const Description = ({description} : {description : CardDescription}) =>{
                 </div>
             </div>
             }
-            <hr className="border-1 border-zinc-100" />
-            <span className="text-sm">
+            {description.position?.name && <hr className="border-1 border-zinc-100" />}
+            <span className="text-md">
                 {description.text}
             </span>
             {
