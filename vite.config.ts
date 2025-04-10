@@ -1,19 +1,17 @@
-import react from '@vitejs/plugin-react'
-// vite.config.js (o vite.config.ts)
-import { defineConfig } from 'vite'
-import tailwind from 'tailwindcss'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwind from 'tailwindcss';
 
 export default defineConfig({
-  publicDir: './public',
+  base: './',
+  build: {
+    outDir: 'docs',
+    emptyOutDir: true,
+  },
   css: {
     postcss: {
-      plugins: [
-        tailwind
-      ]
-    }
-  },
-  build:{
-    outDir: 'docs'
+      plugins: [tailwind()],
+    },
   },
   plugins: [react()],
-})
+});

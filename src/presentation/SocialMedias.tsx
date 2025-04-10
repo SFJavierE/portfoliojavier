@@ -1,4 +1,4 @@
-import CV from "../assets/CV-JavierESosaFuch_EN.pdf";
+import CV from "../assets/CVSosaFuch.pdf";
 import { ReactElement, useState } from 'react';
 import {LinkedInIcon, GitHubIcon, EmailIcon, CVIcon, WhatsappIcon, CopyIcon} from '../icons/Icons';
 import { MediaButtonProps } from '../interfaces/Interfaces';
