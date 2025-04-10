@@ -128,7 +128,7 @@ export const listJobs :CardInfo = {
                         }
                     }
                 },
-                text: "Desarrollé una aplicación móvil que conecta instructores de yoga y estudios con estudiantes en Estados Unidos, utilizando Apache Cordova, TypeScript, Hasura y Express.",
+                text: "Contribuí al desarrollo de una aplicación móvil con el objetivo de conecta instructores de yoga y estudios con estudiantes en Estados Unidos, utilizando Apache Cordova, TypeScript, Hasura y Express.",
                 points: [
                     "Implementé pruebas utilizando Cypress, Jest y Storybook.",
                     "Aprendí rápidamente nuevas tecnologías, entregando código limpio y eficiente."
