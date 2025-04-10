@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import tailwind from 'tailwindcss'
 
 export default defineConfig({
+  publicDir: './public',
   css: {
     postcss: {
       plugins: [
