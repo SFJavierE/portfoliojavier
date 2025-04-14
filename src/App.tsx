@@ -8,23 +8,18 @@ import { listProjects } from './projects/ListProjects'
 
 function App() {
   return (
-    <div className="font-mono text-zinc-100 bg-black px-64 py-20">
-      <div className="">
+    <div className="font-mono text-zinc-100 bg-black min-h-screen w-full overflow-x-hidden">
+      <div className="w-full max-w-[100vw] md:max-w-4xl mx-auto px-4 sm:px-6 py-8">
         <Presentation/>
-        <br/>
-        <div className=''>
+        
+        <div className="flex flex-col gap-8 md:mt-6">
           <Technologies/>
-        </div>
-        <br />
-        <div className='mt-8'>
-          <CardList info={listJobs}/>
-        </div>
-        <br />
-        <div className='mt-16'>
-          <CardList info={listEducations}/>
-        </div>
-        <div className='mt-16'>
-          <CardList info={listProjects}/>
+          
+          <div className="space-y-10">
+            <CardList info={listJobs}/>
+            <CardList info={listEducations}/>
+            <CardList info={listProjects}/>
+          </div>
         </div>
       </div>
     </div>

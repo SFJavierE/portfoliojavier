@@ -90,7 +90,7 @@ export const SocialMedias = () =>{
     }
 
     return(
-        <div className="flex justify-start mt-2 mb-4">
+        <div className="flex justify-between md:justify-start lg:justify-start mt-2 mb-4">
             {socialMedias.map(({socialMedia} : MediaButtonProps) => <SocialMediaButton socialMedia={socialMedia}/>)}
         </div>
     )

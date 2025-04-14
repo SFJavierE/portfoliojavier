@@ -1,0 +1,11 @@
+#root {
+    width: 100dvw;
+    min-height: 100dvh;
+  }
+  
+  @supports not (width: 100dvw) {
+    #root {
+      width: 100vw;
+      min-height: 100vh;
+    }
+  }

@@ -14,7 +14,7 @@ import SVG,
 import { ReactElement } from 'react';
 
 export const GetElementList = () : ReactElement[] => {
-    const classNameIcons = "h-16 w-16 text-indigo-300/75 hover:text-indigo-900/75 transition-all duration-300";
+    const classNameIcons = "h-12 w-12  md:h-16 md:w-16 text-indigo-300/75 hover:text-indigo-900/75 transition-all duration-300";
 
     const technologies: ReactElement<{ className: string }>[] = [
         <UnityIcon key="Unity" className={classNameIcons} />,

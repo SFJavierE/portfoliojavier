@@ -64,7 +64,7 @@ export const listProjects : CardInfo = {
                 ]
         },
         {
-            place: 'BackTo90sEcommerce',
+            place: 'BackTo90s',
             description: [
                 {
                     skills: ['React', 'CSS', 'NodeJS', 'ExpressJs'],
