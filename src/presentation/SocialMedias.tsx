@@ -29,7 +29,7 @@ export const SocialMedias = () =>{
         const classNameSVG : string = "w-10 h-10 hover:border-zinc-100 hover:bg-zinc-100 hover:text-indigo-500 transition ease in out delay-150 bg-indigo-950 rounded-md border-4 border-indigo-950";
         
         return(
-            <button className="mr-4" onClick={()=>DoSomething(socialMedia)}>
+            <button key={socialMedia} className="mr-4" onClick={()=>DoSomething(socialMedia)}>
                 {
                     socialMedia == 'LinkedIn' ?
                     <LinkedInIcon className={classNameSVG}/> :
@@ -91,7 +91,11 @@ export const SocialMedias = () =>{
 
     return(
         <div className="flex justify-between md:justify-start lg:justify-start mt-2 mb-4">
-            {socialMedias.map(({socialMedia} : MediaButtonProps) => <SocialMediaButton socialMedia={socialMedia}/>)}
+            {socialMedias.map(({socialMedia} : MediaButtonProps) => 
+            <div key={socialMedia}>
+                <SocialMediaButton socialMedia={socialMedia}/>
+            </div>
+            )}
         </div>
     )
 }
