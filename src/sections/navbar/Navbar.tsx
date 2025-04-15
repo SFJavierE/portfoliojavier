@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MoonWithStarsIcon, SunIcon } from "../utils/icons/Icons";
+import { Moon, Sun } from "../../utils/icons/Icons";
 
 interface Language{
     language : 'ES' | 'EN'
@@ -65,7 +65,7 @@ export default function Navbar(){
                         <button
                         onClick={() => ChangeMode({mode: 'Light'})}
                     >
-                        <MoonWithStarsIcon className={classNameLanguageAndLigth}/>
+                        <Moon className={classNameLanguageAndLigth}/>
                     </button>
                     }
                     {
@@ -73,7 +73,7 @@ export default function Navbar(){
                         <button
                             onClick={() => ChangeMode({mode: 'Dark'})}
                         >
-                            <SunIcon className={classNameLanguageAndLigth}/>
+                            <Sun className={classNameLanguageAndLigth}/>
                         </button>
                     }
                 </li>

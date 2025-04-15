@@ -33,11 +33,18 @@ export interface Dates{
     year: number
 }
 
+export interface DatesDisplay{
+    date: Dates;
+    isCurrent?: boolean;
+}
+
 export type Skills = 'ReactNative' | 'CSS' | 'Redis' | 'ExpressJs' | 'NodeJS' | 'Tailwind' | 'Scrum' | 'API' | 'Express' | 'GitHub' | 'Unity' | 'UnrealEngine' | 'C++' | 'React' | 'Typescript' | 'AngularJS' | 'RubyOnRails' | 'Hasura' | 'GraphQL' | 'ReactNative' | 'Verse' | 'UEFN' | 'UnrealEngineForFortnite' | 'Git' | 'Jira' | 'NetCode' | 'C#' | 'Jest' | 'Js' | 'Figma'
 
-export interface MediaButtonProps{
-    socialMedia: 'GitHub' | 'LinkedIn' | 'Email' | 'CV' | 'Whatsapp' | 'CopyEmail';
+export interface ButtonActions{
+    action: 'GitHub' | 'LinkedIn' | 'Email' | 'CV' | 'Whatsapp' | 'CopyEmail';
 }
+
+export type Actions = 'LinkedIn' | 'GitHub' | 'Whatsapp' | 'Email' | 'CopyEmail' | 'CV';
 
 export interface IconProps{
     className: string;

@@ -1,24 +1,24 @@
 import './App.css'
-import Presentation from './presentation/Presentation'
-import CardList from './cardList/CardList'
-import Technologies from './technologies/Technologies'
-import {Educations, Jobs, Projects} from './utils/lists/Lists'
+import Welcome from './sections/welcome/Welcome'
+import CardList from './components/card/Card'
+import Technologies from './sections/technologies/Technologies'
+import { Educations, Jobs, Projects } from './utils/lists/Lists'
 
 function App() {
   return (
     <div className="font-mono text-zinc-100 bg-black min-h-screen w-full overflow-x-hidden">
-      <div className="w-full max-w-[100vw] md:max-w-4xl mx-auto px-4 sm:px-6 py-8">
-        <Presentation/>
+      <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 md:pt-12 md:pb-24">
+        <Welcome />
         
-        <div className="flex flex-col gap-8 md:mt-6">
-          <Technologies/>
+        <main className="flex flex-col gap-8 md:gap-12 mt-6 md:mt-8">
+          <Technologies />
           
-          <div className="space-y-10">
-            <CardList info={Jobs}/>
-            <CardList info={Educations}/>
-            <CardList info={Projects}/>
+          <div className="space-y-12 md:space-y-16">
+            <CardList info={Jobs} />
+            <CardList info={Educations} />
+            <CardList info={Projects} />
           </div>
-        </div>
+        </main>
       </div>
     </div>
   )

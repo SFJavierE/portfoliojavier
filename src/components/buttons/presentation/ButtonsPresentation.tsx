@@ -1,18 +1,17 @@
-import CV from "../assets/CVSosaFuch.pdf";
+import CV from "../../../assets/pdf/CVSosaFuch.pdf";
 import { ReactElement, useState } from 'react';
-import {LinkedIn, GitHub, Email, Cv, Phone, Copy} from '../utils/icons/Icons';
-import { MediaButtonProps } from '../utils/interfaces/Interfaces';
+import {LinkedIn, GitHub, Email, Cv, Phone, Copy} from '../../../utils/icons/Icons';
+import { ButtonActions } from '../../../utils/interfaces/Interfaces';
 
-
-export const SocialMedias = () =>{
+const ButtonsPresentation = () =>{
     const [showBubleDialog, setShowBubleDialog] = useState<boolean>(false);
-    const socialMedias : MediaButtonProps[] = [
-        {socialMedia: 'LinkedIn'},
-        {socialMedia: 'GitHub'},
-        {socialMedia: 'Whatsapp'},
-        {socialMedia: 'Email'},
-        {socialMedia: 'CopyEmail'},
-        {socialMedia: 'CV'},
+    const actions : ButtonActions[] = [
+        {action: 'LinkedIn'},
+        {action: 'GitHub'},
+        {action: 'Whatsapp'},
+        {action: 'Email'},
+        {action: 'CopyEmail'},
+        {action: 'CV'},
     ];
     const linkedIn : string = "https://www.linkedin.com/in/sosafuch";
     const github : string = "https://github.com/Zoaxx1";
@@ -25,25 +24,25 @@ export const SocialMedias = () =>{
         }, 150)
     }
     
-    const SocialMediaButton = ({socialMedia} : MediaButtonProps) : ReactElement =>{
+    const SocialMediaButton = ({action} : ButtonActions) : ReactElement =>{
         const classNameSVG : string = "w-10 h-10 hover:border-zinc-100 hover:bg-zinc-100 hover:text-indigo-500 transition ease in out delay-150 bg-indigo-950 rounded-md border-4 border-indigo-950";
         
         return(
-            <button key={socialMedia} className="mr-4" onClick={()=>DoSomething(socialMedia)}>
+            <button key={action} className="mr-4" onClick={()=>DoSomething(action)}>
                 {
-                    socialMedia == 'LinkedIn' ?
+                    action == 'LinkedIn' ?
                     <LinkedIn className={classNameSVG}/> :
-                    socialMedia == 'GitHub' ?
+                    action == 'GitHub' ?
                     <GitHub className={classNameSVG}/>:
-                    socialMedia == 'Email' ?
+                    action == 'Email' ?
                     <Email className={classNameSVG}/>:
-                    socialMedia == 'CopyEmail' ?
+                    action == 'CopyEmail' ?
                     <div className="relative" onMouseEnter={()=> DelayShowBubleDialog(true)} onMouseLeave={()=> DelayShowBubleDialog(false)}>
                         <span className={`absolute bg-gray-600 text-zinc-100 w-auto rounded-sm p-1 -top-10 left-0 text-sm font-bold ${showBubleDialog ? "opacity-100" : "opacity-0"}`}>CopiarEmail</span>
                         <span className={`absolute font-bold text-medium -top-5 text-gray-700 left-4 ${showBubleDialog ? "opacity-100" : "opacity-0"}`}>▼</span>
                         <Copy className={classNameSVG}/>
                     </div> :
-                    socialMedia == 'Whatsapp' ?
+                    action == 'Whatsapp' ?
                     <Phone className={classNameSVG}/>:
                     <Cv className={classNameSVG}/>
                 }
@@ -69,8 +68,8 @@ export const SocialMedias = () =>{
         link.click();
     }
 
-    const DoSomething = (socialMedia : string) =>{
-        switch(socialMedia){
+    const DoSomething = (action : string) =>{
+        switch(action){
             case 'LinkedIn':
                 Redirect(linkedIn)
                break;
@@ -91,11 +90,13 @@ export const SocialMedias = () =>{
 
     return(
         <div className="flex justify-between md:justify-start lg:justify-start mt-2 mb-4">
-            {socialMedias.map(({socialMedia} : MediaButtonProps) => 
-            <div key={socialMedia}>
-                <SocialMediaButton socialMedia={socialMedia}/>
-            </div>
+            {actions.map(({action} : ButtonActions) => 
+                <div key={action}>
+                    <SocialMediaButton action={action}/>
+                </div>
             )}
         </div>
     )
 }
+
+export default ButtonsPresentation;
