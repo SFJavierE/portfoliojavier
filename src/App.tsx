@@ -2,9 +2,7 @@ import './App.css'
 import Presentation from './presentation/Presentation'
 import CardList from './cardList/CardList'
 import Technologies from './technologies/Technologies'
-import { listJobs } from './experiencie/ListJobs'
-import { listEducations } from './education/ListEducations'
-import { listProjects } from './projects/ListProjects'
+import {Educations, Jobs, Projects} from './utils/lists/Lists'
 
 function App() {
   return (
@@ -16,9 +14,9 @@ function App() {
           <Technologies/>
           
           <div className="space-y-10">
-            <CardList info={listJobs}/>
-            <CardList info={listEducations}/>
-            <CardList info={listProjects}/>
+            <CardList info={Jobs}/>
+            <CardList info={Educations}/>
+            <CardList info={Projects}/>
           </div>
         </div>
       </div>

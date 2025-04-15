@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MoonWithStarsIcon, SunIcon } from "../icons/Icons";
+import { MoonWithStarsIcon, SunIcon } from "../utils/icons/Icons";
 
 interface Language{
     language : 'ES' | 'EN'

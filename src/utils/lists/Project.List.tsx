@@ -1,6 +1,6 @@
 import { CardInfo } from "../interfaces/Interfaces";
 
-export const listProjects : CardInfo = {
+export const projectList : CardInfo = {
     title: "Proyectos",
     data: [
         {

@@ -1,4 +1,4 @@
-import { Card } from "../interfaces/Interfaces";
+import { Card } from "../utils/interfaces/Interfaces";
 import ExperiencieES from "./cardList.es.json";
 
 export const PlaceJob = ({job}:{job: Card}) => {

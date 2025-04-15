@@ -1,4 +1,4 @@
-import { Skills } from '../interfaces/Interfaces';
+import { Skills } from '../utils/interfaces/Interfaces';
 import { ReactElement } from 'react';
 
 export const ListSkills = ({ skill }: { skill: Skills }): ReactElement => {

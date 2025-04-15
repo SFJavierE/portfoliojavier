@@ -1,3 +1,5 @@
+import { ReactElement } from "react"
+
 export interface CardInfo{
     title: string,
     data: Card[]
@@ -35,4 +37,15 @@ export type Skills = 'ReactNative' | 'CSS' | 'Redis' | 'ExpressJs' | 'NodeJS' | 
 
 export interface MediaButtonProps{
     socialMedia: 'GitHub' | 'LinkedIn' | 'Email' | 'CV' | 'Whatsapp' | 'CopyEmail';
+}
+
+export interface IconProps{
+    className: string;
+}
+
+export type ChildrenSVG = ReactElement<{ className?: string }>;
+
+export interface SVGs{
+    name: string;
+    children: ChildrenSVG
 }

@@ -1,4 +1,4 @@
-import { CardInfo } from "../interfaces/Interfaces";
+import { CardInfo } from "../utils/interfaces/Interfaces";
 import { Description } from "./Description";
 import { PlaceJob } from "./PlaceJob";
 

@@ -1,6 +1,6 @@
 import { CardInfo } from '../interfaces/Interfaces';
 
-export const listJobs :CardInfo = {
+export const jobList :CardInfo = {
     title: "Experiencia",
     data: [{
     place: 'Trick Studios',

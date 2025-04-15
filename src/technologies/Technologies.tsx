@@ -1,6 +1,7 @@
-import { ReactElement, useEffect, useRef } from "react";
+import { ReactElement, useEffect, useRef, useState } from "react";
 import ReactDOM from 'react-dom/client';
-import { GetElementList } from './TechnologiesList';
+import { Technologies as technologiesList } from "../utils/lists/Lists"; 
+import { ChildrenSVG, SVGs } from "../utils/interfaces/Interfaces";
 
 export default function Technologies() {
     
@@ -9,8 +10,45 @@ export default function Technologies() {
     const rootRefs = useRef<ReactDOM.Root[]>([]);
     const positionRef = useRef(0);
     const isPausedRef = useRef(false);
-    const elements : ReactElement[] = GetElementList();
     
+    function SVG ({name, children} : SVGs) : ReactElement{
+        const [isHovered, setIsHovered] = useState(false);
+
+        return(
+            <div
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+            >
+                {children}
+                {isHovered && (
+                    <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 bg-indigo-800 text-indigo-100 text-xs px-2 py-1 rounded whitespace-nowrap">
+                        {name}
+                        <div className="absolute top-[-4px] left-1/2 -translate-x-1/2 w-2 h-2 bg-indigo-800 transform rotate-45"></div>
+                    </div>
+                )}
+            </div>
+        )
+    }
+
+    const GetElementList = () : ReactElement[] => {
+        const CreateElements = () : ReactElement[] => {
+            const elementsList : ReactElement[] = [];
+            technologiesList.map((tech : ChildrenSVG) => {
+                elementsList.push(
+                    <SVG name={tech.key!} key={tech.key}>
+                        {tech}
+                    </SVG>
+                )
+            })
+
+            return elementsList;
+        }
+
+        return CreateElements();
+    }
+    const elements : ReactElement[] = GetElementList();
+
+
     useEffect(() => {
         const container = containerRef.current;
         if (!container) return;

@@ -1,7 +1,7 @@
 import CV from "../assets/CVSosaFuch.pdf";
 import { ReactElement, useState } from 'react';
-import {LinkedInIcon, GitHubIcon, EmailIcon, CVIcon, WhatsappIcon, CopyIcon} from '../icons/Icons';
-import { MediaButtonProps } from '../interfaces/Interfaces';
+import {LinkedIn, GitHub, Email, Cv, Phone, Copy} from '../utils/icons/Icons';
+import { MediaButtonProps } from '../utils/interfaces/Interfaces';
 
 
 export const SocialMedias = () =>{
@@ -32,20 +32,20 @@ export const SocialMedias = () =>{
             <button key={socialMedia} className="mr-4" onClick={()=>DoSomething(socialMedia)}>
                 {
                     socialMedia == 'LinkedIn' ?
-                    <LinkedInIcon className={classNameSVG}/> :
+                    <LinkedIn className={classNameSVG}/> :
                     socialMedia == 'GitHub' ?
-                    <GitHubIcon className={classNameSVG}/>:
+                    <GitHub className={classNameSVG}/>:
                     socialMedia == 'Email' ?
-                    <EmailIcon className={classNameSVG}/>:
+                    <Email className={classNameSVG}/>:
                     socialMedia == 'CopyEmail' ?
                     <div className="relative" onMouseEnter={()=> DelayShowBubleDialog(true)} onMouseLeave={()=> DelayShowBubleDialog(false)}>
                         <span className={`absolute bg-gray-600 text-zinc-100 w-auto rounded-sm p-1 -top-10 left-0 text-sm font-bold ${showBubleDialog ? "opacity-100" : "opacity-0"}`}>CopiarEmail</span>
                         <span className={`absolute font-bold text-medium -top-5 text-gray-700 left-4 ${showBubleDialog ? "opacity-100" : "opacity-0"}`}>▼</span>
-                        <CopyIcon className={classNameSVG}/>
+                        <Copy className={classNameSVG}/>
                     </div> :
                     socialMedia == 'Whatsapp' ?
-                    <WhatsappIcon className={classNameSVG}/>:
-                    <CVIcon className={classNameSVG}/>
+                    <Phone className={classNameSVG}/>:
+                    <Cv className={classNameSVG}/>
                 }
             </button>
         )

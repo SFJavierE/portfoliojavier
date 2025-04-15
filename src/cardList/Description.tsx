@@ -1,5 +1,5 @@
 import TranslateES from "./cardList.es.json";
-import { CardDescription } from "../interfaces/Interfaces"
+import { CardDescription } from "../utils/interfaces/Interfaces"
 import { ListSkills } from "./Skills";
 
 export const Description = ({ description }: { description: CardDescription }) => {
