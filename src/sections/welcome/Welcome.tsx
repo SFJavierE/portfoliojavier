@@ -5,7 +5,12 @@ import Photo from "../../components/photo/Photo";
 
 export default function Welcome() {
     return(
-      <div className="flex flex-col-reverse md:flex-row w-full items-center gap-6">
+      <div className="flex flex-col md:flex-row w-full items-center gap-6">
+        <div className="w-full max-w-[200px] md:max-w-none md:w-1/2 flex justify-end">
+            <div className="relative aspect-square">
+                <Photo/>
+            </div>
+        </div>
         <div className="w-full md:w-1/2">
             <Name/>
             
@@ -17,11 +22,6 @@ export default function Welcome() {
             
             <ButtonsPresentation/>
             <ShortDescription/>
-        </div>
-        <div className="w-full max-w-[200px] md:max-w-none md:w-1/2 flex justify-end">
-            <div className="relative aspect-square">
-                <Photo/>
-            </div>
         </div>
       </div>
     )
