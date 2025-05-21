@@ -14,7 +14,7 @@ import
 import { ChildrenSVG } from '../interfaces/Interfaces';
 
 const technologiesList = () : ChildrenSVG[] => {
-    const classNameIcons = "h-12 w-12  md:h-16 md:w-16 text-indigo-300/75 hover:text-indigo-900/75 transition-all duration-300";
+    const classNameIcons = "h-2 w-2  md:h-16 md:w-16 text-indigo-300/75";
 
     return [
         <Unity key="Unity" className={classNameIcons} />,

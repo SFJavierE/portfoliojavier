@@ -2,32 +2,25 @@ import { memo } from 'react';
 import { CardInfo } from "../../utils/interfaces/Interfaces";
 import Description from "./description/Description";
 import Title from "./title/Title";
+import NavBar from '../navbar/Navbar';
 
 const Card = memo(({ info }: { info: CardInfo }) => {
-  const titleClasses = `
-    text-xl md:text-2xl lg:text-3xl font-bold tracking-wide
-    border-indigo-100 border-b-2 md:border-b-4 border-s-4 md:border-s-8
-    rounded-sm p-1 md:p-2 shadow-lg shadow-indigo-950 bg-indigo-950/25
-    inline-block w-full break-words
-  `;
-
   return (
-    <div className="w-full flex flex-col gap-3 md:gap-4">
+    <div className="px-36 py-12 w-full flex flex-col gap-3 md:gap-4">
+      <NavBar/>
       {/* Section Title */}
-      <div className="w-full max-w-[90vw] mx-auto">
-        <h2 className={titleClasses} aria-label={info.title}>
+      <div className="from-indigo-800 to-indigo-200/75 w-full py-3 pl-4 text-start text-3xl rounded-md bg-gradient-to-r text-gray-200 font-bold">
           {info.title}
-        </h2>
       </div>
 
       {/* Info List */}
-      <div className="mt-4 md:mt-6 lg:mt-8 space-y-4 md:space-y-5">
+      <div className="mt-6">
         {info.data.map((data, index) => (
           <article 
             key={`${data.place}-${index}`}
             className="w-full text-zinc-100 rounded-lg
               border-b md:border-none border-indigo-100/25
-              pb-4 md:pb-0"
+              mb-6"
           >
             <div className="grid grid-cols-1 md:grid-cols-6 gap-3 md:gap-4">
               {/* Title Section */}

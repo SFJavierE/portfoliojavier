@@ -1,7 +1,27 @@
 {
     "SKILLS": "Creativo, Resolutivo y Proactivo.",
-    "DESCRIPTION": "Me gusta enfrentar desafiós y cada proyecto que encaro me ayuda a crecer mis habilidades y a seguir aprendiendo cada día 🚀",
-    "CURRENTJOB": "Game Developer",
+    "DESCRIPTION": "Me entusiasma enfrentar nuevos desafíos. Cada proyecto que abordo es una oportunidad valiosa que me impulsa a expandir y perfeccionar mis habilidades, permitiéndome seguir aprendiendo y evolucionando constantemente cada día. ¡Siempre listo para el próximo reto! 🚀",
+    "TITLE": {
+        "DEVELOPER": "Desarrollador",
+        "FRONTEND": "Frontend",
+        "GAMES": "Juegos",
+        "CREATIVE": "Creativo"
+    },
+    "BUTTONS":{
+        "EXPERIENCIE": "Experiencia",
+        "EDUCATION": "Educación",
+        "PROJECTS": "Proyectos",
+        "ABOUTME": "Sobre Mi"
+    },
+    "EMOJIS":{
+        "FRONTEND": "💻✨",
+        "GAMES": "🎮🕹️",
+        "CREATIVE": "💡🧠",
+        "EXPERIENCIES": "💼📈⚙️",
+        "EDUCATION": "🎓📚🧠",
+        "PROJECTS": "🛠️💡🚀",
+        "ABOUTME": "🐶🎮🍳"
+    },
     "PLACE": "Trick Studios",
     "POPUP_WEBSITE": "Sitio Web"
 }

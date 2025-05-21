@@ -31,3 +31,7 @@ html::after {
   );
   pointer-events: none;
 }
+
+body{
+  overflow-x: hidden;
+}

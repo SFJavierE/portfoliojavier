@@ -1,29 +1,11 @@
-import { ReactElement, useEffect, useRef, useState, memo, useCallback, useMemo } from "react";
+import { useEffect, useRef, memo, useCallback, useMemo } from "react";
 import ReactDOM from 'react-dom/client';
 import { Technologies as technologiesList } from "../../utils/lists/Lists"; 
-import { ChildrenSVG, SVGs } from "../../utils/interfaces/Interfaces";
+import { ChildrenSVG} from "../../utils/interfaces/Interfaces";
 
-const SVG = memo(({ name, children }: SVGs): ReactElement => {
-    const [isHovered, setIsHovered] = useState(false);
-    
-    return (
-        <div
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            className="relative"
-        >
-            {children}
-            {isHovered && (
-                <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 bg-indigo-800 text-indigo-100 text-xs px-2 py-1 rounded whitespace-nowrap">
-                    {name}
-                    <div className="absolute top-[-4px] left-1/2 -translate-x-1/2 w-2 h-2 bg-indigo-800 transform rotate-45"></div>
-                </div>
-            )}
-        </div>
-    );
-});
 
 const Technologies = () => {
+
     const containerRef = useRef<HTMLDivElement>(null);
     const animationRef = useRef<number>(0);
     const rootRefs = useRef<ReactDOM.Root[]>([]);
@@ -32,9 +14,9 @@ const Technologies = () => {
     
     const elements = useMemo(() => 
         technologiesList.map((tech: ChildrenSVG) => (
-            <SVG name={tech.key!} key={tech.key}>
+            <div key={tech.key}>
                 {tech}
-            </SVG>
+            </div>
         )), []
     );
 
@@ -45,24 +27,24 @@ const Technologies = () => {
         container.innerHTML = '';
         
         const wrapper = document.createElement('div');
-        wrapper.className = 'flex relative h-full';
+        wrapper.className = 'flex h-full';
         
         const originalList = document.createElement('ul');
-        originalList.className = 'flex space-x-8 h-full items-center absolute top-0 left-0';
+        originalList.className = 'flex space-x-6 h-full items-center absolute top-0 left-0';
         
         const clonedList = document.createElement('ul');
         clonedList.className = 'flex space-x-8 h-full items-center absolute top-0 left-6';
     
         elements.forEach((tech) => {
             const li = document.createElement('li');
-            li.className = 'flex-shrink-0 hover:scale-125 transition-transform duration-300';
+            li.className = 'flex-shrink-0 transition-transform duration-300';
             const root = ReactDOM.createRoot(li);
             root.render(tech);
             rootRefs.current.push(root);
             originalList.appendChild(li);
     
             const liClone = document.createElement('li');
-            liClone.className = 'flex-shrink-0 hover:scale-125 transition-transform duration-300';
+            liClone.className = 'flex-shrink-0 transition-transform duration-300';
             const rootClone = ReactDOM.createRoot(liClone);
             rootClone.render(tech);
             rootRefs.current.push(rootClone);
@@ -101,39 +83,25 @@ const Technologies = () => {
         animationRef.current = requestAnimationFrame(animate);
     }, []);
 
-    const handleMouseEnter = useCallback(() => {
-        isPausedRef.current = true;
-    }, []);
-
-    const handleMouseLeave = useCallback(() => {
-        isPausedRef.current = false;
-        animate();
-    }, [animate]);
-
     useEffect(() => {
         const { originalList, clonedList } = setupDOM() || {};
         if (!originalList || !clonedList) return;
 
         animate();
 
-        const container = containerRef.current;
-        container?.addEventListener('mouseenter', handleMouseEnter);
-        container?.addEventListener('mouseleave', handleMouseLeave);
-
         return () => {
-            cancelAnimationFrame(animationRef.current!);
-            container?.removeEventListener('mouseenter', handleMouseEnter);
-            container?.removeEventListener('mouseleave', handleMouseLeave);
             rootRefs.current.forEach(root => root.unmount());
         };
-    }, [setupDOM, animate, handleMouseEnter, handleMouseLeave]);
+    }, [setupDOM, animate]);
 
     return (
-        <div 
-            ref={containerRef}
-            className="w-full overflow-hidden h-40"
-            aria-label="Tecnologías dominadas"
-        />
+        <div className={`hover:shadow-md hover:shadow-indigo-400 h-20 w-full rounded-md hover:from-indigo-800 hover:to-indigo-200/75 bg-gradient-to-r from-indigo-950/75 to-indigo-600/25 relative overflow-hidden`}>
+            <div 
+                ref={containerRef}
+                className="w-full h-20 rounded-md"
+                aria-label="Tecnologías dominadas"
+            />
+        </div>
     );
 };
 

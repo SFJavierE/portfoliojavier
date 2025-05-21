@@ -56,3 +56,17 @@ export interface SVGs{
     name: string;
     children: ChildrenSVG
 }
+
+export interface BordersEnables{
+    topLeft: boolean,
+    topRight: boolean,
+    bottomLeft: boolean,
+    bottomRight: boolean,
+    borderSize: number,
+    divSize: string
+}
+
+export interface ButtonTransitionProps {
+    setChangeSection: React.Dispatch<React.SetStateAction<boolean>>,
+    changeSection: boolean
+  }

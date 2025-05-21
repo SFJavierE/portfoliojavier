@@ -1,19 +1,20 @@
 import { memo } from 'react';
 import ArgentinaFlag from "../../assets/imgs/argentina.png";
+import BorderFrame from '../borders/Border.Frame';
 
 const Name = memo(() => {
   return (
-    <div className="w-full max-w-[90vw] mx-auto mb-4">
-      <div className="tracking-wide font-bold border-b-2 sm:border-b-4 border-s-4 sm:border-s-8 border-indigo-100 rounded-sm p-1 sm:p-2 bg-indigo-950/25 shadow-lg shadow-indigo-950">
+    <div className="w-full max-w-[90vw] mb-4">
+      <div>
 
         <div className="flex flex-col">
-          <span className="text-3xl sm:text-3xl md:text-4xl lg:text-6xl break-words">
+          <span className="flex flex-start text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             Javier
-            <span className="hidden sm:inline text-indigo-300"> E.</span>
-            <span className="ml-1"> Sosa Fuch</span>
+            <span className="hidden sm:inline text-indigo-300">E.</span>
+            <span className="ml-1">SosaFuch</span>
           </span>
 
-          <div className="mt-2 flex items-center gap-2 text-xs sm:text-sm">
+          <div className="w-1/3 h-6 mt-3 flex items-center justify-center gap-2 text-xs sm:text-sm relative px-2 py-4 bg-indigo-900/25">
             <span>De Argentina</span>
             <img 
               src={ArgentinaFlag}
@@ -21,6 +22,7 @@ const Name = memo(() => {
               alt="Bandera Argentina"
               loading="lazy"
             />
+            <BorderFrame topLeft={true} topRight={false} bottomLeft={false} bottomRight={true} borderSize={4} divSize='4'/>
           </div>
         </div>
       </div>
