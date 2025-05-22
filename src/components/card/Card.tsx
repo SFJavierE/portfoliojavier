@@ -2,12 +2,10 @@ import { memo } from 'react';
 import { CardInfo } from "../../utils/interfaces/Interfaces";
 import Description from "./description/Description";
 import Title from "./title/Title";
-import NavBar from '../navbar/Navbar';
 
 const Card = memo(({ info }: { info: CardInfo }) => {
   return (
     <div className="px-36 py-12 w-full flex flex-col gap-3 md:gap-4">
-      <NavBar/>
       {/* Section Title */}
       <div className="from-indigo-800 to-indigo-200/75 w-full py-3 pl-4 text-start text-3xl rounded-md bg-gradient-to-r text-gray-200 font-bold">
           {info.title}

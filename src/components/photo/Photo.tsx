@@ -1,20 +1,22 @@
 import { memo } from 'react';
 import Me from '../../assets/imgs/yo.png';
-import BorderFrame from '../borders/Border.Frame';
+import Technologies from '../technologies/Technologies';
 
 const Photo = memo(() => (
-  <div className="w-full rounded-lg relative shadow-2xl shadow-indigo-950/70">
+  <div className="w-full relative shadow-2xl shadow-indigo-950/70">
     <img 
       src={Me}
-      className='opacity-80 hover:opacity-95 transition-opacity
+      className='rounded-md opacity-80 hover:opacity-95 transition-opacity
       border-4 border-indigo-900/30 hover:border-indigo-700/50
-      object-cover p-1 hover:scale-[1.02] transition-all duration-300
-      bg-indigo-950/75 p-4'
+      object-cover p-1 transition-all duration-300
+      bg-indigo-950/75'
       alt="Javier Sosa Fuch - Desarrollador Frontend"
       loading="lazy"
       decoding="async"
     />
-    <BorderFrame topLeft={true} topRight={true} bottomLeft={true} bottomRight={true} borderSize={8} divSize={"1/4"}/>
+    <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm">
+      <Technologies/>
+    </div>
   </div>
 ));
 

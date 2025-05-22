@@ -2,8 +2,8 @@ import TranslateES from "../../utils/translates/welcome/welcome.es.json"
 
 export default function Phrase(){
     return(
-        <div className="mb-5">
-            <span className="text-start text-lg md:text-lx lg:text-2xl text-indigo-500">
+        <div className="mb-2">
+            <span className="text-start text-lg md:text-lx lg:text-xl text-indigo-500">
                 <div className="flex justify-start">
                     <p className="mr-2">{TranslateES.TITLE.DEVELOPER}</p>
                     <p className="mr-2 text-gray-200 font-semibold decoration-solid underline">{`${TranslateES.TITLE.FRONTEND}`}</p>

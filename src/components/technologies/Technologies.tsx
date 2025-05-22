@@ -95,7 +95,7 @@ const Technologies = () => {
     }, [setupDOM, animate]);
 
     return (
-        <div className={`hover:shadow-md hover:shadow-indigo-400 h-20 w-full rounded-md hover:from-indigo-800 hover:to-indigo-200/75 bg-gradient-to-r from-indigo-950/75 to-indigo-600/25 relative overflow-hidden`}>
+        <div className={`z-50 h-12 w-full rounded-ee-md rounded-ss-md bg-gradient-to-r from-indigo-950/75 to-indigo-600/25 relative overflow-hidden`}>
             <div 
                 ref={containerRef}
                 className="w-full h-20 rounded-md"

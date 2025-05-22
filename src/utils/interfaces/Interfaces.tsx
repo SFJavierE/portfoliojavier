@@ -70,3 +70,16 @@ export interface ButtonTransitionProps {
     setChangeSection: React.Dispatch<React.SetStateAction<boolean>>,
     changeSection: boolean
   }
+
+export interface Refs {
+    homeRef: React.RefObject<HTMLDivElement | null>,
+    skillsRef: React.RefObject<HTMLDivElement | null>,
+    jobsRef: React.RefObject<HTMLDivElement | null>,
+    educationsRef: React.RefObject<HTMLDivElement | null>,
+    projectsRef: React.RefObject<HTMLDivElement | null>,
+    aboutMeRef: React.RefObject<HTMLDivElement | null>,
+}
+
+export interface ClassContainer{
+    classContainer: string
+}

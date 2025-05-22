@@ -74,10 +74,10 @@ export default function CardPresentation() {
     <div 
     ref={componentRef}
     
-    className= "font-mono text-zinc-100 min-h-screen w-full overflow-x-hidden flex justify-center h-full items-center">
+    className= "font-mono text-zinc-100 min-h-screen w-full overflow-x-hidden flex justify-center h-full items-center relative">
         <div 
         style={transformStyle}
-        className={`relative ${transitionDuration} ease-out-quad will-change-transform`}>
+        className={`relative ${transitionDuration} ease-out-quad will-change-transform `}>
           <Welcome />
 
         </div>

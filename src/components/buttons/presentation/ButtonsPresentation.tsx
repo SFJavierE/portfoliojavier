@@ -1,9 +1,9 @@
 import CV from "../../../assets/pdf/CVSosaFuch.pdf";
 import { ReactElement } from 'react';
 import {LinkedIn, GitHub, Email, Cv, Phone, Copy} from '../../../utils/icons/Icons';
-import { ButtonActions } from '../../../utils/interfaces/Interfaces';
+import { ButtonActions, ClassContainer } from '../../../utils/interfaces/Interfaces';
 
-const ButtonsPresentation = () =>{
+const ButtonsPresentation = ({ classContainer } : ClassContainer) =>{
     const actions : ButtonActions[] = [
         {action: 'LinkedIn'},
         {action: 'GitHub'},
@@ -18,7 +18,7 @@ const ButtonsPresentation = () =>{
     const whatsapp : string = "https://w.app/sosafuchjaviere";
     
     const SocialMediaButton = ({action} : ButtonActions) : ReactElement =>{
-        const classNameSVG : string = "w-10 h-10 hover:border-gray-200 hover:bg-gray-200 hover:text-indigo-500 transition ease in out delay-150 bg-indigo-950 rounded-md border-4 border-indigo-950";
+        const classNameSVG : string = "mr-3 w-10 h-10 hover:border-gray-200 hover:bg-gray-200 hover:text-indigo-800 transition ease in out text-indigo-200 delay-150 bg-indigo-400 rounded-md border-4 border-indigo-400";
         
         return(
             <button key={action} className="" onClick={()=>DoSomething(action)}>
@@ -78,7 +78,7 @@ const ButtonsPresentation = () =>{
     }
 
     return(
-        <div className="flex justify-between mt-6">
+        <div className={classContainer}>
             {actions.map(({action} : ButtonActions) => 
                 <div key={action}>
                     <SocialMediaButton action={action}/>
