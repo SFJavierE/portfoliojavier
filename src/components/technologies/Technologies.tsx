@@ -14,7 +14,7 @@ const Technologies = () => {
     
     const elements = useMemo(() => 
         technologiesList.map((tech: ChildrenSVG) => (
-            <div key={tech.key}>
+            <div key={tech.key} className="h-8 w-8 ">
                 {tech}
             </div>
         )), []

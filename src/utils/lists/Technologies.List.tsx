@@ -9,12 +9,13 @@ import
     Tailwind,
     TypeScript,
     Unity,
-    UnrealEngine
+    UnrealEngine,
+    NodeJS
 } from "../icons/Icons";
 import { ChildrenSVG } from '../interfaces/Interfaces';
 
 const technologiesList = () : ChildrenSVG[] => {
-    const classNameIcons = "h-8 w-8 text-indigo-300/75";
+    const classNameIcons = " text-indigo-300/75";
 
     return [
         <Unity key="Unity" className={classNameIcons} />,
@@ -26,6 +27,7 @@ const technologiesList = () : ChildrenSVG[] => {
         <Angular key="Angular" className={classNameIcons} />,
         <RubyOnRails key="RubyOnRails" className={classNameIcons} />,
         <Net key=".Net" className={classNameIcons} />,
+        <NodeJS key="NodeJs" className={classNameIcons} />,
         <Jira key="Jira" className={classNameIcons} />
     ];
 }

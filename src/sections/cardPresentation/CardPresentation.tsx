@@ -1,4 +1,4 @@
-import Welcome from '../../sections/welcome/Welcome'
+import Welcome from '../welcome/Welcome.Section'
 import {useState, useRef, useEffect, useCallback} from 'react';
 
 export default function CardPresentation() {

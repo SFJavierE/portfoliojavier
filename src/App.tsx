@@ -1,9 +1,12 @@
 import {useRef} from 'react';
 import './App.css';
+import NavBar from './components/navbar/Navbar';
 import CardPresentation from './sections/cardPresentation/CardPresentation';
-import Card from './components/card/Card';
-import { Educations, Jobs, Projects } from './utils/lists/Lists';
-import NavBar from './components/navbar/Navbar'; // Asumiendo que tienes un NavBar
+import Experiencies from './sections/experiencies/Experiencies.Section';
+import Projects from './sections/projects/Projects.Section';
+import Skills from './sections/skills/Skills.Section'
+import AboutMe from './sections/aboutMe/AboutMe.Section';
+import Education from './sections/education/Education.Section';
 
 function App() {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -19,6 +22,7 @@ function App() {
         w-full min-h-screen
         scroll-smooth
         snap-y snap-mandatory
+        pb-36 px-36
       "
     >
       <NavBar homeRef={homeRef} skillsRef={skillsRef} jobsRef={jobsRef} educationsRef={educationsRef} projectsRef={projectsRef} aboutMeRef={aboutMeRef}/>
@@ -28,23 +32,23 @@ function App() {
         </div>
 
         <div ref={skillsRef} className="snap-start min-h-screen flex items-center justify-center ">
-          
+          <Skills/>
         </div>
 
         <div ref={jobsRef} className="snap-start min-h-screen flex items-center justify-center ">
-          <Card info={Jobs} />
+          <Experiencies />
         </div>
 
         <div ref={educationsRef} className="snap-start min-h-screen flex items-center justify-center ">
-          <Card info={Educations} />
+          <Education/>
         </div>
 
         <div ref={projectsRef} className="snap-start min-h-screen flex items-center justify-center ">
-          <Card info={Projects} />
+          <Projects />
         </div>
 
         <div ref={aboutMeRef} className="snap-start min-h-screen flex items-center justify-center ">
-          
+          <AboutMe/>
         </div>
       </>
     </div>

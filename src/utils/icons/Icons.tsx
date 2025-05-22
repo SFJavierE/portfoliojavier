@@ -17,6 +17,7 @@ import TailwindIcon from "./Tailwind.Icon";
 import TypescriptIcon from "./Typescript.Icon";
 import UnityIcon from "./Unity.Icon";
 import UnrealEngineIcon from "./UnrealEngine.Icon";
+import NodeJSIcon from "./NodeJSIcon";
 
 export const Angular = AngularIcon;
 export const Bootstrap = BootstrapIcon;
@@ -37,3 +38,4 @@ export const Tailwind = TailwindIcon;
 export const TypeScript = TypescriptIcon;
 export const Unity = UnityIcon;
 export const UnrealEngine = UnrealEngineIcon;
+export const NodeJS = NodeJSIcon;

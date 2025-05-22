@@ -4,6 +4,32 @@ export const educationList : CardInfo = {
     title: "Educación",
     data: [
     {
+        place: 'CEM English',
+        dates:{
+            firstDate: {
+                month: 3,
+                year: 2025
+            },
+            secondDate: 'Current'
+        },
+        description: [
+            {
+                skills: [],
+                position: {
+                    name: 'Lenguaje de Ingles',
+                    time: {
+                        firstDate: {
+                            month: 3,
+                            year: 2025
+                        },
+                        secondDate: 'Current'
+                    }
+                },
+                text: "Un programa en línea de Ingles para fortalecer mi capacidad de comunicación en la lengua Anglosajona."
+                }
+            ]
+    },
+    {
         place: 'Henry',
         dates:{
             firstDate: {

@@ -9,7 +9,10 @@ export const jobList :CardInfo = {
             month: 12,
             year: 2023
         },
-        secondDate: 'Current'
+        secondDate: {
+            month: 5,
+            year: 2025
+        }
     },
     description: [
         {
@@ -21,7 +24,10 @@ export const jobList :CardInfo = {
                         month: 11,
                         year: 2024
                     },
-                    secondDate: 'Current'
+                    secondDate: {
+                        month: 5,
+                        year: 2025
+                    }
                 }
             },
             text: "Diseñé y desarrollé mapas interactivos para Fortnite utilizando Verse y el Editor Unreal para Fortnite (UEFN). Creé herramientas y sistemas personalizados, como un sistema de recompensas diarias, para mejorar la jugabilidad y la experiencia del usuario. Competente en diseño de mapas, mecánicas interactivas e implementación de funciones innovadoras."

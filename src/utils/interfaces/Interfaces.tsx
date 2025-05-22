@@ -83,3 +83,7 @@ export interface Refs {
 export interface ClassContainer{
     classContainer: string
 }
+
+export interface Title{
+    name: string
+}
