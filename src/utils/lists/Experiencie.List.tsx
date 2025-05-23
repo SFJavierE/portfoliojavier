@@ -1,9 +1,9 @@
 import { CardInfo } from '../interfaces/Interfaces';
+import TRANSLATE from '../translates/experiencies/translate.json'
 
-export const jobList :CardInfo = {
-    title: "Experiencia",
+export const experiencieList :CardInfo = {
     data: [{
-    place: 'Trick Studios',
+    place: TRANSLATE.ES.PLACE.TRICK.NAME,
     dates:{
         firstDate: {
             month: 12,
@@ -18,7 +18,7 @@ export const jobList :CardInfo = {
         {
             skills: ['UnrealEngine', 'Verse', 'UEFN', 'UnrealEngineForFortnite'],
             position: {
-                name: 'Fortnite Map Developer',
+                name: TRANSLATE.ES.PLACE.TRICK.POSITIONS.FORTNITE.TITLE,
                 time: {
                     firstDate: {
                         month: 11,
@@ -30,12 +30,12 @@ export const jobList :CardInfo = {
                     }
                 }
             },
-            text: "Diseñé y desarrollé mapas interactivos para Fortnite utilizando Verse y el Editor Unreal para Fortnite (UEFN). Creé herramientas y sistemas personalizados, como un sistema de recompensas diarias, para mejorar la jugabilidad y la experiencia del usuario. Competente en diseño de mapas, mecánicas interactivas e implementación de funciones innovadoras."
+            text: TRANSLATE.ES.PLACE.TRICK.POSITIONS.FORTNITE.DESCRIPTION
         },
         {
             skills: ['Unity', 'C#', 'NetCode', 'GitHub'],
             position: {
-                name: 'Unity Developer',
+                name: TRANSLATE.ES.PLACE.TRICK.POSITIONS.UNITY.TITLE,
                 time: {
                     firstDate:{
                         month: 12,
@@ -47,11 +47,11 @@ export const jobList :CardInfo = {
                     }
                 }
             },
-            text: "Desarrollé prototipos de juegos jugables y optimizados (MVP) con enfoque en modo multijugador utilizando NetCode. Entregué soluciones de alta calidad y optimizadas para el rendimiento dentro de los plazos establecidos."
+            text: TRANSLATE.ES.PLACE.TRICK.POSITIONS.UNITY.DESCRIPTION
         }
     ]
     },{
-        place: 'Wisboo',
+        place: TRANSLATE.ES.PLACE.WISBOO.NAME,
         dates:{
             firstDate: {
                 month: 5,
@@ -66,7 +66,7 @@ export const jobList :CardInfo = {
             {
                 skills: ['AngularJS', 'Jira', 'GitHub', 'Figma', 'RubyOnRails', 'Js'],
                 position: {
-                    name: 'Teach Leader & Frontend Developer',
+                    name: TRANSLATE.ES.PLACE.WISBOO.POSITIONS.LEADER.TITLE,
                     time:{
                         firstDate:{
                             month: 3,
@@ -78,19 +78,19 @@ export const jobList :CardInfo = {
                         }
                     }
                 },
-                text: "Lideré el equipo de tecnología en la Celula de Money, combinando roles técnicos y de gestión. Como desarrollador frontend, implementé soluciones y corregí errores utilizando AngularJS, enfocándome en áreas como compras, ventas, suscripciones y métodos de pago.",
+                text: TRANSLATE.ES.PLACE.WISBOO.POSITIONS.LEADER.DESCRIPTION,
                 points: [
-                    "Organicé y asigné tareas utilizando Jira.",
-                    "Creé y mantuve documentación técnica y funcional.",
-                    "Revisé y asigné la resolución de errores.",
-                    "Brindé visión técnica al equipo de producto.",
-                    "Representé a la Celula en reuniones corporativas."
+                    TRANSLATE.ES.PLACE.WISBOO.POSITIONS.LEADER.POINTS.FIRST,
+                    TRANSLATE.ES.PLACE.WISBOO.POSITIONS.LEADER.POINTS.SECOND,
+                    TRANSLATE.ES.PLACE.WISBOO.POSITIONS.LEADER.POINTS.THIRD,
+                    TRANSLATE.ES.PLACE.WISBOO.POSITIONS.LEADER.POINTS.FOURTH,
+                    TRANSLATE.ES.PLACE.WISBOO.POSITIONS.LEADER.POINTS.FIFTH
                 ]
             },
             {
                 skills: ['AngularJS', 'GitHub', 'RubyOnRails', 'Js'],
                 position: {
-                    name: 'Fullstack Developer',
+                    name: TRANSLATE.ES.PLACE.WISBOO.POSITIONS.FULL.TITLE,
                     time:{
                         firstDate:{
                             month: 5,
@@ -102,12 +102,12 @@ export const jobList :CardInfo = {
                         }
                     }
                 },
-                text: "Contribuí al mantenimiento y mejora de una plataforma que permite a los usuarios crear sus propias academias. Colaboré con un equipo experto, adquiriendo aprendizaje y crecimiento profesional."
+                text: TRANSLATE.ES.PLACE.WISBOO.POSITIONS.FULL.DESCRIPTION
             }
         ]
     },
     {
-        place: 'Ohmunity',
+        place: TRANSLATE.ES.PLACE.OHMUNITY.NAME,
         dates:{
             firstDate: {
                 month: 10,
@@ -122,7 +122,7 @@ export const jobList :CardInfo = {
             {
                 skills: ['Typescript', 'Git', 'GraphQL', 'Hasura', 'Js', 'React', 'Jest'],
                 position: {
-                    name: 'Fullstack Developer',
+                    name: TRANSLATE.ES.PLACE.OHMUNITY.POSITIONS.FULL.TITLE,
                     time: {
                         firstDate: {
                             month: 10,
@@ -134,10 +134,10 @@ export const jobList :CardInfo = {
                         }
                     }
                 },
-                text: "Contribuí al desarrollo de una aplicación móvil con el objetivo de conecta instructores de yoga y estudios con estudiantes en Estados Unidos, utilizando Apache Cordova, TypeScript, Hasura y Express.",
+                text: TRANSLATE.ES.PLACE.OHMUNITY.POSITIONS.FULL.DESCRIPTION,
                 points: [
-                    "Implementé pruebas utilizando Cypress, Jest y Storybook.",
-                    "Aprendí rápidamente nuevas tecnologías, entregando código limpio y eficiente."
+                    TRANSLATE.ES.PLACE.OHMUNITY.POSITIONS.FULL.POINTS.FIRST,
+                    TRANSLATE.ES.PLACE.OHMUNITY.POSITIONS.FULL.POINTS.SECOND
                 ]
             }
         ]

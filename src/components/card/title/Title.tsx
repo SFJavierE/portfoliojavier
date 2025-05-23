@@ -24,8 +24,9 @@ const Title = memo(({ title }: { title: Card }) => {
 
   return (
     <div className="pr-2 w-full">
-      <h3 className="text-lg md:text-xl font-bold text-indigo-200">
+      <h3 className={`${title.type && 'flex'} text-lg md:text-xl font-bold text-indigo-200`}>
         {title.place}
+        {title.type && <p className='ml-2'>{title.type == 'Game' ? "🎮" : "💻"}</p>}
       </h3>
       {renderDates}
     </div>

@@ -1,7 +1,7 @@
 import { useEffect, useRef, memo, useCallback, useMemo } from "react";
 import ReactDOM from 'react-dom/client';
-import { Technologies as technologiesList } from "../../utils/lists/Lists"; 
-import { ChildrenSVG} from "../../utils/interfaces/Interfaces";
+import { Technologies as technologiesList } from "../../../utils/lists/Lists"; 
+import { ChildrenSVG} from "../../../utils/interfaces/Interfaces";
 
 
 const Technologies = () => {

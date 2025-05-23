@@ -1,5 +1,6 @@
 import { memo } from 'react';
-import ArgentinaFlag from "../../assets/imgs/argentina.png";
+import ArgentinaFlag from "../../../assets/imgs/argentina.png";
+import TRANSLATE from '../../../utils/translates/welcome/translate.json'
 
 const Name = memo(() => {
   return (
@@ -14,7 +15,7 @@ const Name = memo(() => {
           </span>
 
           <div className="rounded-md w-1/3 h-6 mt-3 flex items-center justify-center gap-2 text-xs sm:text-sm relative px-2 py-4 bg-indigo-900/25">
-            <span>De Argentina</span>
+            <span>{TRANSLATE.ES.FROM}</span>
             <img 
               src={ArgentinaFlag}
               className="h-4 w-4 sm:h-5 sm:w-5"

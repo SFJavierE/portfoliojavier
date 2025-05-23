@@ -1,6 +1,6 @@
 import {useRef} from 'react';
 import './App.css';
-import NavBar from './components/navbar/Navbar';
+import NavBar from './sections/navbar/Navbar';
 import CardPresentation from './sections/cardPresentation/CardPresentation';
 import Experiencies from './sections/experiencies/Experiencies.Section';
 import Projects from './sections/projects/Projects.Section';

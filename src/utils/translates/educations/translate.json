@@ -1,0 +1,52 @@
+{
+    "ES":{
+        "SELFTAUGHT":{
+            "TITLE": "Mi Enfoque de Aprendizaje: La Pasión Autodidacta",
+            "FIRST": "Mi trayectoria profesional se ha forjado principalmente a través de un enfoque autodidacta, una metodología que considero mi mayor fortaleza. Cuando una tecnología, como React o Unity, capta mi interés, me sumerjo por completo en ella hasta dominarla. Este proceso implica una combinación intensiva de estudio de la documentación oficial, la implementación de proyectos prácticos desde cero y la resolución activa de problemas reales que surgen en el camino.",
+            "SECOND": "Este método me ha permitido desarrollar una capacidad excepcional para adaptarme rápidamente a nuevos entornos y tecnologías, así como una profunda habilidad para la resolución de problemas de forma independiente. Si bien el 90% de mi aprendizaje proviene de esta práctica autónoma y la exploración constante, también he complementado mi formación con cursos específicos en instituciones cuando ha sido necesario para profundizar en temas puntuales. Para mí, la clave es simple: si algo me apasiona, le dedico el tiempo y el enfoque necesarios, sin depender únicamente de rutas preestablecidas. Esta curiosidad insaciable y mi compromiso con el aprendizaje continuo son los motores que me impulsan a crecer y a mantenerme siempre a la vanguardia tecnológica."
+        },
+        "ACADEMY":{
+            "CEM":{
+                "NAME": "CEM English Academy",
+                "TITLE": "Leguaje de Ingles",
+                "DESCRIPTION": "Un programa en línea de Ingles para fortalecer mi capacidad de comunicación en la lengua Anglosajona."
+            },
+            "HENRY":{
+                "NAME": "SoyHenry",
+                "TITLE": "Fullstack Developer",
+                "DESCRIPTION": "Un programa intensivo en línea que simula un entorno laboral real, preparándome para una carrera en TI.",
+                "POINTS":{
+                    "FIRST": "Primeros dos meses: Formación intensiva en tecnologías de Frontend y Backend.",
+                    "SECOND": "Tercer mes: Desarrollo de una plataforma de E-commerce desde cero en un equipo multidisciplinario de 5-6 personas.",
+                    "THIRD": "Cuarto mes: Prácticas profesionales con experiencia práctica en un entorno laboral real.",
+                    "FOURTH": "Proyectos colaborativos: Trabajo en equipo para resolver desafíos técnicos y desarrollar aplicaciones funcionales."
+                }
+            }
+        }
+    },
+    "EN":{
+        "SELFTAUGHT":{
+            "TITLE":"My Learning Approach: The Self-Taught Passion",
+            "FIRST": "My professional journey has been primarily shaped by a self-taught approach, a methodology I consider my greatest strength. When a technology, such as React or Unity, captures my interest, I immerse myself completely until I master it. This process involves an intensive combination of studying official documentation, implementing practical projects from scratch, and actively solving real-world problems that arise along the way.",
+            "SECOND": "This method has allowed me to develop an exceptional ability to quickly adapt to new environments and technologies, as well as a deep skill for independent problem-solving. While 90% of my learning comes from this autonomous practice and constant exploration, I have also complemented my training with specific courses at institutions when necessary to delve deeper into particular topics. For me, the key is simple: if something truly fascinates me, I dedicate the necessary time and focus, without solely relying on pre-established paths. This insatiable curiosity and my commitment to continuous learning are the driving forces that push me to grow and always stay at the technological forefront."
+        },
+        "ACADEMY": {
+            "CEM": {
+                "NAME": "CEM English Academy",
+                "TITLE": "English Language",
+                "DESCRIPTION": "An online English program to strengthen my communication skills in the Anglo-Saxon language."
+            },
+            "HENRY": {
+                "NAME": "SoyHenry",
+                "TITLE": "Fullstack Developer",
+                "DESCRIPTION": "An intensive online program that simulates a real work environment, preparing me for a career in IT.",
+                "POINTS": {
+                    "FIRST": "First two months: Intensive training in Frontend and Backend technologies.",
+                    "SECOND": "Third month: Development of an E-commerce platform from scratch in a multidisciplinary team of 5-6 people.",
+                    "THIRD": "Fourth month: Professional internships with practical experience in a real work environment.",
+                    "FOURTH": "Collaborative projects: Teamwork to solve technical challenges and develop functional applications."
+                }
+            }
+        }
+    }
+}

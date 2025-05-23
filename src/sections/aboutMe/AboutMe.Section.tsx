@@ -1,4 +1,4 @@
-import ButtonsPresentation from "../../components/buttons/presentation/ButtonsPresentation"
+import ButtonsPresentation from "../../components/buttons/communication/CommunicationButtons"
 
 export default function AboutMe(){
     return(

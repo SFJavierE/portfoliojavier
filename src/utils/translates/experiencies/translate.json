@@ -1,0 +1,102 @@
+{
+    "ES":{
+        "PLACE":{
+            "TRICK":{
+                "NAME": "Trick Studios",
+                "POSITIONS":{
+                    "FORTNITE": {
+                        "TITLE": "Fortnite Map Developer",
+                        "DESCRIPTION": "Diseñé y desarrollé mapas interactivos para Fortnite utilizando Verse y el Editor Unreal para Fortnite (UEFN). Creé herramientas y sistemas personalizados, como un sistema de recompensas diarias, para mejorar la jugabilidad y la experiencia del usuario. Competente en diseño de mapas, mecánicas interactivas e implementación de funciones innovadoras." 
+                    },
+                    "UNITY": {
+                        "TITLE": "Unity Developer",
+                        "DESCRIPTION": "Desarrollé prototipos de juegos jugables y optimizados (MVP) con enfoque en modo multijugador utilizando NetCode. Entregué soluciones de alta calidad y optimizadas para el rendimiento dentro de los plazos establecidos." 
+                    }
+                }
+            },
+            "WISBOO":{
+                "NAME": "Wisboo",
+                "POSITIONS":{
+                    "LEADER": {
+                        "TITLE": "Teach Leader & Frontend Developer",
+                        "DESCRIPTION": "Lideré el equipo de tecnología en la Celula de Money, combinando roles técnicos y de gestión. Como desarrollador frontend, implementé soluciones y corregí errores utilizando AngularJS, enfocándome en áreas como compras, ventas, suscripciones y métodos de pago.",
+                        "POINTS": {
+                            "FIRST": "Organicé y asigné tareas utilizando Jira.",
+                            "SECOND": "Creé y mantuve documentación técnica y funcional.",
+                            "THIRD": "Revisé y asigné la resolución de errores.",
+                            "FOURTH": "Brindé visión técnica al equipo de producto.",
+                            "FIFTH": "Representé a la Celula en reuniones corporativas."
+                        }
+                    },
+                    "FULL":{
+                        "TITLE": "Fullstack Developer",
+                        "DESCRIPTION": "Contribuí al mantenimiento y mejora de una plataforma que permite a los usuarios crear sus propias academias. Colaboré con un equipo experto, adquiriendo aprendizaje y crecimiento profesional."
+                    }
+                }
+            },
+            "OHMUNITY":{
+                "NAME": "Ohmunity",
+                "POSITIONS":{
+                    "FULL":{
+                        "TITLE": "Fullstack Developer",
+                        "DESCRIPTION": "Contribuí al desarrollo de una aplicación móvil con el objetivo de conecta instructores de yoga y estudios con estudiantes en Estados Unidos, utilizando Apache Cordova, TypeScript, Hasura y Express.",
+                        "POINTS":{
+                            "FIRST": "Implementé pruebas utilizando Cypress, Jest y Storybook.",
+                            "SECOND": "Aprendí rápidamente nuevas tecnologías, entregando código limpio y eficiente."
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "EN": {
+        "PLACE": {
+            "TRICK": {
+                "NAME": "Trick Studios",
+                "POSITIONS": {
+                    "FORTNITE": {
+                        "TITLE": "Fortnite Map Developer",
+                        "DESCRIPTION": "Designed and developed interactive maps for Fortnite using Verse and the Unreal Editor for Fortnite (UEFN). Created custom tools and systems, such as a daily rewards system, to enhance gameplay and user experience. Competent in map design, interactive mechanics, and implementation of innovative features."
+                    },
+                    "UNITY": {
+                        "TITLE": "Unity Developer",
+                        "DESCRIPTION": "Developed playable and optimized game prototypes (MVPs) with a focus on multiplayer mode using NetCode. Delivered high-quality, performance-optimized solutions within established deadlines."
+                    }
+                }
+            },
+            "WISBOO": {
+                "NAME": "Wisboo",
+                "POSITIONS": {
+                    "LEADER": {
+                        "TITLE": "Tech Lead & Frontend Developer",
+                        "DESCRIPTION": "Led the technology team in the Money Cell, combining technical and management roles. As a frontend developer, I implemented solutions and fixed bugs using AngularJS, focusing on areas such as purchases, sales, subscriptions, and payment methods.",
+                        "POINTS": {
+                            "FIRST": "Organized and assigned tasks using Jira.",
+                            "SECOND": "Created and maintained technical and functional documentation.",
+                            "THIRD": "Reviewed and assigned bug resolution.",
+                            "FOURTH": "Provided technical vision to the product team.",
+                            "FIFTH": "Represented the Cell in corporate meetings."
+                        }
+                    },
+                    "FULL": {
+                        "TITLE": "Fullstack Developer",
+                        "DESCRIPTION": "Contributed to the maintenance and improvement of a platform that allows users to create their own academies. Collaborated with an expert team, gaining learning and professional growth."
+                    }
+                }
+            },
+            "OHMUNITY": {
+                "NAME": "Ohmunity",
+                "POSITIONS": {
+                    "FULL": {
+                        "TITLE": "Fullstack Developer",
+                        "DESCRIPTION": "Contributed to the development of a mobile application aimed at connecting yoga instructors and studios with students in the United States, using Apache Cordova, TypeScript, Hasura, and Express.",
+                        "POINTS": {
+                            "FIRST": "Implemented tests using Cypress, Jest, and Storybook.",
+                            "SECOND": "Quickly learned new technologies, delivering clean and efficient code."
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

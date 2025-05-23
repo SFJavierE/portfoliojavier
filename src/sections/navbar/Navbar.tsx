@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Refs } from '../../utils/interfaces/Interfaces';
-import ButtonsPresentation from '../buttons/presentation/ButtonsPresentation';
+import ButtonsPresentation from '../../components/buttons/communication/CommunicationButtons';
 
 export default function NavBar({ homeRef, skillsRef, jobsRef, educationsRef, projectsRef, aboutMeRef } : Refs) {
   const [showNavbar, setShowNavBar] = useState(false);

@@ -1,0 +1,46 @@
+{
+    "ES":{
+        "FROM": "De Argentina",
+        "DESCRIPTION": "Me entusiasma enfrentar nuevos desafíos. Cada proyecto que abordo es una oportunidad valiosa que me impulsa a expandir y perfeccionar mis habilidades, permitiéndome seguir aprendiendo y evolucionando constantemente cada día. ¡Siempre listo para el próximo reto! 🚀",
+        "TITLE": {
+            "DEVELOPER": "Desarrollador",
+            "FRONTEND": "Frontend",
+            "GAMES": "Juegos",
+            "CREATIVE": "Creativo"
+        },
+        "BUTTONS":{
+            "SKILLS": "Habilidades",
+            "EXPERIENCIE": "Experiencia",
+            "EDUCATION": "Educación",
+            "PROJECTS": "Proyectos",
+            "ABOUTME": "Sobre Mi"
+        }
+    },
+    "EN": {
+        "FROM": "From Argentina",
+        "DESCRIPTION": "I am excited to face new challenges. Every project I undertake is a valuable opportunity that drives me to expand and refine my skills, allowing me to continue learning and evolving constantly every day. Always ready for the next challenge! 🚀",
+        "TITLE": {
+            "DEVELOPER": "Developer",
+            "FRONTEND": "Frontend",
+            "GAMES": "Games",
+            "CREATIVE": "Creative"
+        },
+        "BUTTONS":{
+            "SKILLS": "Skills",
+            "EXPERIENCE": "Experience",
+            "EDUCATION": "Education",
+            "PROJECTS": "Projects",
+            "ABOUTME": "About Me"
+        }
+    },
+    "EMOJIS":{
+        "FRONTEND": "💻✨",
+        "GAMES": "🎮🕹️",
+        "CREATIVE": "💡🧠",
+        "SKILLS": "🎯🧩🏆",
+        "EXPERIENCIES": "💼📈⚙️",
+        "EDUCATION": "🎓📚🧠",
+        "PROJECTS": "🛠️💡🚀",
+        "ABOUTME": "🐶🎮🍳"
+    }
+}

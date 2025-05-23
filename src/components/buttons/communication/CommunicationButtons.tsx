@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import {LinkedIn, GitHub, Email, Cv, Phone, Copy} from '../../../utils/icons/Icons';
 import { ButtonActions, ClassContainer } from '../../../utils/interfaces/Interfaces';
 
-const ButtonsPresentation = ({ classContainer } : ClassContainer) =>{
+const CommunicationButtons = ({ classContainer } : ClassContainer) =>{
     const actions : ButtonActions[] = [
         {action: 'LinkedIn'},
         {action: 'GitHub'},
@@ -18,7 +18,7 @@ const ButtonsPresentation = ({ classContainer } : ClassContainer) =>{
     const whatsapp : string = "https://w.app/sosafuchjaviere";
     
     const SocialMediaButton = ({action} : ButtonActions) : ReactElement =>{
-        const classNameSVG : string = "mr-3 w-10 h-10 hover:border-gray-200 hover:bg-gray-200 hover:text-indigo-800 transition ease in out text-indigo-200 delay-150 bg-indigo-400 rounded-md border-4 border-indigo-400";
+        const classNameSVG : string = "mr-3 w-10 h-10 hover:border-gray-200 hover:bg-gray-200 hover:text-indigo-800 transition ease in out text-indigo-200 delay-150 bg-indigo-900 rounded-md border-4 border-indigo-800 shadow-indigo-600 shadow-md hover:shadow-lg hover:shadow-indigo-400";
         
         return(
             <button key={action} className="" onClick={()=>DoSomething(action)}>
@@ -88,4 +88,4 @@ const ButtonsPresentation = ({ classContainer } : ClassContainer) =>{
     )
 }
 
-export default ButtonsPresentation;
+export default CommunicationButtons;

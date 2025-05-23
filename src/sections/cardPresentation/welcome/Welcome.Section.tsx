@@ -1,10 +1,10 @@
-import Name from "../../components/name/Name";
-import ButtonsPresentation from "../../components/buttons/presentation/ButtonsPresentation";
-import ShortDescription from "../../components/description/presentation/ShortDescription";
-import Photo from "../../components/photo/Photo";
-import Phrase from "../../components/phrase/Phrase";
-import ButtonsRedirecters from "../../components/buttons/redirecters/ButtonsRedirecters";
-import ButtonTransition from "../../components/buttons/transition/ButtonTransition";
+import Name from "../../../components/welcome/name/Name";
+import CommunicationButtons from "../../../components/buttons/communication/CommunicationButtons";
+import ShortDescription from "../../../components/welcome/presentation/ShortDescription";
+import Photo from "../../../components/welcome/photo/Photo";
+import Phrase from "../../../components/welcome/phrase/Phrase";
+import CardSectionButtons from "../../../components/welcome/buttons/redirecters/CardSectionButtons";
+import CardButton from "../../../components/welcome/buttons/card/CardButton";
 import { useState, useEffect } from 'react';
 
 export default function Welcome() {
@@ -34,15 +34,15 @@ export default function Welcome() {
                 <Name/>
                 <Phrase/>
                 <ShortDescription/>
-                <ButtonsPresentation classContainer="flex justify-start mt-6"/>
+                <CommunicationButtons classContainer="flex justify-start mt-6"/>
             </div>
             <div
                 className={`${contentBaseClasses} ${changeSection ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
             >
-                <ButtonsRedirecters/>
+                <CardSectionButtons/>
             </div>
         </div>
-        <ButtonTransition setChangeSection={setChangeSection} changeSection={changeSection}/>
+        <CardButton setChangeSection={setChangeSection} changeSection={changeSection}/>
     </div>
     )
 }

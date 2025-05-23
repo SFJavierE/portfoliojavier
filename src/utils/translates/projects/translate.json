@@ -1,0 +1,74 @@
+{
+    "ES":{
+        "MAGE":{
+            "NAME": "TheMageTower",
+            "DESCRIPTION": "Roguelike de plataformas donde juegas como un aprendiz de mago en una misión desesperada: rescatar a tu maestro secuestrado. Aprende hechizos caóticos, mejora tus poderes cada vez que mueras y adéntrate en mazmorras que cambian en cada partida. ¿Lograrás dominar la magia... o sucumbirás una y otra vez?"
+        },
+        "SLIME":{
+            "NAME": "SlimeSlash",
+            "DESCRIPTION": "Juego en 2D donde controlas a un soldado que debe enfrentarse a un Slime Gigante. Tu objetivo: esquivar sus ataques y evitar que absorba suficiente energía para convertirse en una amenaza aún mayor."
+        },
+        "ARAM":{
+            "NAME": "LolAram",
+            "DESCRIPTION": "Una replica del League of Legends, de una forma más clásica en el mapa de una sola línea ARAM."
+        },
+        "ZOMBIE":{
+            "NAME": "ZombieWave",
+            "DESCRIPTION": "Juego mobile 3D con vista superior donde sobrevives a oleadas de zombies nivel tras nivel. Usa armas, tácticas y power-ups para resistir, mientras Firebase guarda tus puntajes en tiempo real para competir con otros jugadores."
+        },
+        "DOGS": {
+            "NAME": "DogsPictures",
+            "DESCRIPTION": "Este proyecto utiliza la API de Unsplash para mostrar imágenes en una galería organizada en columnas de 3 imágenes por fila.",
+            "POINTS": {
+                "FIRST": "Carga dinámica: Cada petición a la API trae 6 imágenes nuevas, que se añaden al hacer clic en el botón 'Ver más'.",
+                "SECOND": "Guardado de imágenes: Puedes guardar tus favoritas haciendo clic en el botón 'Guardar' (ubicado en la esquina superior izquierda de cada imagen).",
+                "THIRD": "Galería personal: Todas las imágenes guardadas se almacenan y pueden verse en la pestaña 'Mis imágenes'.",
+                "FOURTH": "Búsqueda integrada: Un motor de búsqueda te permite encontrar imágenes específicas según tus intereses."
+            }
+        },
+        "BANK": {
+            "NAME": "BankAppMe",
+            "DESCRIPTION": "Desarrollé una aplicación móvil de billetera virtual utilizando React Native en equipo. Aunque ningún integrante tenía experiencia previa con la tecnología, asumí el liderazgo del frontend, coordinando al grupo mediante videollamadas para resolver desafíos técnicos y guiar la implementación. El resultado fue una app funcional que permitía cargar saldo virtual y realizar transferencias entre usuarios, demostrando nuestra capacidad para aprender rápidamente y colaborar de manera efectiva."
+        },
+        "BACK90": {
+            "NAME": "BackTo90s",
+            "DESCRIPTION": "Ecommerce desarrollado como proyecto en Henry junto a tres compañeros. Su objetivo era exhibir productos icónicos de los años 90, mostrando sus precios originales de la época y evocando nostalgia. Realizamos una campaña de marketing creativa, lo que generó una buena recepción entre los alumnos durante la presentación en vivo ante el instructor."
+        }
+    },
+    "EN": {
+        "MAGE": {
+            "NAME": "TheMageTower",
+            "DESCRIPTION": "Roguelike platformer where you play as a wizard apprentice on a desperate mission: rescue your kidnapped master. Learn chaotic spells, upgrade your powers every time you die, and delve into dungeons that change with each playthrough. Will you master magic... or succumb again and again?"
+        },
+        "SLIME": {
+            "NAME": "SlimeSlash",
+            "DESCRIPTION": "2D game where you control a soldier who must face a Giant Slime. Your objective: dodge its attacks and prevent it from absorbing enough energy to become an even greater threat."
+        },
+        "ARAM": {
+            "NAME": "LolAram",
+            "DESCRIPTION": "A League of Legends replica, in a more classic way on the single-lane ARAM map."
+        },
+        "ZOMBIE": {
+            "NAME": "ZombieWave",
+            "DESCRIPTION": "3D mobile game with a top-down view where you survive waves of zombies level after level. Use weapons, tactics, and power-ups to resist, while Firebase saves your scores in real-time to compete with other players."
+        },
+        "DOGS": {
+            "NAME": "DogsPictures",
+            "DESCRIPTION": "This project uses the Unsplash API to display images in a gallery organized into 3-image columns per row.",
+            "POINTS": {
+                "FIRST": "Dynamic loading: Each API request fetches 6 new images, which are added by clicking the 'See more' button.",
+                "SECOND": "Image saving: You can save your favorites by clicking the 'Save' button (located in the top left corner of each image).",
+                "THIRD": "Personal gallery: All saved images are stored and can be viewed in the 'My Images' tab.",
+                "FOURTH": "Integrated search: A search engine allows you to find specific images based on your interests."
+            }
+        },
+        "BANK": {
+            "NAME": "BankAppMe",
+            "DESCRIPTION": "Developed a virtual wallet mobile application using React Native as part of a team. Although no team member had prior experience with the technology, I took the lead on the frontend, coordinating the group via video calls to solve technical challenges and guide implementation. The result was a functional app that allowed users to load virtual balance and perform transfers between users, demonstrating our ability to learn quickly and collaborate effectively."
+        },
+        "BACK90": {
+            "NAME": "BackTo90s",
+            "DESCRIPTION": "E-commerce developed as a project at Henry with three teammates. Its goal was to showcase iconic 90s products, displaying their original prices from that era and evoking nostalgia. We conducted a creative marketing campaign, which generated a good reception among students during the live presentation to the instructor."
+        }
+    }
+}

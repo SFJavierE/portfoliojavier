@@ -1,10 +1,10 @@
 import { CardInfo } from "../interfaces/Interfaces";
+import TRANSLATE from '../translates/educations/translate.json'
 
 export const educationList : CardInfo = {
-    title: "Educación",
     data: [
     {
-        place: 'CEM English',
+        place: TRANSLATE.ES.ACADEMY.CEM.NAME,
         dates:{
             firstDate: {
                 month: 3,
@@ -16,7 +16,7 @@ export const educationList : CardInfo = {
             {
                 skills: [],
                 position: {
-                    name: 'Lenguaje de Ingles',
+                    name: TRANSLATE.ES.ACADEMY.CEM.TITLE,
                     time: {
                         firstDate: {
                             month: 3,
@@ -25,12 +25,12 @@ export const educationList : CardInfo = {
                         secondDate: 'Current'
                     }
                 },
-                text: "Un programa en línea de Ingles para fortalecer mi capacidad de comunicación en la lengua Anglosajona."
+                text: TRANSLATE.ES.ACADEMY.CEM.DESCRIPTION
                 }
             ]
     },
     {
-        place: 'Henry',
+        place: TRANSLATE.ES.ACADEMY.HENRY.NAME,
         dates:{
             firstDate: {
                 month: 6,
@@ -45,7 +45,7 @@ export const educationList : CardInfo = {
             {
                 skills: ['React', 'GitHub', 'ReactNative', 'API', 'Scrum', 'Js', 'Express'],
                 position: {
-                    name: 'Fullstack Developer',
+                    name: TRANSLATE.ES.ACADEMY.HENRY.TITLE,
                     time: {
                         firstDate: {
                             month: 6,
@@ -57,12 +57,12 @@ export const educationList : CardInfo = {
                         }
                     }
                 },
-                text: "Un programa intensivo en línea que simula un entorno laboral real, preparándome para una carrera en TI.",
+                text: TRANSLATE.ES.ACADEMY.HENRY.DESCRIPTION,
                 points: [
-                    "Primeros dos meses: Formación intensiva en tecnologías de Frontend y Backend.",
-                    "Tercer mes: Desarrollo de una plataforma de E-commerce desde cero en un equipo multidisciplinario de 5-6 personas.",
-                    "Cuarto mes: Prácticas profesionales con experiencia práctica en un entorno laboral real.",
-                    "Proyectos colaborativos: Trabajo en equipo para resolver desafíos técnicos y desarrollar aplicaciones funcionales."
+                    TRANSLATE.ES.ACADEMY.HENRY.POINTS.FIRST,
+                    TRANSLATE.ES.ACADEMY.HENRY.POINTS.SECOND,
+                    TRANSLATE.ES.ACADEMY.HENRY.POINTS.THIRD,
+                    TRANSLATE.ES.ACADEMY.HENRY.POINTS.FOURTH
                     ]
                 }
             ]

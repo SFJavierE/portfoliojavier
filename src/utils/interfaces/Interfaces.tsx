@@ -1,13 +1,13 @@
 import { ReactElement } from "react"
 
 export interface CardInfo{
-    title: string,
     data: Card[]
 }
 
 export interface Card{
     place: string,
     dates?: BusinessDays,
+    type?: 'Game' | 'Develop'
     description: CardDescription[]
 }
 

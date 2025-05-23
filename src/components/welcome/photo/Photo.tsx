@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import Me from '../../assets/imgs/yo.png';
+import Me from '../../../assets/imgs/yo.png'
 import Technologies from '../technologies/Technologies';
 
 const Photo = memo(() => (
