@@ -1,0 +1,18 @@
+{
+    "ES":{
+        "FIRST": "Resolutivo",
+        "SECOND": "Pensamiento Crítico",
+        "THIRD": "Adaptabilidad",
+        "FOURTH": "Trabajo en equipo",
+        "FIFTH": "Buena comunicación",
+        "SIX": "Inglés: Intermedio (B1)"
+    },
+    "EN":{
+        "FIRST": "Problem-solving",
+        "SECOND": "Critical Thinking",
+        "THIRD": "Adaptability",
+        "FOURTH": "Teamwork",
+        "FIFTH": "Good communication",
+        "SIX": "English: Intermediate (B1)"
+    }
+}

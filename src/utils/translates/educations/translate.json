@@ -1,5 +1,6 @@
 {
     "ES":{
+        "TITLE": "Educación",
         "SELFTAUGHT":{
             "TITLE": "Mi Enfoque de Aprendizaje: La Pasión Autodidacta",
             "FIRST": "Mi trayectoria profesional se ha forjado principalmente a través de un enfoque autodidacta, una metodología que considero mi mayor fortaleza. Cuando una tecnología, como React o Unity, capta mi interés, me sumerjo por completo en ella hasta dominarla. Este proceso implica una combinación intensiva de estudio de la documentación oficial, la implementación de proyectos prácticos desde cero y la resolución activa de problemas reales que surgen en el camino.",
@@ -25,6 +26,7 @@
         }
     },
     "EN":{
+        "TITLE": "Education",
         "SELFTAUGHT":{
             "TITLE":"My Learning Approach: The Self-Taught Passion",
             "FIRST": "My professional journey has been primarily shaped by a self-taught approach, a methodology I consider my greatest strength. When a technology, such as React or Unity, captures my interest, I immerse myself completely until I master it. This process involves an intensive combination of studying official documentation, implementing practical projects from scratch, and actively solving real-world problems that arise along the way.",

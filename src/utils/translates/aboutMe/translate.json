@@ -1,0 +1,16 @@
+{
+    "ES":{
+        "TITLE": "Sobre Mi",
+        "TEXT": {
+            "FIRST": "Mi nombre es Javier y soy un desarrollador de 28 años, nacido y residente en Argentina. Desde siempre, la tecnología ha sido mi gran pasión, especialmente el mundo de los videojuegos. Hoy, esa pasión se ha expandido al descubrir cómo una simple línea de código puede transformar un programa, o la importancia de la atención al detalle para resolver desafíos. Esa meticulosidad y curiosidad por el impacto de cada elemento es lo que me impulsa en mi trabajo y en mi día a día, ya sea programando, cocinando, o disfrutando con mi perro Bodoque.",
+            "SECOND": "Me considero una persona apasionada y dedicada, siempre buscando mejorar y enfrentar los desafíos diarios con calma y una actitud positiva. Si buscan a alguien comprometido con el aprendizaje continuo y que disfruta de cada proyecto como una oportunidad de crecimiento, los invito a explorar mis redes para conocer más sobre mi trabajo y los proyectos futuros que estoy desarrollando. ¡Gracias por su atención!"
+        }
+    },
+    "EN":{
+        "TITLE": "About Me",
+        "TEXT": {
+            "FIRST": "My name is Javier and I am a 28-year-old developer, born and living in Argentina. Technology has always been my great passion, especially the world of video games. Today, that passion has expanded as I discover how a single line of code can transform a program, or the importance of attention to detail to solve challenges. That meticulousness and curiosity about the impact of each element is what drives me in my work and in my daily life, whether programming, cooking, or enjoying time with my dog Bodoque.",
+            "SECOND": "I consider myself a passionate and dedicated person, always seeking to improve and face daily challenges with calm and a positive attitude. If you are looking for someone committed to continuous learning who enjoys every project as an opportunity for growth, I invite you to explore my networks to learn more about my work and the future projects I am undertaking. Thank you for your attention!"
+        }
+    }    
+}

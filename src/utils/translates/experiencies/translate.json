@@ -1,5 +1,6 @@
 {
     "ES":{
+        "TITLE": "Experiencia",
         "PLACE":{
             "TRICK":{
                 "NAME": "Trick Studios",
@@ -50,6 +51,7 @@
         }
     },
     "EN": {
+        "TITLE": "Experiencie",
         "PLACE": {
             "TRICK": {
                 "NAME": "Trick Studios",

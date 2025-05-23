@@ -1,5 +1,6 @@
 {
     "ES":{
+        "TITLE": "Proyectos",
         "MAGE":{
             "NAME": "TheMageTower",
             "DESCRIPTION": "Roguelike de plataformas donde juegas como un aprendiz de mago en una misión desesperada: rescatar a tu maestro secuestrado. Aprende hechizos caóticos, mejora tus poderes cada vez que mueras y adéntrate en mazmorras que cambian en cada partida. ¿Lograrás dominar la magia... o sucumbirás una y otra vez?"
@@ -36,6 +37,7 @@
         }
     },
     "EN": {
+        "TITLE": "Projects",
         "MAGE": {
             "NAME": "TheMageTower",
             "DESCRIPTION": "Roguelike platformer where you play as a wizard apprentice on a desperate mission: rescue your kidnapped master. Learn chaotic spells, upgrade your powers every time you die, and delve into dungeons that change with each playthrough. Will you master magic... or succumb again and again?"
