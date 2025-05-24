@@ -1,83 +1,89 @@
-import { CardInfo } from "../interfaces/Interfaces";
+import { CardInfo, Language } from "../interfaces/Interfaces";
 import TRANSLATE from '../translates/projects/translate.json'
 
-export const projectList : CardInfo = {
-    data: [
-        {
-            place: TRANSLATE.ES.MAGE.NAME,
-            type: 'Game',
-            description: [
-                {
-                    skills: ['Unity', 'C#'],
-                    text: TRANSLATE.ES.MAGE.DESCRIPTION
-                }
-            ]
-        },
-        {
-            place: TRANSLATE.ES.SLIME.NAME,
-            type: 'Game',
-            description: [
-                {
-                    skills: ['Unity', 'C#'],
-                    text: TRANSLATE.ES.SLIME.DESCRIPTION,
-                }
-            ]
-        },
-        {
-            place: TRANSLATE.ES.ARAM.NAME,
-            type: 'Game',
-            description: [
-                {
-                    skills: ['Unity', 'C#'],
-                    text: TRANSLATE.ES.ARAM.DESCRIPTION,
-                }
-            ]
-        },
-        {
-            place: TRANSLATE.ES.ZOMBIE.NAME,
-            type: 'Game',
-            description: [
-                {
-                    skills: ['Unity', 'C#'],
-                    text: TRANSLATE.ES.ZOMBIE.DESCRIPTION
-                }
-            ]
-        },
-        {
-            place: TRANSLATE.ES.DOGS.NAME,
-            type: 'Develop',
-            description: [
-                {
-                    skills: ['React', 'Tailwind', 'NodeJS', 'ExpressJs', 'Redis'],
-                    text: TRANSLATE.ES.DOGS.DESCRIPTION,
-                    points: [
-                        TRANSLATE.ES.DOGS.POINTS.FIRST,
-                        TRANSLATE.ES.DOGS.POINTS.SECOND,
-                        TRANSLATE.ES.DOGS.POINTS.THIRD,
-                        TRANSLATE.ES.DOGS.POINTS.FOURTH
-                    ]
-                }
-            ]
-        },
-        {
-            place: TRANSLATE.ES.BANK.NAME,
-            type: 'Develop',
-            description: [
-                {
-                    skills: ['ReactNative', 'CSS', 'NodeJS', 'ExpressJs'],
-                    text: TRANSLATE.ES.BANK.DESCRIPTION
-                }
-            ]
-        },
-        {
-            place: TRANSLATE.ES.BACK90.NAME,
-            type: 'Develop',
-            description: [
-                {
-                    skills: ['React', 'CSS', 'NodeJS', 'ExpressJs'],
-                    text: TRANSLATE.ES.BACK90.DESCRIPTION
-                }
-            ]
-        }
-    ]
+const ProjectList = (L : Language) : CardInfo => {
+    const projectList : CardInfo = {
+        data: [
+            {
+                place: TRANSLATE[L].MAGE.NAME,
+                type: 'Game',
+                description: [
+                    {
+                        skills: ['Unity', 'C#'],
+                        text: TRANSLATE[L].MAGE.DESCRIPTION
+                    }
+                ]
+            },
+            {
+                place: TRANSLATE[L].SLIME.NAME,
+                type: 'Game',
+                description: [
+                    {
+                        skills: ['Unity', 'C#'],
+                        text: TRANSLATE[L].SLIME.DESCRIPTION,
+                    }
+                ]
+            },
+            {
+                place: TRANSLATE[L].ARAM.NAME,
+                type: 'Game',
+                description: [
+                    {
+                        skills: ['Unity', 'C#'],
+                        text: TRANSLATE[L].ARAM.DESCRIPTION,
+                    }
+                ]
+            },
+            {
+                place: TRANSLATE[L].ZOMBIE.NAME,
+                type: 'Game',
+                description: [
+                    {
+                        skills: ['Unity', 'C#'],
+                        text: TRANSLATE[L].ZOMBIE.DESCRIPTION
+                    }
+                ]
+            },
+            {
+                place: TRANSLATE[L].DOGS.NAME,
+                type: 'Develop',
+                description: [
+                    {
+                        skills: ['React', 'Tailwind', 'NodeJS', 'ExpressJs', 'Redis'],
+                        text: TRANSLATE[L].DOGS.DESCRIPTION,
+                        points: [
+                            TRANSLATE[L].DOGS.POINTS.FIRST,
+                            TRANSLATE[L].DOGS.POINTS.SECOND,
+                            TRANSLATE[L].DOGS.POINTS.THIRD,
+                            TRANSLATE[L].DOGS.POINTS.FOURTH
+                        ]
+                    }
+                ]
+            },
+            {
+                place: TRANSLATE[L].BANK.NAME,
+                type: 'Develop',
+                description: [
+                    {
+                        skills: ['ReactNative', 'CSS', 'NodeJS', 'ExpressJs'],
+                        text: TRANSLATE[L].BANK.DESCRIPTION
+                    }
+                ]
+            },
+            {
+                place: TRANSLATE[L].BACK90.NAME,
+                type: 'Develop',
+                description: [
+                    {
+                        skills: ['React', 'CSS', 'NodeJS', 'ExpressJs'],
+                        text: TRANSLATE[L].BACK90.DESCRIPTION
+                    }
+                ]
+            }
+        ]
+    }
+
+    return projectList;
 }
+
+export default ProjectList

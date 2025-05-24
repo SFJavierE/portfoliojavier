@@ -17,10 +17,10 @@ const Card = memo(({ info }: { info: CardInfo }): React.ReactElement => {
             {/* Main container for the list of cards */}
             <div className="mt-6">
                 {/* Map through the 'data' array from 'info' to render each individual card */}
-                {info.data.map((data: CardInterface, index: number) => (
+                {info?.data?.map((data: CardInterface, index: number) => (
                     <article
                         // Unique key for each card based on its place and index for React's reconciliation
-                        key={`${data.place}-${index}`}
+                        key={`${data?.place}-${index}`}
                         className="w-full text-zinc-100 rounded-lg
                                    border-b md:border-none border-indigo-100/25
                                    mb-6"
@@ -39,7 +39,7 @@ const Card = memo(({ info }: { info: CardInfo }): React.ReactElement => {
                                 {data.description.map((description, descIndex) => (
                                     <Description
                                         // Unique key for each description item
-                                        key={`desc-${descIndex}-${data.place}`}
+                                        key={`desc-${descIndex}-${data?.place}`}
                                         description={description}
                                     />
                                 ))}

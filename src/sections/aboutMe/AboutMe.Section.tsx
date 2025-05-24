@@ -1,6 +1,8 @@
 import ButtonsPresentation from "../../components/buttons/communication/CommunicationButtons"; // Imports the communication buttons component
+import { Language } from "../../utils/interfaces/Interfaces";
 import Translate from '../../utils/translates/aboutMe/translate.json'; // Imports translation data for the About Me section
 import { type ReactElement } from 'react'; // Imports ReactElement type for explicit typing
+import { useSelector } from 'react-redux'
 
 /**
  * A functional component that renders the "About Me" section of a portfolio or profile.
@@ -13,23 +15,25 @@ import { type ReactElement } from 'react'; // Imports ReactElement type for expl
  * @returns {ReactElement} A React div element representing the entire "About Me" section.
  */
 export default function AboutMe(): ReactElement {
+    const L : Language = useSelector((state : any) => state.language.value)
+
     return (
         <div className="w-full text-gray-200">
             {/* Section Title: Displays the "About Me" title, styled with a gradient background. */}
             <div className="from-indigo-800 to-indigo-200/75 w-full py-3 pl-4 text-start text-3xl rounded-md bg-gradient-to-r font-bold">
-                {Translate.ES.TITLE} {/* Fetches the title from the translation file */}
+                {Translate[L].TITLE} {/* Fetches the title from the translation file */}
             </div>
 
             {/* Description Section: Contains the personal narrative. */}
             <div className="pl-6 mt-6 text-lg">
                 {/* First paragraph of the 'About Me' text. */}
                 <p>
-                    {Translate.ES.TEXT.FIRST} {/* Fetches the first paragraph from the translation file */}
+                    {Translate[L].TEXT.FIRST} {/* Fetches the first paragraph from the translation file */}
                 </p>
                 <br /> {/* Line break for visual separation between paragraphs */}
                 {/* Second paragraph of the 'About Me' text. */}
                 <p>
-                    {Translate.ES.TEXT.SECOND} {/* Fetches the second paragraph from the translation file */}
+                    {Translate[L].TEXT.SECOND} {/* Fetches the second paragraph from the translation file */}
                 </p>
             </div>
 

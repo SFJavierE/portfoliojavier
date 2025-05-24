@@ -1,7 +1,9 @@
 import { useState, type ReactElement } from 'react';
-import { Refs } from '../../utils/interfaces/Interfaces'; // Assuming Refs interface defines the React.RefObject types
+import { Language, Refs } from '../../utils/interfaces/Interfaces'; // Assuming Refs interface defines the React.RefObject types
 import ButtonsPresentation from '../../components/buttons/communication/CommunicationButtons'; // Communication buttons component
-
+import Translate from '../../utils/translates/navBar/translate.json'
+import { useSelector, useDispatch } from 'react-redux'
+import { changeLanguage } from '../../utils/redux/language';
 /**
  * Defines the structure for each navigation link.
  */
@@ -23,17 +25,19 @@ const LI_GRADIENT_CLASSES: string = "bg-gradient-to-l from-indigo-950/75 to-indi
  * @returns {ReactElement} A React fragment containing the navigation toggle button and the navigation menu.
  */
 export default function NavBar({ homeRef, skillsRef, jobsRef, educationsRef, projectsRef, aboutMeRef }: Refs): ReactElement {
+    const L : Language = useSelector((state : any) => state.language.value)
+    const dispatch = useDispatch();
     // State to control the visibility of the navigation bar (true for open, false for closed)
     const [showNavbar, setShowNavBar] = useState<boolean>(false);
 
     // Array defining the navigation links, their labels, and corresponding section refs
     const NAV_LINKS: NavLink[] = [
-        { label: "Inicio", ref: homeRef, key: "home" },
-        { label: "Habilidades", ref: skillsRef, key: "skills" },
-        { label: "Experiencia", ref: jobsRef, key: "jobs" },
-        { label: "Educación", ref: educationsRef, key: "educations" },
-        { label: "Proyectos", ref: projectsRef, key: "projects" },
-        { label: "Sobre Mí", ref: aboutMeRef, key: "aboutMe" },
+        { label: Translate[L].START, ref: homeRef, key: "home" },
+        { label: Translate[L].SKILLS, ref: skillsRef, key: "skills" },
+        { label: Translate[L].EXPERIENCIE, ref: jobsRef, key: "jobs" },
+        { label: Translate[L].EDUCATION, ref: educationsRef, key: "educations" },
+        { label: Translate[L].PROJECTS, ref: projectsRef, key: "projects" },
+        { label: Translate[L].ABOUTME, ref: aboutMeRef, key: "aboutMe" },
     ];
 
     /**
@@ -55,19 +59,24 @@ export default function NavBar({ homeRef, skillsRef, jobsRef, educationsRef, pro
     return (
         <>
             {/* Navigation Toggle Button */}
-            <button
-                className={`
-                    fixed top-4 left-4 z-[100] p-2 rounded-md
-                    transition-all duration-300 ease-in-out
-                    ${showNavbar ? 'bg-indigo-700 text-white' : 'bg-indigo-950 text-white'}
-                    hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-500
-                `}
-                onClick={() => setShowNavBar(!showNavbar)}
-                // Aria label for accessibility, describing button's current action
-                aria-label={showNavbar ? "Close navigation menu" : "Open navigation menu"}
-            >
-                {showNavbar ? "←" : "☰"} {/* Display arrow or hamburger icon */}
-            </button>
+            <div className='fixed top-4 left-4 z-[100]
+                        transition-all duration-300 ease-in-out w-full'>
+                <button
+                    className={`${showNavbar ? 'bg-indigo-700 text-white' : 'bg-indigo-950 text-white'}
+                        hover:bg-indigo-800 p-2 focus:outline-none rounded-md focus:ring-2 focus:ring-indigo-500 mr-3`}
+                    onClick={() => setShowNavBar(!showNavbar)}
+                    // Aria label for accessibility, describing button's current action
+                    aria-label={showNavbar ? "Close navigation menu" : "Open navigation menu"}
+                >
+                    {showNavbar ? "←" : "☰"} {/* Display arrow or hamburger icon */}
+                </button>
+                <button 
+                    className={`${showNavbar ? 'bg-indigo-700 text-white' : 'bg-indigo-950 text-white'}
+                        hover:bg-indigo-800 p-2 focus:outline-none rounded-md focus:ring-2 focus:ring-indigo-500`}
+                    onClick={() => dispatch(changeLanguage())}>
+                    {L}
+                </button>
+            </div>
 
             {/* Side Navigation Menu */}
             <nav
@@ -97,7 +106,7 @@ export default function NavBar({ homeRef, skillsRef, jobsRef, educationsRef, pro
                     ))}
                 </ul>
                 {/* Communication Buttons */}
-                <ButtonsPresentation classContainer="grid grid-cols-3 mt-60 gap-x-5 gap-y-2"/>
+                <ButtonsPresentation classContainer="grid grid-cols-3 mt-2 lg:mt-60 gap-x-5 gap-y-2"/>
             </nav>
         </>
     );

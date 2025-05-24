@@ -1,7 +1,8 @@
 import { Technologies } from '../../utils/lists/Lists'; // Imports a list of technology SVG components
-import { ChildrenSVG } from "../../utils/interfaces/Interfaces"; // Interface for the structure of technology children (SVGs)
+import { ChildrenSVG, Language } from "../../utils/interfaces/Interfaces"; // Interface for the structure of technology children (SVGs)
 import Translate from "../../utils/translates/skills/translate.json"; // Imports translation data for skills
 import { type ReactElement } from 'react'; // Imports ReactElement type for explicit typing
+import { useSelector } from 'react-redux'
 
 /**
  * A functional component that displays the developer's skills.
@@ -11,15 +12,16 @@ import { type ReactElement } from 'react'; // Imports ReactElement type for expl
  * @returns {ReactElement} A React div element representing the entire Skills section.
  */
 export default function Skills(): ReactElement {
+    const L : Language = useSelector((state : any) => state.language.value)
     // Array of soft skills, fetched from the translation JSON.
     // Each string represents a distinct skill or proficiency.
     const skills: string[] = [
-        Translate.ES.FIRST,
-        Translate.ES.SECOND,
-        Translate.ES.THIRD,
-        Translate.ES.FOURTH,
-        Translate.ES.FIFTH,
-        Translate.ES.SIX,
+        Translate[L].FIRST,
+        Translate[L].SECOND,
+        Translate[L].THIRD,
+        Translate[L].FOURTH,
+        Translate[L].FIFTH,
+        Translate[L].SIX,
     ];
 
     return (
@@ -31,7 +33,7 @@ export default function Skills(): ReactElement {
                         // Each skill is rendered within a div, preceded by an emoji.
                         // Using 'index' as a key is acceptable here since the list is static and not reordered.
                         <div key={index} className='flex text-center'>
-                            <p className='text-2xl text-gray-200 font-bold mb-12'>
+                            <p className='text-xl text-gray-200 font-bold mb-12'>
                                 {"✅ "} {/* Hardcoded checkmark emoji for visual emphasis */}
                                 {skill} {/* The skill text from the translation file */}
                             </p>

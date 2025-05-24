@@ -1,0 +1,18 @@
+{
+    "ES":{
+        "START": "Inicio",
+        "SKILLS": "Habilidades",
+        "EXPERIENCIE": "Experiencia",
+        "EDUCATION": "Educación",
+        "PROJECTS": "Proyectos",
+        "ABOUTME": "Sobre Mí"
+    },
+    "EN":{
+        "START": "Start",
+        "SKILLS": "Skills",
+        "EXPERIENCIE": "Experiencie",
+        "EDUCATION": "Education",
+        "PROJECTS": "Projects",
+        "ABOUTME": "About Me"
+    }
+}

@@ -12,11 +12,13 @@
     "reinstall": "npm run clean && npm install"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
     "lint-fix": "^0.24.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.6.0"
+    "react-router-dom": "^7.6.0",
+    "redux-thunk": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

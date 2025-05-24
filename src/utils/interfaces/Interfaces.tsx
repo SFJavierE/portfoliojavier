@@ -181,3 +181,9 @@ export interface Title {
 export interface ButtonActions {
     action: ActionType;
 }
+
+export interface Languages {
+    value: Language
+}
+
+export type Language = 'ES' | 'EN'
