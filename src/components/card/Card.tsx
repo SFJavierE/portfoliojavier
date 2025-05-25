@@ -15,15 +15,15 @@ const Card = memo(({ info }: { info: CardInfo }): React.ReactElement => {
     return (
         <div className="w-full flex flex-col gap-3 md:gap-4">
             {/* Main container for the list of cards */}
-            <div className="mt-6">
+            <div className="lg:mt-6">
                 {/* Map through the 'data' array from 'info' to render each individual card */}
                 {info?.data?.map((data: CardInterface, index: number) => (
                     <article
                         // Unique key for each card based on its place and index for React's reconciliation
                         key={`${data?.place}-${index}`}
-                        className="w-full text-zinc-100 rounded-lg
+                        className="w-full text-zinc-100 py-4
                                    border-b md:border-none border-indigo-100/25
-                                   mb-6"
+                                   mb-2"
                     >
                         {/* Grid layout for title and description sections within each card */}
                         <div className="grid grid-cols-1 md:grid-cols-6 gap-3 md:gap-4">

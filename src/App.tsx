@@ -31,7 +31,7 @@ function App(): ReactElement {
                 w-full min-h-screen
                 scroll-smooth           /* Enables smooth scrolling animation */
                 snap-y snap-mandatory    /* Enforces vertical scroll snapping to elements */
-                pb-36 px-36              /* Padding at the bottom and horizontal padding */
+                pb-24 px-6 lg:px-36              /* Padding at the bottom and horizontal padding */
             "
         >
             {/* Navigation Bar: Receives all section refs to enable smooth scrolling to each section. */}

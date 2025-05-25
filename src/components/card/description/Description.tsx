@@ -57,7 +57,6 @@ const DescriptionItem = memo(({ description }: { description: CardDescription })
         return (
             <div className="flex flex-wrap gap-x-2">
                 <DateDisplay date={positionTime.firstDate} />
-                <span>-</span>
                 {secondDateComponent}
             </div>
         );
@@ -73,8 +72,8 @@ const DescriptionItem = memo(({ description }: { description: CardDescription })
 
         return (
             <>
-                <div className="flex flex-col md:flex-row justify-between gap-1 md:gap-4">
-                    <h3 className="font-medium text-sm md:text-base">
+                <div className="flex lg:flex-col md:flex-row justify-between gap-1 md:gap-4 mt-6">
+                    <h3 className="font-medium text-sm -mt-1 lg:mt-0 lg:text-base">
                         {description.position.name}
                     </h3>
                     {positionDates} {/* Render the memoized position dates */}
@@ -85,10 +84,10 @@ const DescriptionItem = memo(({ description }: { description: CardDescription })
     }, [description.position, positionDates]); // Re-memoize when position or its dates change
 
     return (
-        <article className="pl-4 md:pl-6">
+        <article className="lg:pl-6">
             {positionContent} {/* Render the memoized position content */}
 
-            <p className="text-sm leading-relaxed hyphens-auto mb-4">
+            <p className="text-sm leading-relaxed hyphens-auto lg:mb-4">
                 {description.text}
             </p>
 

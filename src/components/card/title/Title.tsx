@@ -35,16 +35,16 @@ const Title = memo(({ title }: { title: Card }): React.ReactElement => { // Use 
             : formatDate(title.dates.secondDate);
 
         return (
-            <div className="flex flex-col md:flex-row justify-between text-sm md:text-base mt-1">
+            <div className="flex lg:flex-col md:flex-row lg:justify-between text-sm md:text-base lg:mt-1">
                 <span aria-label="Start date">{startDate}</span>
-                <span aria-label="End date" className="mt-1 md:mt-0">{endDate}</span>
+                <span aria-label="End date" className="ml-2 md:mt-0">{endDate}</span>
             </div>
         );
     }, [title.dates]); // Re-memoize only when title.dates object changes
 
     return (
-        <div className="pr-2 w-full">
-            <h3 className={`${title.type ? 'flex items-center' : ''} text-lg md:text-xl font-bold text-indigo-200`}>
+        <div className="lg:pr-2 w-full flex justify-between">
+            <h3 className={`${title.type ? 'flex items-center' : ''} -mt-1 lg:mt-0 text-lg md:text-xl font-bold text-indigo-200`}>
                 {title.place}
                 {/* Conditionally render an emoji based on the card type */}
                 {title.type && (

@@ -3,7 +3,7 @@ import TRANSLATE from "../../../../utils/translates/welcome/translate.json"; // 
 import { useSelector } from 'react-redux'
 
 // Define the common Tailwind CSS classes for all buttons
-const BUTTON_COMMON_CLASS: string = "hover:shadow-md hover:shadow-indigo-400 mt-6 hover:from-indigo-800 hover:to-indigo-200/75 w-full py-3 pl-4 text-start text-2xl rounded-md bg-gradient-to-r from-indigo-950/75 to-indigo-600/25";
+const BUTTON_COMMON_CLASS: string = "hover:shadow-md hover:shadow-indigo-400 mt-6 hover:from-indigo-800 hover:to-indigo-200/75 w-full py-3 pl-4 text-start text-md lg:text-2xl rounded-md bg-gradient-to-r from-indigo-950/75 to-indigo-600/25";
 
 
 /**
@@ -26,7 +26,7 @@ export default function CardSectionButtons(): React.ReactElement {
 
     return (
         <div className="w-full h-full">
-            <div className="flex flex-col w-full">
+            <div className="lg:flex lg:flex-col w-full">
                 {/* Dynamically render buttons from the BUTTON_DATA array */}
                 {BUTTON_DATA.map((button, index) => (
                     <button

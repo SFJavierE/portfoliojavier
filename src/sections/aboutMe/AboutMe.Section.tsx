@@ -3,7 +3,7 @@ import { Language } from "../../utils/interfaces/Interfaces";
 import Translate from '../../utils/translates/aboutMe/translate.json'; // Imports translation data for the About Me section
 import { type ReactElement } from 'react'; // Imports ReactElement type for explicit typing
 import { useSelector } from 'react-redux'
-
+import TitleSection from '../../components/titleSection/TitleSection'
 /**
  * A functional component that renders the "About Me" section of a portfolio or profile.
  * It displays a main title, a personal description spanning two paragraphs,
@@ -20,12 +20,10 @@ export default function AboutMe(): ReactElement {
     return (
         <div className="w-full text-gray-200">
             {/* Section Title: Displays the "About Me" title, styled with a gradient background. */}
-            <div className="from-indigo-800 to-indigo-200/75 w-full py-3 pl-4 text-start text-3xl rounded-md bg-gradient-to-r font-bold">
-                {Translate[L].TITLE} {/* Fetches the title from the translation file */}
-            </div>
+            <TitleSection name={Translate[L].TITLE} />
 
             {/* Description Section: Contains the personal narrative. */}
-            <div className="pl-6 mt-6 text-lg">
+            <div className="lg:pl-6 mt-4 lg:mt-6 text-sm lg:text-lg">
                 {/* First paragraph of the 'About Me' text. */}
                 <p>
                     {Translate[L].TEXT.FIRST} {/* Fetches the first paragraph from the translation file */}
@@ -38,12 +36,12 @@ export default function AboutMe(): ReactElement {
             </div>
 
             {/* Footer Section: Contains the signature and communication buttons. */}
-            <div className="text-2xl font-bold flex justify-between text-end pl-6">
+            <div className="text-2xl font-bold lg:flex lg:justify-between text-end pl-6">
                 {/* Signature Name: Hardcoded as it's a fixed personal detail. */}
                 <p className="mt-6">Javier Eduardo Sosa Fuch</p>
                 {/* Communication Buttons: Renders a set of external communication links,
                     aligned to the end of the container. */}
-                <ButtonsPresentation classContainer="flex justify-end mt-6" />
+                <ButtonsPresentation classContainer="flex lg:justify-end mt-6" />
             </div>
         </div>
     );

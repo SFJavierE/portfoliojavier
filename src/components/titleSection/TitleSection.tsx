@@ -9,7 +9,7 @@ import { Title } from '../../utils/interfaces/Interfaces'; // Import the Title i
  */
 export default function TitleSection({ name }: Title): React.ReactElement {
     return (
-        <div className="from-indigo-800 to-indigo-200/75 w-full py-3 pl-4 text-start text-3xl rounded-md bg-gradient-to-r text-gray-200 font-bold">
+        <div className="from-indigo-800 to-indigo-200/75 w-full pl-2 py-1 lg:py-3 lg:pl-4 text-start text-xl lg:text-3xl rounded-md bg-gradient-to-r text-gray-200 font-bold">
             {name} {/* Displays the title text passed as a prop */}
         </div>
     );

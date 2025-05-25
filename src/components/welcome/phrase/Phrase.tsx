@@ -41,7 +41,7 @@ export default function Phrase(): React.ReactElement {
 
     return (
         <div className="mb-2">
-            <span className="text-start text-lg md:text-lx lg:text-xl text-indigo-500">
+            <span className="text-start text-md md:text-lx lg:text-xl text-indigo-500">
                 {PHRASE_LINES.map((line, lineIndex) => (
                     <div key={lineIndex} className="flex justify-start">
                         {line.parts.map((part, partIndex) => (

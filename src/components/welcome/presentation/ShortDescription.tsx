@@ -15,8 +15,8 @@ const ShortDescription = memo((): ReactElement => {
     const L : Language = useSelector((state : any) => state.language.value)
 
     return (
-        <div className="max-w-[90vw] md:max-w-[65ch] space-y-2 md:space-y-3">
-            <p className="text-md leading-relaxed text-indigo-100 line-clamp-3 md:line-clamp-none">
+        <div className="hidden lg:inline max-w-[90vw] md:max-w-[65ch] space-y-2 md:space-y-3">
+            <p className="text-sm lg:text-md leading-relaxed text-indigo-100 line-clamp-3 md:line-clamp-none">
                 {TRANSLATE[L].DESCRIPTION} {/* Displays the description text from the translation file */}
             </p>
         </div>

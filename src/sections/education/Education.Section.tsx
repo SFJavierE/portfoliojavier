@@ -24,18 +24,17 @@ export default function Education(): ReactElement {
             <TitleSection name={Translate[L].TITLE} />
 
             {/* Container for the self-taught learning description. */}
-            <div className='text-gray-200 mt-4 mb-1'>
+            <div className='text-gray-200 mt-2 lg:mt-4 mb-1'>
                 {/* Title for the self-taught section, styled to be prominent. */}
-                <p className='font-bold text-xl underline text-indigo-200'>
+                <p className='font-bold text-md lg:text-xl underline text-indigo-200'>
                     {Translate[L].SELFTAUGHT.TITLE}
                 </p>
                 {/* First paragraph describing the self-taught journey. */}
-                <p className='text-md mt-2 pl-6'>
+                <p className='text-sm lg:text-md mt-2 lg:pl-6'>
                     {Translate[L].SELFTAUGHT.FIRST}
                 </p>
-                <br /> {/* Line break for visual separation. */}
                 {/* Second paragraph providing more details on self-taught efforts. */}
-                <p className='text-md pl-6'>
+                <p className='text-sm lg:text-md mt-2 lg:mt-6 lg:pl-6'>
                     {Translate[L].SELFTAUGHT.SECOND}
                 </p>
             </div>

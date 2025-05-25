@@ -11,10 +11,10 @@ import { SkillType } from '../../../utils/interfaces/Interfaces'; // Import the 
 const Skill = memo(({ skill }: { skill: SkillType }): ReactElement => (
     <span
         // Apply Tailwind CSS classes for styling the skill tag
-        className="text-zinc-100 text-xs md:text-sm p-1 md:p-2 rounded
+        className="text-zinc-100 text-xs md:text-sm p-2 lg:p-4 rounded
                    mr-1 md:mr-2 shadow-sm md:shadow-inner shadow-indigo-900/50
-                   font-semibold md:font-bold bg-indigo-900/20 hover:bg-indigo-900/30
-                   transition-all duration-200 whitespace-nowrap cursor-pointer"
+                   font-semibold md:font-bold bg-indigo-900/50 hover:bg-indigo-900/75
+                   transition-all duration-200 whitespace-nowrap"
         // Add a title attribute for hover text and accessibility
         title={skill}
     >
