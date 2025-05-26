@@ -24,7 +24,8 @@ const LI_GRADIENT_CLASSES: string = "bg-gradient-to-l from-indigo-950/75 to-indi
  * @param {Refs} props - An object containing refs to different sections of the page.
  * @returns {ReactElement} A React fragment containing the navigation toggle button and the navigation menu.
  */
-export default function NavBar({ homeRef, skillsRef, jobsRef, educationsRef, projectsRef, aboutMeRef }: Refs): ReactElement {
+export default function NavBar(): ReactElement {
+    const refs: Refs = useSelector((state: any) => state.refs.value)
     const L : Language = useSelector((state : any) => state.language.value)
     const dispatch = useDispatch();
     // State to control the visibility of the navigation bar (true for open, false for closed)
@@ -32,12 +33,12 @@ export default function NavBar({ homeRef, skillsRef, jobsRef, educationsRef, pro
 
     // Array defining the navigation links, their labels, and corresponding section refs
     const NAV_LINKS: NavLink[] = [
-        { label: Translate[L].START, ref: homeRef, key: "home" },
-        { label: Translate[L].SKILLS, ref: skillsRef, key: "skills" },
-        { label: Translate[L].EXPERIENCIE, ref: jobsRef, key: "jobs" },
-        { label: Translate[L].EDUCATION, ref: educationsRef, key: "educations" },
-        { label: Translate[L].PROJECTS, ref: projectsRef, key: "projects" },
-        { label: Translate[L].ABOUTME, ref: aboutMeRef, key: "aboutMe" },
+        { label: Translate[L].START, ref: refs.homeRef, key: "home" },
+        { label: Translate[L].SKILLS, ref: refs.skillsRef, key: "skills" },
+        { label: Translate[L].EXPERIENCIE, ref: refs.jobsRef, key: "jobs" },
+        { label: Translate[L].EDUCATION, ref: refs.educationsRef, key: "educations" },
+        { label: Translate[L].PROJECTS, ref: refs.projectsRef, key: "projects" },
+        { label: Translate[L].ABOUTME, ref: refs.aboutMeRef, key: "aboutMe" },
     ];
 
     /**

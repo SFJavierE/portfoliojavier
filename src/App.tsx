@@ -1,4 +1,4 @@
-import { useRef, type ReactElement } from 'react'; // Import useRef for DOM references and ReactElement type
+import { useRef, type ReactElement, useEffect } from 'react'; // Import useRef for DOM references and ReactElement type
 import './App.css'; // Assuming this imports global or base styles
 import NavBar from './sections/navbar/Navbar'; // Navigation bar component
 import CardPresentation from './sections/cardPresentation/CardPresentation'; // Welcome/Card presentation section
@@ -7,6 +7,9 @@ import Projects from './sections/projects/Projects.Section'; // Projects section
 import Skills from './sections/skills/Skills.Section'; // Skills section
 import AboutMe from './sections/aboutMe/AboutMe.Section'; // About Me section
 import Education from './sections/education/Education.Section'; // Education section
+import { useDispatch } from 'react-redux';
+import { setAllRefs } from './utils/redux/refs';
+import { Refs } from './utils/interfaces/Interfaces';
 
 /**
  * The main App component that orchestrates the entire portfolio layout.
@@ -15,6 +18,8 @@ import Education from './sections/education/Education.Section'; // Education sec
  * @returns {ReactElement} The root React element for the application.
  */
 function App(): ReactElement {
+    const dispatch = useDispatch();
+
     // Create refs for each major section of the portfolio.
     // These refs will be attached to their respective section divs,
     // allowing direct DOM manipulation for smooth scrolling.
@@ -25,6 +30,18 @@ function App(): ReactElement {
     const projectsRef = useRef<HTMLDivElement>(null);
     const aboutMeRef = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        const refs : Refs= {
+            homeRef,
+            skillsRef,
+            jobsRef,
+            educationsRef,
+            projectsRef,
+            aboutMeRef
+        }
+        dispatch(setAllRefs(refs))
+    }, [])
+    
     return (
         <div
             className="
@@ -35,14 +52,7 @@ function App(): ReactElement {
             "
         >
             {/* Navigation Bar: Receives all section refs to enable smooth scrolling to each section. */}
-            <NavBar
-                homeRef={homeRef}
-                skillsRef={skillsRef}
-                jobsRef={jobsRef}
-                educationsRef={educationsRef}
-                projectsRef={projectsRef}
-                aboutMeRef={aboutMeRef}
-            />
+            <NavBar/>
 
             {/* Container for all main content sections */}
             <>

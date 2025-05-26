@@ -1,4 +1,4 @@
-import { Language } from "../../../../utils/interfaces/Interfaces";
+import { Language, Refs } from "../../../../utils/interfaces/Interfaces";
 import TRANSLATE from "../../../../utils/translates/welcome/translate.json"; // Assuming this JSON contains button texts and emojis
 import { useSelector } from 'react-redux'
 
@@ -13,16 +13,34 @@ const BUTTON_COMMON_CLASS: string = "hover:shadow-md hover:shadow-indigo-400 mt-
 * @returns {React.ReactElement} A React div element containing a list of styled buttons.
 */
 export default function CardSectionButtons(): React.ReactElement {
+    const refs : Refs = useSelector((state : any) => state.refs.value)
     const L : Language = useSelector((state : any) => state.language.value)
 
     // Centralized data for each button to avoid repetition
     const BUTTON_DATA = [
-        { text: TRANSLATE[L].BUTTONS.SKILLS, emoji: TRANSLATE.EMOJIS.SKILLS, key: "skills" },
-        { text: TRANSLATE[L].BUTTONS.EXPERIENCE, emoji: TRANSLATE.EMOJIS.EXPERIENCIES, key: "experience" },
-        { text: TRANSLATE[L].BUTTONS.EDUCATION, emoji: TRANSLATE.EMOJIS.EDUCATION, key: "education" },
-        { text: TRANSLATE[L].BUTTONS.PROJECTS, emoji: TRANSLATE.EMOJIS.PROJECTS, key: "projects" },
-        { text: TRANSLATE[L].BUTTONS.ABOUTME, emoji: TRANSLATE.EMOJIS.ABOUTME, key: "about-me" },
+        { text: TRANSLATE[L].BUTTONS.SKILLS, emoji: TRANSLATE.EMOJIS.SKILLS, key: "skills", ref: refs.skillsRef},
+        { text: TRANSLATE[L].BUTTONS.EXPERIENCE, emoji: TRANSLATE.EMOJIS.EXPERIENCIES, key: "experience", ref: refs.jobsRef },
+        { text: TRANSLATE[L].BUTTONS.EDUCATION, emoji: TRANSLATE.EMOJIS.EDUCATION, key: "education", ref: refs.educationsRef },
+        { text: TRANSLATE[L].BUTTONS.PROJECTS, emoji: TRANSLATE.EMOJIS.PROJECTS, key: "projects", ref: refs.projectsRef },
+        { text: TRANSLATE[L].BUTTONS.ABOUTME, emoji: TRANSLATE.EMOJIS.ABOUTME, key: "about-me", ref: refs.aboutMeRef },
     ];
+
+    /**
+         * Scrolls the view to the specified section using its ref.
+         * After scrolling, it closes the navigation bar.
+         *
+         * @param {React.RefObject<HTMLDivElement | null>} ref - The ref object pointing to the target DOM element.
+         */
+    const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>): void => {
+        if (ref.current) {
+            ref.current.scrollIntoView({
+                behavior: 'smooth', // Enables smooth scrolling animation
+                block: 'start',      // Aligns the top of the section with the top of the viewport
+            });
+        }
+    };
+
+
 
     return (
         <div className="w-full h-full">
@@ -30,6 +48,7 @@ export default function CardSectionButtons(): React.ReactElement {
                 {/* Dynamically render buttons from the BUTTON_DATA array */}
                 {BUTTON_DATA.map((button, index) => (
                     <button
+                        onClick={() => scrollToSection(button.ref)}
                         key={button.key} // Unique key for list rendering
                         // Apply common classes, and for the first button, override 'mt-6' with 'mt-0'
                         className={`${BUTTON_COMMON_CLASS} ${index === 0 ? "mt-0" : ""}`}

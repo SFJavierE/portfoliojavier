@@ -152,6 +152,10 @@ export interface ButtonTransitionProps {
 /**
  * References to different sections of the page.
  */
+export interface ReduxRefs {
+    value: Refs
+}
+
 export interface Refs {
     homeRef: React.RefObject<HTMLDivElement | null>;
     skillsRef: React.RefObject<HTMLDivElement | null>;
